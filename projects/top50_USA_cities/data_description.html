@@ -1,0 +1,86 @@
+<h1>Top 50 American Cities</h1>
+
+<p><a href="city_dataset.csv">This spreadsheet</a> has a variety of data from the 50 largest cities by estimated metro population in 2021.  It's great for quickly testing an idea to see if a trend exists.</p>
+
+<p><strong>Warning: Be aware that the data comes from regions with different bounaries.</strong></p>
+
+<p>HUD's rents are for "Fair Market Rent" (FMR) areas.  HUD's homeless numbers are for "Continuity of Care" (CoC) areas.  These not consistently aligned with metro areas nor cities.</p>
+
+<p>INRIX's regions are also inconsisent.  (San Jose is part of San Francisco, Riverside part of Los Angeles, and Virginia Beach part of Norfolk.)</p>
+
+<p><strong>Warning: times are not necessarily aligned in data</strong></p>
+
+<p>HUD's median rents are <strong>published</strong> in Fiscal Year 2023, but are calculated of earlier data.</p>
+
+<h2>List of fields and sources:</h2>
+
+<ul>
+<li>Metro area population (US Census 2021 est., 2020, 2010)</li>
+<li>City population (US Census 2021 est., 2020, 2010)</li>
+<li>City's area</li>
+<li>Price of a cheap lot in City (Zillow, 1%ile in Sept. 2021)</li>
+<li>Price of a cheap apartment in City (1bed+1bath, Zillow 1%ile in Sept. 2021)</li>
+<li>Median rent (HUD FY2023 and FY2013) </li>
+<li>Metro GDP (2018, 2017) </li>
+<li>Median lot size and price-per-sqft (<a href="https://www.angi.com/articles/lot-size-index.htm">from Angi.com</a>)</li>
+<li>Overall homeless and unsheltered homeless (HUD 2019)</li>
+<li>Last-mile travel speed and hours lost to congestion <a href="https://inrix.com/scorecard/">INRIX 2021</a></li>
+</ul>
+
+<h2>Details</h2>
+
+<p>Zillow data collection started Sept 17th.</p>
+
+<p>Lots come from Zillow.com.
+I only considered "agent listings".
+Lots had to be listed in the last 90 days
+Went to round(# available) and then searched for "valid" lot
+- had sqft
+- had road
+- had address (may be #0 on that street)
+- was residential (not commercial, not parking lot, no alley)
+- nothing left on lot (e.g., old foundation)
+- not auction (opening bid at auction)</p>
+
+<p>Apartments/Condos/Co-ops from Zillow.com.
+1+ beds, 1+ baths
+Listed within 30 days.
+Valid listings had:
+- had sqft
+- has address
+! counted many rooms at same address as "1".
+! only selected ads with single room at address
+3rd ad may have been sponsored.  It was counted as a property except when less than 10.</p>
+
+<ul>
+<li>Ignored this place in Miami.  I didn't believe it had 1896 sqft. https://www.zillow.com/homedetails/6733-NW-2nd-Ct-3-Miami-FL-33150/2076941032_zpid/</li>
+<li>Seattle is 220 sqft, which is very small.  Especially compared to pictures.   Next would have been this at $1100 and 512 sqft https://www.zillow.com/homedetails/4750-15th-Ave-NE-307-Seattle-WA-98105/2070768044_zpid/</li>
+<li>Ignored this place in Las Vegas.  Didn't believe 5200 sqft. https://www.zillow.com/homedetails/2304-Sunrise-Ave-9-Las-Vegas-NV-89101/2069790629_zpid/</li>
+<li>Ignored indianapolis.  didn't believe 2225 sqft https://www.zillow.com/homedetails/1529-E-Michigan-St-Indianapolis-IN-46201/88918320_zpid/</li>
+<li>Ignored cleveland.  didn't believe 2400 sqft https://www.zillow.com/homedetails/3651-E-55th-St-3-Cleveland-OH-44105/2096510665_zpid/</li>
+<li>Ignored richmond   didn't believe 32 sqft https://www.zillow.com/homedetails/2863-Hull-St-APT-A-Richmond-VA-23224/2061837472_zpid/</li>
+<li>Ignored Louisville   didn't believe 2886 sqft https://www.zillow.com/homedetails/1349-Olive-St-Louisville-KY-40211/73604936_zpid/</li>
+</ul>
+
+<p>10% lot size done on Sept. 21st.</p>
+
+<ul>
+<li>In D.C., skipped parking lots.</li>
+<li>In Boston, skipped parking lots.</li>
+<li>In San Francisco ... only 17 lots.  Accepted 2nd lot, but it's questionable.  (On a hillside.)</li>
+<li>San Diego had 14 lots without sizes.  Chose 10%ile of those that did.</li>
+<li>Baltimore the lot was 1 price for 3 lots.  Wasn't sure if size was 1 lot or all.  Took next lot.</li>
+<li>Orlando - accepted undisclosed address because others were disclosed.</li>
+<li>Virginia Beach - skipped 3 0-size lots.  took next</li>
+<li>Providence - skipped lot with no size</li>
+<li>Richmond - skipped 2 lots with no size.  Took 10%ile of the rest.</li>
+<li>New Orleans --  10+40+40+36=126 lots with 0 size.  Took 10%ile of rest</li>
+</ul>
+
+<p>Median lot size came from Angi.com.
+It reports Zillow's median lot size in MSA (not city!) from May 2022.
+https://www.angi.com/articles/lot-size-index.htm
+I was able to extract data from their table
+https://embed.neomam.com/the-2022-us-lot-size-index/table/</p>
+
+<p>Median rent comes from this HUD page: https://www.huduser.gov/portal/datasets/50per.html   Not clear what it means.</p>
