@@ -6,6 +6,7 @@
   publisher = "Island Press",
   address   = "Washington, DC",
   year      = 2022,
+  keywords={planning; zoning},
   annote    = {
   A very readable book that argues that zoning is unnecessary.  It describes what zoning does (restricts use, restricts size) and what it does not do (mandate construction, protect health and safety, protect the environment, plan for the future).  Zoning doesn't even "solve" the problem of externalities like noise, smell, shade, etc..  
 
@@ -23,5 +24,38 @@
 
    The author says that if zoning is abolished, planning needs to change.  Laws need to focus on externalities directly, like noise and smell.  Planner's duties can be replaced by mediators.
 
-    The author says that planning needs to fight the segregation that it helped create.  Not just remove zoning, but use the federal Low-Income Housing Tax Credits (LIHTC) and Section 8 vouchers to put poorer families in high-opportunity areas.  The author believe inclusionary zoning is bad.  He supports community land trusts (CLT). (I find CLTs very very expensive for their benefit.) }
+    The author says that planning needs to fight the segregation that it helped create.  Not just remove zoning, but use the federal Low-Income Housing Tax Credits (LIHTC) and Section 8 vouchers to put poorer families in high-opportunity areas.  The author believe inclusionary zoning is bad.  He supports community land trusts (CLT). (I find CLTs very very expensive for their benefit.)
+    }
 }
+
+
+@TechReport{Hamilton2021,
+  author    = "Emily Hamilton",
+  title     = "Inclusionary Zoning Hurts More Than It Helps",
+  url = "https://www.mercatus.org/system/files/hamilton_-_policy_brief_-_inclusionary_zoning_hurts_more_than_it_helps_-_v2.pdf",  
+  institution="Mercatus Center",
+  year      = 2021,
+  keywords={zoning; inclusionary zoning},
+  annote    = {This is an executive summary of inclusive zoning.  It describes it and its effects.  It has a summary of 6 different studies of inclusionary zoning.  "... four find that inclusionary zoning increases prices."  The author points out that all these studies assume the cities' restrictive zoning policy is "a given".  In the conclusion she states: "No studies of its effects indicate that it increases housing supply or contributes to broadly lower prices. It benefits a small portion of low and moderate-income households rather than targeting aid at the households that need it most."
+  }
+}
+
+@TechReport{Hamilton2018,
+  author    = "Emily Hamilton and Eli Dourado",
+  title     = "The Premium for Walkable Development under Land Use Regulations",
+  url       = "https://www.mercatus.org/system/files/hamilton-walkable-development-mercatus-research-v1.pdf",
+  institution="Mercatus Center",
+  year      = 2018,
+  keywords={walkability},
+  annote    = { This research evaluates walkability's effect on home prices on a zipcode basis.  I don't trust this paper's results at all.  
+
+     The paper's literature review says that Walk Score sometimes didn't line up with real walkability on small scales.  Hence, it would be odd to see its effect at larger scales, like zipcode.
+
+     The Walk Score for a zipcode was taken at its centroid.  The other variables were average rooms, average housing age, average commute time, average distance to CBD, income, vacancy, and density.  They controlled for county-level fixed effects.  (The hope this adjusts for crime and public amenities.)  They regress log(price-per-sqft) with linear effects.  It isn't clear if that is a sqft of land or interior space.   They use linear average income, not log(average income), which is strange.  In the results, they say "The coefficients on distance from the CBD, average commute... are insignficant".  That's a bad sign.
+
+     They attempt to validate the model with rental rates, which I would think would be the primary way to measure the effects.
+
+     The authors find price increases with Walk Score.  But zip codes are not randomly drawn --- they were drawn for delivery of postal mail.  Nor is the centroid of them random.  The Walk Score varies on a small scale and they should be measuring it on that scale.  I don't think they take enough confounding variables into account.  Even with the ones they do, they find a negative coefficient for both commute distance and distance to CBD.  I don't trust these results at all.  
+  }
+}
+
