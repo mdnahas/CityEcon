@@ -1,5 +1,61 @@
 @Comment This is the annotated bibliography for Michael Nahas
 
+@book{Colburn2022,
+  author    = "Gregg Colburn and Clayton Page Aldern"
+  title     = "Homelessness is a Housing Problem",
+  publisher = "University of California Press",
+  address   = "Oakland, CA",
+  year      = 2022,
+  keywords={homelessness; housing price},
+  annote    = {
+    The authors felt that the press, public, and even policy makers had a mistaken view of the causes of homelessness.  They wanted to present simple plots of data showing that many commonly discussed "causes" are not the cause.  And that the price of housing was.
+
+     Page 13 and 14 have a great metaphor: musical chairs.  A person with a cast doesn't get a seat, but it isn't because he cannot get to a chair.  It is because there is 1 fewer chairs than people.  Such is homelessness --- we see a lot of individual factors (mental health, addiction, race, etc.) that affect who doesn't gets a home, but we need to look at citywide factors that cause a home shortage.
+
+     The data is strange.  They want to use the 35 largest cities by metro area.  (Why 35??)  They drop 6 because HUD's Continuity of Care (CoC) region covers "too large a geographic area".  The dropped cities are Houston, Riverside (CA), Denver, Orlando, Pittsburgh, and Kansas City (MO).  The rest are split into two groups, where the CoC matches the city (20 of them) or the county (10 of them).  Chicago appears in both groups.  They cover years 2007 to 2019, but admit that the PIT Count (their measure of homelessness) is iffy in some cities and especially in the early few years.
+
+     Over time, homelessness has dropped on average.  But the variance has increased.
+
+     They talk about the PIT Count ("homeless census").  Most homelessness is temporary, but some is long-term.  Because the PIT Count is a single day, it emphasizes the long-term.  If it was people over the year, the temporary ones would show up more.
+
+     Homeless are more likely to be: male, unmarried, low-income, old, non-white, and queer.  They are socially isolated: fewer family ties and far from family.  They are more likely to be depressed, mentally ill, abused drugs, abuse alcohol, have a conviction and been incarcerated.  70\% are individuals, usually male.  30\% are families, which tend to undergo temporary homelessness.
+
+    Cost per homeless is \$30,000 to \$100,000 for government services.
+
+
+    The book has good data on poverty, which is negatively correlated with homelessness.  Unemployment is negatively correlated with homelessness.  It is odd that they plot data points for every year and don't estimate fixed-effects for cities.  (E.g., does an increase in poverty cause an increase in homelessness?)
+
+    Mental illness and drug use are measured on a statewide-basis.  That seems to large a scale.
+
+    Race is negatively correlated with homelessness.   Black people are more likely to be homeless, but cities with more Black residents have a lower rate of homelessness!
+
+    Temperature is handled badly.  They use the average temperature for the month of January ... even though the PIT Count was on a specific day?  The county data shows no correlation of warmer winters with homelessness, but the city data does.  They fight that result by combining the data using "indexed homelessness" (described on pages 20 to 22) which is, let's say, not a well-known technique.  The annedotal evidence --- that cold NYC has more homeless than warm southern cities --- is much stronger than their data.
+
+    They admit that temperature is correlated with unsheltered homeless.  They explain that this may be because cold cities spend more on shelter than warmer cities, which may spend on outdoor services.
+
+    Generous social services is also done differently.  It measures the state's maximum TANF ("Welfare") benefit against family homelessness rate.  It uses families, because individuals rarely qualify for TANF.  This does not seem like a good measure.
+
+    The show that low-income migration is negatively correlated with homelessness.  They try to say this shows the cities with high homelessness are not "welfare magnets".  To me, that data means other things.
+
+    They handle political party annecdotally, citing that Chicago, Detroit, and Cleveland are highly Democratic cities with low homelessness.  The authors inveigh against harsh police treatment of the homeless and say there is no evidence that it does more than hide the problem.
+
+    They do a strange interlude to look at cost-burden-ness as a cause of homelessness.  They find when the median person spend more on housing, homelessness goes down in cities.  But not in counties.  And the result doesn't hold when looking at the "first-quartile housing cost burden".
+
+    What should be the finale is the comparison of median rent, vacancy, first-quartile rent, and "first-quartile vacancy" (vacancy in lowest 1/4 rent apartments).  Rent and vacancy are inversely correlated and both predict homelessness.  The strongest is median rent which has an R-squared of 55\% for cities and first-quartile rent which has an R-squared of 28\% for counties.  (For vacancy, they regress against log(vacancy), which is a strange choice since both homeless rate and vacancy are on a scale of 0 to 100\%.  They don't apply log to rent, where it would be more natural.  And they don't do log(vacancy) when showing it correlates with rent.  These are inconsistent strange choices.)
+
+    Page 134 says that they did a full model with fixed-city effects ... but don't show its results.  Not even in an appendix.  WTF.  
+
+    The rest of the book doesn't follow their thesis.  They see if growth is correlated with homelessness and find it isn't.  They mention a study shows that inequality is causal ... but say it isn't in their data (without any plots).
+
+   They eventually say that economics believe supply is limited by geography (oceans, mountains, etc.) and by regulation.  They then group cities by elasticity (a measure of supply limitations) and growth.  (So, now, they're saying growth \emph{does} matter.)  And the worst cities have high growth and low elasticity.  I expected the book to end here saying "we need to fix the regulation in high-growth cities".
+
+    But, no.  We get 38 pages of their vague plan to fix homelessness.  After a data-driven book focused on proving one point, it is huge jumble of opinion at the finish.  They dismiss filtering without a citation on page 134.  They put together a mushy argument against markets on pages 171 to 173.  They say private markets won't create houses for people with no income, but ignore the idea of giving money to those people.  After citing economists ealier, they say "housing must be de-commodified".  They mention that building houses has not come down in price like building iPhones, but don't mention that most cities ban manufactured homes on most land.  It goes on: public perception, funding, and more.  Way too much for a single chapter.  
+
+    The book's data is passable --- it is clear enough to make most of their thesis's points --- but I think it needs a much stronger analysis in an appendix.  The book never really addressed how to handle correlations in data samples from the same city in different years.   The writing began well but it totally flubbed the landing.  The last chapter should have been cut and become the basis for the author's next book.  But it did well enough to make its point and that's an accomplishment.
+  }
+}
+
+
 @book{Gray2022,
   author    = "M. Nolan Gray",
   title     = "Arbitrary Lines",
@@ -58,4 +114,140 @@
      The authors find price increases with Walk Score.  But zip codes are not randomly drawn --- they were drawn for delivery of postal mail.  Nor is the centroid of them random.  The Walk Score varies on a small scale and they should be measuring it on that scale.  I don't think they take enough confounding variables into account.  Even with the ones they do, they find a negative coefficient for both commute distance and distance to CBD.  I don't trust these results at all.  
   }
 }
+
+
+
+@Article{Harnish2016,
+  author = 	 {Veronica Harnish},
+  title = 	 {I’ve been homeless 3 times. The problem isn’t drugs or mental illness — it’s poverty.},
+  journal = 	 {Vox},
+  year = 	 {2016},
+  url = 	 {https://www.vox.com/2016/3/8/11173304/homeless-in-america},
+  annote = 	 {
+    A touching and enlightening article.  The author explains how she delt with poverty by occasionally living in her car.
+
+    It covers a lot of the practical issues of being homeless.  Low pay and expensive housing cause homelessness.  Landlords have requirements (deposit, proof of income, etc.) and discriminate against homeless (let alone incarcerated, etc.).  Roommates are problematic: propositions for sex, mental health, lack of privacy, etc..  When you live in your car, you need to find a place to park at night.  
+
+    The most important section is the first: "Homelessness is expensive".  It opened my eyes to how costs \emph{increase} as you go down the ladder.  Without a stove, you must buy pre-cooked food and cannot buy in bulk.  Without storage, you must buy a new winter coat each year.  Without a shower, you need to buy a gym membership to get clean.  With all those higher costs, trying to "climb up the ladder" is harder the lower you are.
+  }
+}
+
+     
+
+
+@TechReport{OFlaherty1992,
+  author    = "Brendan O'Flaherty",
+  title     = "Why Homelessness? Some Theory",
+  url       = "https://academiccommons.columbia.edu/doi/10.7916/D87W6KN0/download",
+  institution="Columbia University",
+  year      = 1992,
+  keywords  ={homelessness},
+  annote    = {
+    The author builds economic models to explain homelessness.
+
+    The basic model has 3 levels of housing: homeless, low quality, and high quality.  Agents have an income and a standard utility model, increasing in money and home quality.  The model demonstrates that poor people, in the right situtations, will choose homelessness.
+
+    The author extends this to a model with a continuum of quality ranges, from 0 to positive infinity.   And then adds construction of homes, maintenance, filtering, etc..  Models are similar to filtering models of Sweeney 1974 and Arnott 1987.
+
+    SKIMMED.
+
+    On page 49, the author looks at "compartive dynamics".  That is, how changes in income distribution, interest rates, and other factors affect the housing market.  I didn't read all the details.
+
+    Other aspects of housing are considered: rent collection costs, public housing, shelters, building codes, and tastes.
+
+    I think the model is more complicated than necessary to explain the homelessness dynamics.  There isn't any data connecting it to the real world.  Still, the author seems pretty happy with it.  
+  }
+}
+
+
+@TechReport{OFlaherty2018,
+  author    = "Brendan O'Flaherty",
+  title     = "Homelessness Research: A Guide for Economists (and Friends)",
+  url       = "https://econ.columbia.edu/working-paper/homelessness-research-a-guide-for-economists-and-friends/",
+  institution="Columbia University",
+  year      = 2018,
+  keywords  ={homelessness},
+  annote    = {
+    This paper research into homelessness by economists and practioners.
+
+    It has an interesting discussion of the strengths of studies that focus on individual vs. averages.  Practioners want individual studies, since it informs how they act.  But they don't provide information on solving homelessness.
+
+    It has some interesting insights on the "general equilibrium", by which the author means how everyone in the housing market reacts to a policy.  A shelter is more pleasant than sleeping rough, so more shelters means that fewer will sleep rough and, also, that some people will stay longer.  So, Housing First treats the homeless, but there aren't studies on what it does to the system.
+
+    One simple model has a rate $e$ at which the homed become homeless and a rate $x$ at whick the homeless become homed.  The steadystate homeless rate is $e/x$.  
+
+    Discusses treatments, where money seems to be best.  Mentions that rent is factor.   Some non-housing interventions help, but they're relatively expensive.
+
+    Journeys Home is a longitudinal study that covers Australians beyond homelessness.  It produced a lot of good data.  For men, trauma was seen on entering and exiting homelessness.  Women experienced trauma while homeless.  Violence might cause male homelessness, but not female.   Addiction, in general, was not a cause of homelessness.  Although heavy alcohol use (a binge)might be causal. 
+
+    An increase in EITC payments lead to fewer families doubling up.  But it didn't decrease homelessness.  The author asks "Why might this be?" and guesses either it has to do with averages or the near-homeless didn't apply for EITC.
+
+    Evictions often preceed homelessness.  Giving legal representation during evictions help prevent them.  But no one has studied if landlords change in response.
+
+    He casts a lot of doubt on HUD's Annual Homeless Assessment Report.  This includes the Point-in-Time Count ("homeless census", "PIT Count").
+
+    His own paper (2003) looked at shelter quality and the quality of living outside (rain, worse spots to camp) and computed an equilibrium for how many homeless would choose each.  It says how the number of beds affects numbers too --- meaning 100 more beds reduces the PIT Count by much fewer than 100!  Permanent supportive housing is very high quality housing and has a predictable effect.  
+
+    When prisoners are released, shelter numbers do not increase.  But that may be because recently released criminals scare people away?
+
+    If housing is given to those homeless longest, it might incentivize people to stay homeless longer to increase their odds of "winning a lottery".  
+
+   Corinth 2017 has formula for predicting homelessness.
+
+   NYC ran a service "Homebase" which prioritized treated people in their neighborhoods.  I'm not sure all the details, but it kept social connections.
+
+   Prevention is tricky.  Rolston et al. found 14.5\% of their control group entered shelters and 8.0\% of the treatment group.  Since only 6.5\% were affected, the program could be expensive for the effect.
+
+   People have private information on how likely they are to be homeless.  Still, practioners may find it hard to get honest answers when the treatment depends on the answer.  The Homebase program saw evidence with long walks to services.  The NYC housing program does it by requiring long stays at a shelter before getting housing support.
+
+   In NYC, homelessness increased from 2011 to 2017, but the housing market was mostly unchanged.  Vacancy in low-rent apartments fell by 1/3, but it was not significant.  Migration doesn't explain shifts in numbers, even in the NY/NJ area.   LA saw a similar rise in the city but not surrounding areas.
+
+   Under Mayor De Blasio, NYC raised \$-per-family-day from \$103 to \$171.  (NYC sometimes rents hotel rooms and that's close to the price of one.)
+
+   On page 62, does a "thought experiment" of how many Housing Choice Vouchers would be necessary to replace NYC's shelters and other programs.  He believes the money currently spent (\$1.8 billion) might be able to do it.
+   
+   Pg. 66 says LA's survey is different from NYC in major ways.  E.g., visual not interviews.  No transit.  Non-random.  Crappy in every way.   
+
+   LA spends far less on homeless services: 1/15th that of NYC!   That rose to about 1/3 in 2017.   "prevention in Los Angeles might also require \$30,000 to reduce the PIT Count by 1".  Wow.  He compares that to rent subsidies, which in NYC, cost \$40,000 to \$80,000 to reduce the PIT Count by 1. 
+
+   Economists have not studied the unsheltered homeless.  Is the difference between cities a matter of enforcement?
+
+   Veterans saw a big decrease in homelessness from 2010 to 2016.  But the age range for high homelessness (18 to 64) also fell sharply.  There was a large voucher program (HUD-VASH) but it may have had little effect.
+
+   Homeless families fell by 2/3s between 2010 and 2017.  It could be because NY state takes kids from homeless families and other states copied that.  There are other possibilities.
+
+   Black people are more likely to be homeless, but states with more Black residents tend to have fewer homeless.  Drug rates, alcohol abuse, and mental illness are the same rate in Blacks as in other groups.  The proportion of Black incarcerated is similar to those homeless.  The author says another candidate explanation is segregation: a shelter full of Black people may be offputting to White people.  (But wouldn't that push up the number of unsheltered White homeless?)
+
+    The conclusion says: "We don't know how to end homelessness."  "We can't explain why homelessness in the two biggest American cities exploded in this decade, or why it fell in the rest of the country."  "On an aggregate level, weather, labor market conditions, and housing prices affect homelessness, and maybe policies too, but modest changes in unemployment or rents cannot be expected to trigger huge changes in homelessness."  "...; for the most effective policies a handful ro two of people have to be treated to reduce aggregate homelessness by one."   "It's a good time for more economists to start working on homelessness."
+  }
+}
+
+
+@Article{Quigley2001,
+  @Comment RePEc:taf:eurjhp:v:1:y:2001:i:3:p:323-336,
+  author={John M. Quigley and Steven Raphael},
+  title={{The Economics Of Homelessness: The Evidence From North America}},
+  journal={European Journal of Housing Policy},
+  year=2001,
+  volume={1},
+  number={3},
+  pages={323-336},
+  month={},
+  keywords={homelessness},
+  doi={10.1080/14616710110091525},
+  abstract={It is generally believed that the increased incidence of homelessness in the US has arisen from broad societal factors - changes in the institutionalization of the mentally ill, increases in drug addiction and alcohol usage, etc. This paper reports on a comprehensive test of the alternate hypothesis that variations in homelessness arise from changed circumstances in the housing market and in the income distribution. We utilize essentially all the systematic information available on homelessness in US urban areas - census counts, shelter bed counts, records of transfer payments, and administrative agency estimates. We use these data to estimate the effects of housing prices, vacancies, and rentto-income ratios upon the incidence of homelessness. Our results suggest that simple economic principles governing the availability and pricing of housing and the growth in demand for the lowest quality housing explain a large portion of the variation in homelessness among US metropolitan housing markets. Furthermore, rather modest improvements in the affordability of rental housing or its availability can substantially reduce the incidence of homelessness in the US.},
+  url={https://urbanpolicy.berkeley.edu/pdf/QR_EJHP01PB.pdf},
+  annote    = {
+     I quickly skimmed this paper.
+
+     It tries to find the contributing factors to homelessness.
+
+     It first looks at the theory that the mentally ill were no longer in institutions.  It finds the prison population increased proportionally.  The remaining 34,000 were too few to account for the 100,000+ increase in homeless over the period.
+
+     They interpret O’Flaherty (1996) as saying income inequality can lead to a class of older housing where rent is too low to pay for the maintenance.  Thus, residents must choose between substandard housing or homelessness.  (Note to self: the oldest housing in Austin is near downtown.  Growth has caused the least-valuable buildings to be on very valuable land.  Has this wrecked filtering?)  
+
+     Did not finish.
+  }
+}
+
 

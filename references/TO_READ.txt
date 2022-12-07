@@ -1,0 +1,86 @@
+Market Urbanism's TO READ list:
+https://marketurbanism.com/2019/04/16/what-should-i-read-to-understand-zoning/
+
+
+Book: Land Use Without Zoning by Bernard H. Siegan.
+    - how land-use regulation works in zoning-free Houston
+
+Book: Urban Dynamics by Jay W. Forester
+    - 1969 text that models city based on inputs/outputs/population/capital
+
+TV: "Gentefied" on Netflix
+    - about gentrification of neighborhood
+    - (Also "Vida" on Starz)
+    
+
+Ian Mulheirn
+https://blogs.lse.ac.uk/politicsandpolicy/tackling-the-uk-housing-crisis/#comments
+    - high housing prices caused by low interest rates
+
+Ian Mulheirn
+https://housingevidence.ac.uk/wp-content/uploads/2019/08/20190820b-CaCHE-Housing-Supply-FINAL.pdf
+    - rent is right metric
+    - not rising as rapidly as prices
+    ! doesn't mention black market housing
+    - rent increases slightly in London, but prices go up dramatically.  Rest of country sees rents fall and prices remain steady.  (Except in Northeast, where both fall.)
+    - children stay at home longer   (? could this be part of the volume-discount effect?  More people = large house for cheaper price per-sqft.)
+    - says rent have fallen relative to median household income ... but that's not the right metric!
+    
+
+Christian A. L. Hilber & Andreas Mense
+https://cep.lse.ac.uk/pubs/download/dp1743.pdf
+    - demand shocks cause short-term increases in rent, supply shocks cause rises in price
+    - claims to be a response to Ian Mulheirn
+    
+Kate Pennington
+https://www.dropbox.com/s/oplls6utgf7z6ih/Pennington_JMP.pdf?dl=0
+    - prices of rent around buildings rebuilt after fires
+    - shows nearby had lower prices, fewer evictions, fewer households moving to poorer zipcodes
+
+Anthony Damiano & Chris Frenier
+https://www.tonydamiano.com/project/new-con/bbb-wp.pdf
+    - Minneapolis upto 2018
+    - new construction near high-cost housing lowered rents.
+    - new construction near low-cost housing increased rents (very slightly after adjusting for inflation).
+    - ? is this that rich people move into new construction and people want to live near rich people?  (and the new amenties that come to serve them.)
+    - ? Also, if land in the area is more expensive, do landlords pass that on to residents?
+    - ? Also, if the land value is increasing in the future, do landlords need to be paid _not_ to redevelop the property right now?
+    - doesn't mention filtering effects
+
+
+Op-Ed by man who wanted to die because he couldn't afford rent in Ontario
+https://www.independent.co.uk/voices/assisted-dying-maid-suicide-canada-homeless-b2233845.html
+
+
+https://www.buildzoom.com/blog/whats-up-with-construction-costs
+    - construction costs (labor + materials)
+    - Austin is still low in 2018.  Highest in SF, NYC, and ... Chicago.
+    - some cities do more renovation vs. new construction
+
+Jenny Schuetz
+https://www.brookings.edu/2022/11/21/are-new-housing-policy-reforms-working-we-need-better-research-to-find-out/
+    - are new housing policies in cities working?
+    - how to evaluate
+    - need for data
+    - just asks questions --- no answers
+    
+Great quote about parking from SimCity designers!
+https://youtu.be/rmXkL8iGk84?list=PLqHz6b_dGILy715SQTFDqNzEknS6_YAHi&t=284
+
+For value of land near transit:
+   Jonathan Levine, "Zoned Out: Regualtion, Markets and Choices in Transportation and Metropolitan Land Use" 2005
+
+
+Yan Song and Gerrit Knapp, “New Urbanism and Housing Values: A Disaggregate Assessment,”
+Journal of Urban Economics 54, no. 2 (2003); Yan Song and Gerrit Knapp, “Measur ing the Effects of
+Mixed Land Uses on Housing Values,” Regional Science and Urban Economics 34 (2004).
+   - used GIS to measure walkability and value in Portland.  Emily Hamilton says "they find that proximity to nonresidential amenities increases the value of single-family homes. They find that while multifamily housing and industrial uses may lower home values, service-oriented businesses and parks increase home values."
+
+
+Matthew Resseger "The Impact of Land Use Regulation on Racial Segregation: Evidence from Massachusetts Zoning Borders"
+https://scholar.harvard.edu/resseger/jmp
+   - finds that half of segregation is due to zoning, especially multi-family vs single-family zoning.
+
+Peter H. Rossi - Down and Out in America 1990
+
+O'Flaherty 2003 --- looks at shelter quality and how many homeless stay there

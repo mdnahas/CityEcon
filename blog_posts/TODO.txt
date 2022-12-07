@@ -1,0 +1,39 @@
+Topics to write about for blog:
+
+- maximum lot size, not minimum: during water shortages we control the maximum amount of bottled water that anyone can buy so that everyone gets some.  During a land shortage, we should have a maximum lot size.  Instead, we have a minimum which GUARANTEES unfair distribution of land and is CAUSING the shortage.   ("quantity control" is the economic keyword)
+- Evil Landlord theory (in reply to Jerusalem Demsas's article in The Atlanic: https://www.theatlantic.com/ideas/archive/2022/11/us-housing-supply-shortage-crisis-2022/672240/)
+- The cheapest way to live in America --- apartment near public transit, job, food available, kitchen (able to cook at home), storage (able to buy in bulk, able to keep winter clothes, etc.), ... and anything else is more expensive.
+- investors buying houses do matter --- they become a concentrated interest that can lobby to push up rents
+- homevoter idea is wrong.  Homeowners don't win.  The landlords do.  (Maybe retirees win?)
+- What metrics should a city use to measure its land-use and housing?
+- land use research needs good, open data
+- legalize manufactured homes
+- rents are the right way to measure the problem, not prices
+- floating-rate mortgages are the right interest rate.  Traditional mortgages are options, thanks to the ability to refinance.
+- MFI is shitty.  More than half of all households are "less than 80% MFI".
+- Is homeless due to log-normal incomes + volume discounts?   (Elasticity says we need to build much more housing to drop prices.)
+- Chicago's house price insurance program (for black people moving into the neighborhood)
+- We don't need laws for things that people won't do anyway   ... people don't want the ugliest house in the neighborhood.  Houston without zoning looks a lot like cities with it.
+- tenent legal representation is a great use of money
+- land trusts are very expensive (Arbitrary Lines supports land trusts)
+- summarize the results of hedonic regression in different cities
+- What is the effect of City of Austin's discount on taxes to people who live in their home?  Do the wealthy buy to optimize their taxes?
+- What is the effect of limiting the rate of assessed values?
+- A better mortgage: currently homeowners own their home, which is bet on their home and city.  But the city is a bad bet. (e.g., Detroit)  The mortgage should be long home and short city.  Investors will want to go long cities (with a premium?).  
+- Kevin Erdmann's Adjustable Principal mortgage.  Good to borrowers.  Awkward to lenders.  Can it be improved?  Also, how will it handle high inflation? 
+    https://www.mercatus.org/publications/financial-markets/suggested-mortgage-amortization-structure-fixed-amortization
+- my own results
+    - Austin land price regression
+    - 
+- book reviews
+    - Homelessness is a Housing Problem
+    - Arbitrary Lines
+    - Urban Economics
+- other topics:
+    - gentrification
+    - displacement
+    - inclusive zoning (can I clearly demonstrate that the conditions to incentivize developers is worse than the "benefits" it creates?)
+    - graph-theory with urban economics
+
+- congestion pricing
+

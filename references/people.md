@@ -1,11 +1,13 @@
 # People studying Cities
 
-## Gregg Colburn
+## Intellectuals
+
+### Gregg Colburn
 - [Asst. Professor in Real Estate at U. of Washington](https://re.be.uw.edu/people/gregg-colburn/)
 - PhD in Public Affairs at UMN, MBA, MSW
 - Wrote "Homeslessness is a Housing Problem" with data scientist Clayton Page Aldern
 
-## Jerusalem Demsas
+### Jerusalem Demsas
 - [Staff Writer, The Atlantic](https://www.theatlantic.com/author/jerusalem-demsas/)
 - Formerly: [Policy Reporter, Vox](https://www.vox.com/authors/jerusalem-demsas)
 - https://twitter.com/JerusalemDemsas
@@ -39,10 +41,27 @@
 - wrote paper with Eli Dourado on Walk Score where I don't trust the results.
 
 
+## Economists
+
+### Ed Glaeser
+- [Professor at Harvard](https://scholar.harvard.edu/glaeser/home)
+- supply of housing
+- land prices
+
+### Joseph Gyourko
+- [Professor at Wharton School](https://real-estate.wharton.upenn.edu/profile/gyourko/)
+- regulations' effect on housing
+
+### Brendan O’Flaherty
+- [Professor at Columbia](https://econ.columbia.edu/econpeople/brendan-oflaherty/)
+- Urban Economist
+- homelessness models
+
+### Al Saiz
+- [Professor at MIT](https://cre.mit.edu/people/albert-saiz/)
+- [Urban Economics Lab](http://urbaneconomics.mit.edu/home)
+
+
 ## To add:
-
-Jenny Schuetz Brookings Institute
-
-AURA
-Austin
-@AURAatx
+- Jenny Schuetz Brookings Institute
+- AURA, Austin, @AURAatx
