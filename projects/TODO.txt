@@ -1,0 +1,86 @@
+Ideas for projects:
+
+- GIS projects
+    - Add political boundaries (10 districts) to maps?
+    - compare TCAD to Zillow
+    - look for odd ball valuations in data
+    - Map of mobile homes?
+    - Connect addresses to ages of people in voting records ... determine how much the young pay more taxes in Austin!
+
+- Map of cannot-be-split lots
+    - Use GIS to generate map of most common zoning and lot size
+        - lots smaller than minimum lot size
+        - lots less than twice minimum lot size
+        - all other lots
+
+- Map of tax-shift to inner neighborhoods
+   - Map tax-paid increase from 2010 to 2020 (or so) by single-family lot
+
+- redo UT filtering study, but include distance to center of city!
+
+- generate 1D histogram of Austin
+    -try to show different types and average building size and drive time from city
+
+- histograms of lot size at each distance from the center of city
+    - show that smaller lots are demanded as you get closer, but city doesn't allow them.
+
+
+- If demand is constant (57% of consumption goes to housing and transportation) for all consumption levels and consumption is log-normal and there's a volume discount of X% for every doubling of housing size (land or interior space or both), what is the distribution of housing by income level?
+   -  Quick post showing rent is super-linear with average GDP?
+   - Use Gyourko & Glaeser's estimates of average and marginal cost-per-acre to figure out real-world valus?
+       - https://www.newyorkfed.org/medialibrary/media/research/epr/03v09n2/0306glae.pdf
+   - ACS data on housing consumption distribution + Zillow scrape of land+interiorspace volume discounts
+
+
+- Write up list of metrics for cities regarding housing
+    - must be able to be gathered at reasonable cost
+    - must be clearly "better higher" or "better lower"
+    - must be within reasonable control of city government and their policy
+
+- Blackmarket housing in Austin, TX
+   - collect interviews
+   -  Can I use census records to find where undocumented migrants live and/or where blackmarket housing is?
+
+- Show demand is constant (57%) for housing and transportation
+    - show that "cost burdened" households are actually riding public transportation
+        - Plot # of cost burdened households vs. # riding transit
+
+- Interview homeless based on economic decisions
+
+
+- Build 10-cent homeless simulator
+    - basically a game playable in 5 minutes on a cellphone, but underneath is a game theory game / finite state machine / markov model of how it is to live on the streets.
+    - score is summed happiness
+    - happiness comes from food, warmth, cleanliness, etc.  (? going to bathroom)
+    - trade-offs are time and money to generate happiness
+    - can stay in apartment, shelter, tent, etc.
+    - can have car, bike, winter clothes, rain clothes, etc.
+s
+    - can have family connection to help, but they may cut you off
+    - sleeping badly loses you hours
+    - various random incidents --- being robbed, sickness, car stops working, etc.  
+    - have N hours in day, need to travel to eat, travel to work, etc.
+    - addiction means drugs/alcohol give you happiness, but also affects future happiness.  Can have random chance of going on a mindless binge.
+    - depression loses you hours.  criminal record makes jobs harder to get.  disability slows walking.
+    - being a woman opens up prostitution as an option.  (Is this why few women are homeless?)  May also allow less-direct means of trading sex for shelter/food/etc..
+    - ! demonstrate that living in cheap apartment w/ public transit is cheaper and that living on the streets is more expensive
+    - !!! can program AI to play game.  Then can test interventions based on AI's increase in score!!!
+
+
+- build 1D simulation of a city
+    - javascript animation of households moving, buildings getting taller, etc..
+    - need equations for:
+        - how households decide where to live (and when they choose homelessness)
+	- how land-owners price land and split/join lots
+	- how someone decided how tall to build a building
+	- how landlord sets rates for each building
+    - start with walking as only transportation.  Later, add different transportation layers, car ownership, etc.
+    - start with 1 commercial building in center of city, where everyone works.  Expanding to add distributed commercial is difficult.
+    - Add zoning to see how height of buildings changes and how decisions are changed.
+    - Add competition by having 2 cities.  Then can look at how people move from zoned city to unzoned city.
+    
+    
+- Build an economic model with a fixed amount of housing that can be shared by agents.  Agents are endowed with an income, but also a cost to roommates, and, optionally, a cost to landlords.  (E.g., messy/smelly roommates, destructive renters)  Agents may double-up to afford housing, but some bad roommates will not.  Landlords will not offer housing to some.  
+
+
+
