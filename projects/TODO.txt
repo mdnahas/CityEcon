@@ -1,11 +1,11 @@
-Ideas for projects:
+# Ideas for projects
 
 - GIS projects
-    - Add political boundaries (10 districts) to maps?
     - compare TCAD to Zillow
     - look for odd ball valuations in data
     - Map of mobile homes?
     - Connect addresses to ages of people in voting records ... determine how much the young pay more taxes in Austin!
+    - Add political boundaries (10 districts) to maps?
 
 - Map of cannot-be-split lots
     - Use GIS to generate map of most common zoning and lot size

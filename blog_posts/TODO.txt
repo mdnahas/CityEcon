@@ -2,12 +2,14 @@ Topics to write about for blog:
 
 - maximum lot size, not minimum: during water shortages we control the maximum amount of bottled water that anyone can buy so that everyone gets some.  During a land shortage, we should have a maximum lot size.  Instead, we have a minimum which GUARANTEES unfair distribution of land and is CAUSING the shortage.   ("quantity control" is the economic keyword)
 - Evil Landlord theory (in reply to Jerusalem Demsas's article in The Atlanic: https://www.theatlantic.com/ideas/archive/2022/11/us-housing-supply-shortage-crisis-2022/672240/)
+- demand-side solutions to housing.  Supply-side is slow --- it requires construction.  Growth shocks and inequality shocks cause homelessness.  Demand-side solutions may be faster?
 - The cheapest way to live in America --- apartment near public transit, job, food available, kitchen (able to cook at home), storage (able to buy in bulk, able to keep winter clothes, etc.), ... and anything else is more expensive.
 - investors buying houses do matter --- they become a concentrated interest that can lobby to push up rents
 - homevoter idea is wrong.  Homeowners don't win.  The landlords do.  (Maybe retirees win?)
 - What metrics should a city use to measure its land-use and housing?
 - land use research needs good, open data
 - legalize manufactured homes
+- legalize SROs and Cubicle apartments.  (Beyonce built an SRO in Houston!)
 - rents are the right way to measure the problem, not prices
 - floating-rate mortgages are the right interest rate.  Traditional mortgages are options, thanks to the ability to refinance.
 - MFI is shitty.  More than half of all households are "less than 80% MFI".
