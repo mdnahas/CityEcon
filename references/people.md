@@ -21,9 +21,16 @@
 - His website spells out his philosophy, which I like: raising per-capita GDP.
 - wrote paper with Emily Hamilton on Walk Score where I don't trust the results.
 
+### Jeff Fong, author on Market Urbanism
+- author for [Market Urbanism](https://marketurbanism.com)
+- author for [Tech for Housing](https://techforhousing.org/)
+- employee of Lyft and Postmates
+- Writes on a variety of topics: tech, politics, taxes, etc..
+
 ### Salim Furth
 - [Senior Research Fellow, Mercatus Center](https://www.mercatus.org/scholars/salim-furth)
 - Ph.D. Economics, U of Rochester
+- author for [Market Urbanism](https://marketurbanism.com)
 - https://twitter.com/salimfurth
 
 ### M. Nolan Gray
@@ -37,10 +44,70 @@
 ### Emily Hamilton
 - [Senior Research Fellow, Mercatus Center](https://www.mercatus.org/scholars/emily-hamilton)
 - PhD in Economics, George Mason University.
+- author for [Market Urbanism](https://marketurbanism.com)
+- author for [Neighborhood Effects at Mercatus Center](http://neighborhoodeffects.mercatus.org)  
+- written for USA Today, Washington Post, and LA Times
+- advisor for [Up for Growth](
 - https://twitter.com/ebwhamilton
 - wrote paper with Eli Dourado on Walk Score where I don't trust the results.
 
+### Adam Hengels
+- founder of [Market Urbanism](https://marketurbanism.com)
+- co-founder of [Parafin](parafin3d.com), a startup for optimizing building parameters
+- personal website: https://adamhengels.com/
+- Masters in Real Estate Development from MIT, MS in Structural Engineering.
+- https://twitter.com/hengels
 
+### Sanford "Sandy" Ikeda
+- [Professor of Economics at SUNY Purchase](https://www.purchase.edu/live/profiles/624-sanford-ikeda)
+- [Advisor, Heartland Institute](https://heartland.org/about-us/who-we-are/sanford-ikeda/)
+- PhD from NYU
+- author for [Market Urbanism](https://marketurbanism.com)
+- author for [FEE](https://fee.org)
+- https://twitter.com/ikedasandy?lang=en
+- fan of Jane Jacobs, both social and economic theory
+
+### Michael Lewyn
+- [Professor at Touro Law Center](https://www.tourolaw.edu/AboutTouroLaw/bio/219)
+- Director of the Institute on Land Use and Sustainable Development
+- author for [Market Urbanism](https://marketurbanism.com)
+- JD from Penn
+- Ran to be Manhattan Borough President
+- https://twitter.com/mlewyn
+
+### Stephen Smith
+- author and tweeter for [Market Urbanism](https://marketurbanism.com)
+- written for Forbes, Reason, National Review, and The Atlantic
+- is a New Yorker
+- in 2015, [took a job with Progress Real Estate Partners](https://www.politico.com/states/new-york/city-hall/story/2015/04/real-estate-writer-finds-real-estate-job-h-t-twitter-021146)
+- @stephenjacobsmith@mastodon.social
+
+
+## Websites
+
+### CityLab
+- https://www.bloomberg.com/citylab
+- broad, global focus
+- https://twitter.com/CityLab
+
+### Market Urbanism
+- https://marketurbanism.com/
+- "classical liberal economics" and "urban way of life and its benefits to society"
+- https://twitter.com/marketurbanism
+
+### Planetizen.com
+- https://www.planetizen.com
+- planning and tech
+
+### Strong Towns
+- https://www.strongtowns.org/
+- seeks to replace post-war suburban growth "ponzi scheme" with financially strong and resilient cities.
+- founded by Charles Marohn
+- patron saint is "Nassim Taleb"; [view cities as complex anti-fragile systems, where failure is frequent](https://www.strongtowns.org/journal/2019/1/28/is-a-city-more-like-a-washing-machine-or-a-cat)
+- https://twitter.com/StrongTowns
+
+
+ 
 ## Economists
 
 ### Ed Glaeser
@@ -62,6 +129,29 @@
 - [Urban Economics Lab](http://urbaneconomics.mit.edu/home)
 
 
+## Activists
+
+## Organizations
+
+### AURA
+- [YIMBY group in Austin, Texas](https://aura-atx.org/)
+- https://twitter.com/AURAatx
+
+
 ## To add:
 - Jenny Schuetz Brookings Institute
-- AURA, Austin, @AURAatx
+- Nikolai Fedak, founded New York Yimby
+- Market Urbanism
+- Greater Greater Washington
+- Sonja Trauss
+- SFBarf
+- SF YIMBY Party
+- Scott Wiener, California politician
+- Laura Foot Clarke
+- YIMBY Action
+- Charles "Chuck" Marohn, founder and president of Strong Towns
+- Urban3, a company helping cities plan their economy (and be financially stable)
+- Mercatus Center
+- ? Manhattan Institute
+- ? Better Cities Project
+- Welcoming Neighbors Network
