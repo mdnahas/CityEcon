@@ -3,6 +3,8 @@
 .cmbx-12x-x-144{font-size:144%; font-weight: bold;}
 .cmr-12x-x-120{font-size:120%;}
 .cmti-12{ font-style: italic;}
+.cmmi-12{font-style: italic;}
+.cmsy-8{font-size:66%;}
 p{margin-top:0;margin-bottom:0}
 p.indent{text-indent:0;}
 p + p{margin-top:1em;}
