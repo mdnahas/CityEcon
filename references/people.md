@@ -7,6 +7,13 @@
 - PhD in Public Affairs at UMN, MBA, MSW
 - Wrote "Homeslessness is a Housing Problem" with data scientist Clayton Page Aldern
 
+### Joe Cortright
+- works as economist, but degree was in public policy from Berkeley
+- Founder of and Author on [City Observatory](https://cityobservatory.org/)
+- worked for Brookings Institution
+- was Executive Officer of the Oregon Legislature’s Trade and Economic Development Committee
+- is Chair of the Oregon Governor’s Council of Economic Advisers
+
 ### Jerusalem Demsas
 - [Staff Writer, The Atlantic](https://www.theatlantic.com/author/jerusalem-demsas/)
 - Formerly: [Policy Reporter, Vox](https://www.vox.com/authors/jerusalem-demsas)
@@ -33,6 +40,11 @@
 - author for [Market Urbanism](https://marketurbanism.com)
 - https://twitter.com/salimfurth
 
+### Charlie Gardner
+- [Research Fellow, Mercatus Center](https://www.mercatus.org/people/charles-gardner)
+- Lawyer, local elected official
+- author of [Old Urbanist blog](https://oldurbanist.blogspot.com/)
+
 ### M. Nolan Gray
 - Research Director, [CAYIMBY](https://cayimby.org)
 - [Associated with Mercatus Center](https://www.mercatus.org/people/m-nolan-gray)
@@ -40,6 +52,12 @@
 - was NYC planner
 - https://twitter.com/mnolangray
 - Book "Arbitrary Lines" argues that zoning is not necessary at all.
+
+### Daniel Kay Hertz
+- was Author for City Observatory
+- is at Chicago Department of Housing
+- https://danielkayhertz.com/
+- https://twitter.com/danielkayhertz
 
 ### Emily Hamilton
 - [Senior Research Fellow, Mercatus Center](https://www.mercatus.org/scholars/emily-hamilton)
@@ -90,6 +108,13 @@
 - broad, global focus
 - https://twitter.com/CityLab
 
+### City Observatory
+- https://cityobservatory.org/
+- commentary on cities by economicly-minded Joe Cortright, also a think-tank?
+- https://twitter.com/cityobs
+- https://urbanists.social/@cityobs
+
+
 ### Market Urbanism
 - https://marketurbanism.com/
 - "classical liberal economics" and "urban way of life and its benefits to society"
@@ -129,6 +154,11 @@
 - [Urban Economics Lab](http://urbaneconomics.mit.edu/home)
 
 
+### Hans Koster
+- Professor at Vrije Universiteit Amsterdam
+- [Blog](https://www.urbaneconomics.nl/blogs/)
+
+
 ## Activists
 
 ## Organizations
@@ -137,6 +167,13 @@
 - [YIMBY group in Austin, Texas](https://aura-atx.org/)
 - https://twitter.com/AURAatx
 
+### Coalition for Smarter Growth
+- ["smart growth" group in Washington D.C.](https://smartergrowth.net)
+- https://twitter.com/betterdcregion
+
+### Greater Greater Washington
+- ["growing" "walkable urban"  Washington D.C.](https://ggwash.org)
+- https://twitter.com/ggwash/
 
 ## To add:
 - Jenny Schuetz Brookings Institute
