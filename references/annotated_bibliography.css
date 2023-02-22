@@ -4,6 +4,7 @@
 .cmr-12x-x-120{font-size:120%;}
 .cmti-12{ font-style: italic;}
 .cmmi-12{font-style: italic;}
+.cmmi-8{font-size:66%;font-style: italic;}
 .cmsy-8{font-size:66%;}
 p{margin-top:0;margin-bottom:0}
 p.indent{text-indent:0;}

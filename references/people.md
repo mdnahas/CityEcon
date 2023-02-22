@@ -17,16 +17,24 @@
 ### Jerusalem Demsas
 - [Staff Writer, The Atlantic](https://www.theatlantic.com/author/jerusalem-demsas/)
 - Formerly: [Policy Reporter, Vox](https://www.vox.com/authors/jerusalem-demsas)
-- https://twitter.com/JerusalemDemsas
+- [https://twitter.com/JerusalemDemsas](https://twitter.com/JerusalemDemsas)
 - Champion debater at William and Mary
 
 ### Eli Dourado
 - "economist and regulatory hacker"
 - Senior Researcher, [Center for Growth and Opportunity at Utah State University](https://www.thecgo.org/)
-- https://elidourado.com/
-- https://twitter.com/elidourado
+- [https://elidourado.com/](https://elidourado.com/)
+- [https://twitter.com/elidourado](https://twitter.com/elidourado)
 - His website spells out his philosophy, which I like: raising per-capita GDP.
 - wrote paper with Emily Hamilton on Walk Score where I don't trust the results.
+
+### Kevin Erdmann
+- [Senior Affiliated Scholar with Mercatus Center](https://www.mercatus.org/scholars/kevin-erdmann)
+- Masters in Finance
+- [Personal Blog on Substack](https://kevinerdmann.substack.com/)
+- [Older Personal Blog is IdiosyncraticWhisk](https://www.idiosyncraticwhisk.com)
+- [https://twitter.com/KAErdmann](https://twitter.com/KAErdmann)
+- book "Shut Out" claims there was no housing boom and bust before the Financial Crisis
 
 ### Jeff Fong, author on Market Urbanism
 - author for [Market Urbanism](https://marketurbanism.com)
@@ -38,7 +46,7 @@
 - [Senior Research Fellow, Mercatus Center](https://www.mercatus.org/scholars/salim-furth)
 - Ph.D. Economics, U of Rochester
 - author for [Market Urbanism](https://marketurbanism.com)
-- https://twitter.com/salimfurth
+- [https://twitter.com/salimfurth](https://twitter.com/salimfurth)
 
 ### Charlie Gardner
 - [Research Fellow, Mercatus Center](https://www.mercatus.org/people/charles-gardner)
@@ -50,14 +58,14 @@
 - [Associated with Mercatus Center](https://www.mercatus.org/people/m-nolan-gray)
 - PhD Student in Urban Planning at UCLA
 - was NYC planner
-- https://twitter.com/mnolangray
+- [https://twitter.com/mnolangray](https://twitter.com/mnolangray)
 - Book "Arbitrary Lines" argues that zoning is not necessary at all.
 
 ### Daniel Kay Hertz
 - was Author for City Observatory
 - is at Chicago Department of Housing
-- https://danielkayhertz.com/
-- https://twitter.com/danielkayhertz
+- [https://danielkayhertz.com/](https://danielkayhertz.com/)
+- [https://twitter.com/danielkayhertz](https://twitter.com/danielkayhertz)
 
 ### Emily Hamilton
 - [Senior Research Fellow, Mercatus Center](https://www.mercatus.org/scholars/emily-hamilton)
@@ -65,16 +73,16 @@
 - author for [Market Urbanism](https://marketurbanism.com)
 - author for [Neighborhood Effects at Mercatus Center](http://neighborhoodeffects.mercatus.org)  
 - written for USA Today, Washington Post, and LA Times
-- advisor for [Up for Growth](
-- https://twitter.com/ebwhamilton
+- advisor for [Up for Growth](https://upforgrowth.org/)
+- [https://twitter.com/ebwhamilton](https://twitter.com/ebwhamilton)
 - wrote paper with Eli Dourado on Walk Score where I don't trust the results.
 
 ### Adam Hengels
 - founder of [Market Urbanism](https://marketurbanism.com)
 - co-founder of [Parafin](parafin3d.com), a startup for optimizing building parameters
-- personal website: https://adamhengels.com/
+- personal website: [https://adamhengels.com/](https://adamhengels.com/)
 - Masters in Real Estate Development from MIT, MS in Structural Engineering.
-- https://twitter.com/hengels
+- [https://twitter.com/hengels](https://twitter.com/hengels)
 
 ### Sanford "Sandy" Ikeda
 - [Professor of Economics at SUNY Purchase](https://www.purchase.edu/live/profiles/624-sanford-ikeda)
@@ -82,7 +90,7 @@
 - PhD from NYU
 - author for [Market Urbanism](https://marketurbanism.com)
 - author for [FEE](https://fee.org)
-- https://twitter.com/ikedasandy?lang=en
+- [https://twitter.com/ikedasandy?lang=en](https://twitter.com/ikedasandy?lang=en)
 - fan of Jane Jacobs, both social and economic theory
 
 ### Michael Lewyn
@@ -91,7 +99,7 @@
 - author for [Market Urbanism](https://marketurbanism.com)
 - JD from Penn
 - Ran to be Manhattan Borough President
-- https://twitter.com/mlewyn
+- [https://twitter.com/mlewyn](https://twitter.com/mlewyn)
 
 ### Stephen Smith
 - author and tweeter for [Market Urbanism](https://marketurbanism.com)
@@ -104,32 +112,32 @@
 ## Websites
 
 ### CityLab
-- https://www.bloomberg.com/citylab
+- [https://www.bloomberg.com/citylab](https://www.bloomberg.com/citylab)
 - broad, global focus
-- https://twitter.com/CityLab
+- [https://twitter.com/CityLab](https://twitter.com/CityLab)
 
 ### City Observatory
-- https://cityobservatory.org/
+- [https://cityobservatory.org/](https://cityobservatory.org/)
 - commentary on cities by economicly-minded Joe Cortright, also a think-tank?
-- https://twitter.com/cityobs
-- https://urbanists.social/@cityobs
+- [https://twitter.com/cityobs](https://twitter.com/cityobs)
+- [https://urbanists.social/@cityobs](https://urbanists.social/@cityobs)
 
 
 ### Market Urbanism
-- https://marketurbanism.com/
+- [https://marketurbanism.com/](https://marketurbanism.com/)
 - "classical liberal economics" and "urban way of life and its benefits to society"
-- https://twitter.com/marketurbanism
+- [https://twitter.com/marketurbanism](https://twitter.com/marketurbanism)
 
 ### Planetizen.com
-- https://www.planetizen.com
+- [https://www.planetizen.com](https://www.planetizen.com)
 - planning and tech
 
 ### Strong Towns
-- https://www.strongtowns.org/
+- [https://www.strongtowns.org/](https://www.strongtowns.org/)
 - seeks to replace post-war suburban growth "ponzi scheme" with financially strong and resilient cities.
 - founded by Charles Marohn
 - patron saint is "Nassim Taleb"; [view cities as complex anti-fragile systems, where failure is frequent](https://www.strongtowns.org/journal/2019/1/28/is-a-city-more-like-a-washing-machine-or-a-cat)
-- https://twitter.com/StrongTowns
+- [https://twitter.com/StrongTowns](https://twitter.com/StrongTowns)
 
 
  
@@ -165,15 +173,15 @@
 
 ### AURA
 - [YIMBY group in Austin, Texas](https://aura-atx.org/)
-- https://twitter.com/AURAatx
+- [https://twitter.com/AURAatx](https://twitter.com/AURAatx)
 
 ### Coalition for Smarter Growth
 - ["smart growth" group in Washington D.C.](https://smartergrowth.net)
-- https://twitter.com/betterdcregion
+- [https://twitter.com/betterdcregion](https://twitter.com/betterdcregion)
 
 ### Greater Greater Washington
 - ["growing" "walkable urban"  Washington D.C.](https://ggwash.org)
-- https://twitter.com/ggwash/
+- [https://twitter.com/ggwash/](https://twitter.com/ggwash/)
 
 ## To add:
 - Jenny Schuetz Brookings Institute

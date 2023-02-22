@@ -26,6 +26,7 @@
 - **multi-modal transportation**: a cumbersome phrase for something in addition to (or besides) cars: walking, biking, scooters, etc..
 - **multiplex**: NOT a movie theater, but housing for more than one family.  Duplex, triplex, four-plex, etc..
 - **nonconforming use**: when property is being used for something other than what it is zoned for.  E.g., someone running a business out of their home, which is in a residential zone.  See "variance" and "waiver".
+- **open space zoning**: a pattern of very low-density zoning.  It has large lots and areas of undeveloped land devoted to "conservation".  See [this document](https://j6p3d5c7.stackpathcdn.com/wp-content/uploads/2012/08/590.pdf)
 - **PIT Count**, see "Point-in-Time Count"
 - **Point-in-Time Count**: an annual census of the homeless done by HUD each January
 - **public realm**: the shared part of cities, such as roads, sidewalks, parks, plazas, waterfronts, etc..

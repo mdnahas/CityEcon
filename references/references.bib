@@ -11,7 +11,7 @@
   pages = {454-466},
   abstract = {We estimate the first cross-sectional index of transaction-based land values for every U.S. metropolitan area. The index accounts for geographic selection and incorporates novel shrinkage methods using a prior belief based on urban economic theory. Land values at the city center increase with city size, as do land-value gradients; both are highly variable across cities. Urban land values are estimated at more than two times GDP in 2006. These estimates are higher and less volatile than estimates from residual (total - structure) methods. Five urban agglomerations account for 48\% of all urban land value in the United States.},
   url = {https://www.aeaweb.org/conference/2018/preliminary/paper/bDtiis2a},
-  keywords = {land value},
+  keywords={land prices, hedonic regression},
   annote = {
     Estimated the value of land under American cities using 68,756 land transactions.  The paper gets pretty mathy at points and I didn't understand what they were doing.  But, at its core, it is a hedonic regression.  It has choices that I wouldn't make.  They do cross-validate their results.  I wish they reported error bounds on their numbers --- the price-per-acre in the center of the city is exponentially higher than average, so errors are magnified dramatically.  They don't look at the time series, to see if a change in any factor (like center-city prices) indicates a future change (like residential prices).  
 
@@ -45,6 +45,20 @@
   }
 }
 
+
+@TechReport{Bergeson2018,
+  author    = "Adam Bergeson",
+  title     = "Hedging the Housing Crisis",
+  url = "https://www.strongtowns.org/journal/2018/5/17/hedging-the-housing-crisis",
+  institution="Strong Towns",
+  year      = 2018,
+  keywords={hedging},
+  annote    = {
+    The author suggests metro-area GDP-linked bonds.  He calls them "GDI" or Gross Domestic Income bonds.  The author claims that renters would want to buy these, since they hedge the cost of housing.  Likewise, homeowners would want to sell them, to hedge their ownership.  
+  }
+}
+
+
 @Article{Bryne2021,
   author = 	 {Thomas H. Byrne and Benjamin F. Henwood and Anthony W. Orlando},
   title = 	 {A Rising Tide Drowns Unstable Boats: How Inequality Creates Homelessness},
@@ -53,12 +67,67 @@
   url = 	 {https://journals.sagepub.com/doi/full/10.1177/0002716220981864},
   volume={693},
   number={1},
-  keywords={homelessness},
   doi={10.1177/0002716220981864},
+  keywords={homelessness},
   annote = 	 {
       Have not read.
 
       Brendan O'Flaherty mentioned it as a paper that studied homelessness and inequality.
+  }
+}
+
+@comment RePEc:ysm:somwrk:ysm372
+@TechReport{Caplin2003,
+  author={Andrew Caplin and William Goetzmann and Eric Hangen and Barry Nalebuff and Elisabeth Prentice and John Rodkin and Matthew Spiegel and Tom Skinner},
+  title={{Home Equity Insurance: A Pilot Project}},
+  year=2003,
+  month=May,
+  institution={Yale School of Management},
+  type={Yale School of Management Working Papers},
+  url={https://ideas.repec.org/p/ysm/somwrk/ysm372.html},
+  number={ysm372},
+  abstract={Home equity is the single largest component of household wealth for the majority of American households. Yet, there is virtually no way for the average family to insure itself against drops in home value and the ensuing destructive financial loss. Much of U.S. housing policy has focused on helping them against the risk that home ownership entails. In this paper, we document the development and implementation of a home equity insurance program launched in 2002 in Syracuse, New York. The range of issues arising from the practical implementation of a home equity insurance program, as well as the institutional challenges offer useful data for further extensions of the program. Highlights of the outcome, to date, of the pilot program include the finding that implementation of the program was feasible on the local level, that customers understand and wanted to take part, and that clean data on housing transactions is a vital component of the future success and expansion of the project.},
+  doi={},
+  keywords={home price insurance},
+  annote = {
+    I skimmed part of this paper.
+
+\par
+    It covers the design decisions for a house-price insurance plan for Syracuse, NY.  Syracuse's economy had shrunk and home prices were falling.  No one wanted to buy a house there, because they feared they were bad investments.
+
+\par
+    I read it's history section (\#3).
+
+\par
+    Home equity insurance was legalized in California in 1935, but then made a felony in 1939.  No explanation is known.
+
+\par
+    Oak Park in Illinois, a women's group wanted to integrate the neighborhood.  They feared "white flight" and dropping home values if Black families moved in.  They created an insurance scheme  For a one-time fee of \$175, homes were covered for 80\% of losses \emph{after} 5 years.  The program was paid for by a tax on all homeowners in the neighborhood.
+
+\par
+    99 houses bought insurance in the first 4 months.  This number rose to 1500.  But it had fallen to around 150 by the year 2000.  Insurance was not popular because it insured only the neighborhood, not movement in city or nation-wide home prices.  Also, doing a proper sale to claim the payout was onerous.  
+
+\par
+    At the time, insurance inspired confidence that a "bank run" like exit would not happen.  Later, it inspired fear, because its existance implied that insurance was needed!  The program was ended.  
+
+\par
+    The Illinois state government in 1988 allowed new taxing districts to be created for insurance purposes.  
+
+\par
+    The author did not want to copy the Oak Park scheme for Syracuse.  It didn't cover Syracuse's regional downturn.  If that was changed, since it was backed by taxes, the higher taxes could precipitate an exodus and financial collapse of the city and housing market.   
+
+\par
+    I didn't read all the details, but they proposed insurance based on an index of the Syracuse area housing.  The insured could redeem it when they sold their property.  They evaluate it on historic data.
+
+\par
+   They look at the legal aspects.  It is not insurance (in NY state law).  If it is a mortgage, it is illegal, because it changes the value of the property!  Regulators worked to make it something new.
+
+\par
+   An interesting feature is putting the mortgage lender first in line to receive payment.  This makes it more like mortgage insurance.  It encourages more loans.
+
+\par
+   It went on sale in 2002.    
+
   }
 }
 
@@ -103,6 +172,7 @@
   pages = {54-70},
   abstract = {To explain the large differences in labor productivity across U.S. states, the authors estimate two models--one based on local geographical externalities and the other on the diversity of local intermediate services--where spatial density results in aggregate increasing returns. Both models lead to a relation between county employment density and productivity at the state level. Using data on gross state output, the authors find that a doubling of employment density increases average labor productivity by around 6 percent. More than half of the variance of output per worker across states can be explained by differences in the density of economic activity. Copyright 1996 by American Economic Association.},
   url = {https://web.stanford.edu/~rehall/Productivity-AER-March-1996.pdf},
+  keywords={agglomeration},
   annote = {
     Skimmed this paper.
 
@@ -205,6 +275,224 @@
 }
 
 
+@TechReport{Erdmann2014,
+  author    = "Kevin Erdmann",
+  title     = "Housing policy - please do the opposite",
+  url = "https://www.idiosyncraticwhisk.com/2014/12/housing-policy-please-do-opposite.html",
+  institution="Idiosyncratic Whisk (blog)",
+  year      = 2014,
+  keywords={home prices, mortgage tax deduction},
+  annote    = {
+    This was difficult to read.  I had it recommended to me, so I read it.  But I ended up putting a copy into an editor and massaging it until I got its arguments.
+
+\par
+    This blog post's big point is that we've split the housing market in two: one for landlords and another for owner-occupied housing.  The owner-occupiers get tax benefits, mortgage deduction benefits, etc. and pay less per-year for their house.  That's an economic rent.  To exclude people from gaining it, there's a bidding contest and the creditworthy and wealthy win it.
+
+\par
+    The author packed a lot of other points into the blog post.  One is that a property is a risky asset.  In a well-run market, that risk should be diversified by combining it with other risky assets.  Under Market Portfolio Theory, only the (entire) market risk has a risk-adjusted excess profit.   But we've structured the housing market so that houses are not diversified.  Thus, homeownership comes with a risk premium.  This adds to the benefits of homeownership.   (If you're wealthy enough to survive the risk!)
+
+\par
+   Politicians say they want everyone to be middle class and owning a home is part of that.  But benefits of owning a home come from the economic rents, so they cannot be available to everyone.
+
+\par
+   The author says that the economic rents are reserved for the creditworthy.  In the lead up to the Financial Crisis, credit was extended to a lot more people.  This expanded the number of owner-occupiers bidding on houses and prices rose.  When credit was withdrawn, it was left to landlords to bid on houses.  Given their higher per-year costs, they couldn't bid as high for the houses.  Thus, the crash.  (This paragraph has been what I believe the author meant; it wasn't perfectly clear.)
+ 
+\par
+   This blog posts contains some interesting ideas.  I wish it stated them clearer.     
+  }
+}
+
+
+@TechReport{Erdmann2019,
+  author    = "Kevin Erdmann",
+  title     = "What Are Landlords Good For?",
+  url = "https://www.mercatus.org/economic-insights/expert-commentary/what-are-landlords-good",
+  institution="Mercatus Center",
+  year      = 2019,
+  keywords={landlord-renter},
+  annote    = {
+    The author enumerates some of the benefits provided by landlords: lower transactional costs (vs. buying and selling house), loan of capital, and diversification.  
+  }
+}
+
+
+@TechReport{Erdmann2019b,
+  author    = "Kevin Erdmann",
+  title     = "Homeowners Make the Best Landlords",
+  url = "https://www.mercatus.org/economic-insights/expert-commentary/homeowners-make-best-landlords",
+  institution="Mercatus Center",
+  year      = 2019,
+  keywords={landlord-renter, principal-agent},
+  annote    = {
+    The author talks about the agency costs of renting housing.
+
+\par
+    If the law gives more rights to the tenant, the landlord raises rent to pay for the costs and risks.
+
+\par
+    For low-income housing, renters are more credit constrained and less able to be owners.  They are also higher risk.  Yields earned by landlords are especially high.
+
+\par
+    The author makes a very interesting comment that ursary rates should be determined, not as fixed value, but relative to the rental payment.  This would allow ownership anywhere the mortgage payment (even at a high interest rate) was less than rent.  That would open up ownership to more people.
+
+\par
+    The author doesn't say much about customization of the property.  Nor further investment in the property.  
+  }
+}
+
+
+@article{Fischel2001,
+  author = {William A. Fischel},
+  title = {Why Are There NIMBYs?},
+  year = {2001},
+  abstract = {An owner-occupied home is an unusual asset because it cannot be diversified among locations and because it is the only sizable asset that most owners possess. Among the uninsured risks of homeownership is devaluation by nearby changes in land use. Opponents of land-use change are called NIMBYs ("Not In My Back Yard"). This article submits that NIMBYism is a rational response to the uninsured risks of home-ownership. It explores the possibilities and drawbacks of providing an insurance market to cover such risks. It concludes that some progress is being made towards developing such markets.},
+  journal = {Land Economics},
+  volume = {77},
+  number = {1},
+  pages = {144--152},
+  publisher = {[Board of Regents of the University of Wisconsin System, University of Wisconsin Press]},
+  url = {https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=466bcf58b74d714670ef1fabf77e2cb5a6885b89},
+  keywords={NIMBY motivations},
+  annote = {
+    This paper explores the motivations of NIMBY's, who oppose new construction in their neighborhood.  He says, "It's the variance, dummy!".  Homeowners have sunk all their money into a single risky asset and they fear its crash.  When evaluating any change to a neighborhood, they look at the potential downside.
+
+\par
+    He points out that you rarely find NIMBYs among either apartment owners or apartment dwellers.  Occasionally, you find business owners, but they are usually trying to prevent competition.  He believe apartment owners face the same effects as homeowners, but are more diversified.
+
+\par
+    He says that new homeowners are just as NIMBY as old ones.
+
+\par
+    He says homeowners are astute judges of their house's value.  Prices include costs such as property taxes, health hazards, congestion, school quality, crime rates, and air pollution.  They also price-in events in the future, like potential industrial construction nearby.  
+
+\par
+    He discusses house-price insurance, but says it is hard to write the contract that a homeowner wants and an insurer will accept.  It is hard to price the effects on a particular house or neighborhood.  If a homeowner signs, they might not maintain the house, in order to get a larger payout.  Also, there is a risk of an insurer going bankrupt, since the one-sided risk is so large.
+
+\par
+    He mentions that house-price insurance is not a panacea.  If homeowners are insured against losses, they don't do what's best for the neighborhood!  We need \emph{some} NIMBYism.  So, he doesn't advocate becoming a renter-majority society.
+
+\par
+He says, "it is worth wrestling with the problems of homeowner insurance contracts as a solution to the NIMBY problem".  He says other solutions are possible.  One is Caplin et al. 1991, where homeowners enter partnerships.  Another is Case-Shiller home-value insurance using a city-wide index.  Any diversification helps.  "It may be that the NIMBY problem will fade as a result of more efficient financial markets rather than political reforms.".
+  }
+}
+
+
+
+@comment RePEc:sae:urbstu:v:41:y:2004:i:2:p:317-340,
+@ARTICLE{Fischel2004,
+  title = {An Economic History of Zoning and a Cure for its Exclusionary Effects},
+  author = {Fischel, William},
+  year = {2004},
+  journal = {Urban Studies},
+  volume = {41},
+  number = {2},
+  pages = {317-340},
+  abstract = {The paper outlines the 20th-century history of American zoning to explain how home-owners came to dominate its content and administration in most jurisdictions. Zoning's original purpose was to protect home-owners in residential areas from devaluation by industrial and apartment uses that had been made footloose by trucks and buses around 1910-20. Completion of the interstate highway system around 1970 made jobs and employees so mobile that suburbs adopted growth controls to stem the tide. If zoning is indeed a substitute for home-value insurance, it seems worthwhile to investigate the possibility of home-equity insurance to reduce the demand for exclusionary zoning.},
+  url = {https://EconPapers.repec.org/RePEc:sae:urbstu:v:41:y:2004:i:2:p:317-340},
+  keywords={zoning history, home price insurance, zoning, transportation},
+  annote = {
+    The paper claims that zoning took off in the 1910's because of large gas-powered vehicles.  The bus and truck allowed apartments and industry to operate on land in the suburbs.  Previously, hauling goods was expensive and most people moved by train (street car).
+
+\par
+    With the large vehicle's ability to go on any road, it was necessary by law to protect the neighborhoods.  Developers used convenants for a time, but didn't protect the edge of the neighborhood.  Then they pushed for legislation.  
+
+\par
+    The author says that other excuses for zoning were present at other times.  But zoning took off all over the USA in the 1910s.  It was enacted to preserve home prices in an era of technological change.  
+
+\par
+    The author blames zoning for the fragmentation of American metropolitan areas into many cities.  Previously, if there were two separate cities, the urban downtown of the larger could expand into the smaller one.  The smaller town would merge with the larger, to get its services as business developed.  But, with the new legal power, smaller cities could remain suburbs and stop incursions from commercial and industrial users.
+
+\par
+    Regional government entities were proposed, but killed.  Local control stayed.
+
+\par
+    A great quote: "That the detached, owner-occupied home is at the top of the zoning pyramid is evident in nearly all zoning laws.  ... The primacy of homeownership remains so widespread that we hardly think of it as something requiring explanation. Yet there is no theoretical reason why other uses of land should be regarded as less
+important. Apartment dwellers are as much citizens as home dwellers; owning has long
+commanded no special municipal privilege."  (pg. 17)
+
+\par
+    He says that homeowners invest in a single large un-diversifiable asset and form political entities to protect its value.
+
+\par
+    The author says that people only started to notice zoning's affect on housing prices around 1970.  He's not sure why it showed up then.  One theory is that "industrial parks" showed up and suburbs got some jobs.  This drew poor and Blacks (freed by civil rights lawsuits) to move nearby.  Suburbs forced high land prices to keep them out.   The author believes that exclusion is far more income-based than racial.
+
+\par
+    To validate the new exclusion, suburbs used environmental and "growth management" language.  The rules advocated for larger lots and open space zoning.  (Open space zoning used large lots and banned development in large areas under the term "conservation".)
+
+\par
+    Also in the 1970s era, Regional government entities were set up.  This was called "The Quiet Revolution" by Bosselman and Callies (1971).  The regional entities used "double veto": things could be vetoed at either the local or regional level.
+
+\par
+    As for solutions, the author suggests taxing the imputed rent of owner-occupied houses.  This would lower home ownership.  Switzerland does this and has 30\% home ownership.  He admits that this is an "unlikely policy".
+
+\par
+    The other solution is home equity insurance.  The author cites many sources for a few programs on page 30.  He wants to insure the price of a \emph{neighborhood}, not the whole city.  He realizes there is moral hazard.  And it would be hard to calculate.  And hard to get off the ground.  
+    
+\par
+    My opinion is that the author does a great job of demonstrating that the invention of buses and truck contributed, and may have been the primary cause, of zoning being adopted nation-wide.  It seems like that zoning was to preserve home values.  But it changed later, as a means to fight growth.  I don't think the author finds the meat there.  I don't think taxing the imputed rent is politically viable, at any level of government.  I like the idea of insuring home values, but insurance is a one-sided option with a lot of down-side for the seller.  I don't think you could find investors with enough capital to insure every house in America's cities.  
+  }
+}
+
+
+
+@Article{Furth2021,
+  author = 	 {Salim Furth},
+  title = 	 {Decomposing Housing Unaffordability},
+  journal = 	 {Critical Housing Analysis},
+  year = 	 {2021},
+  url = 	 {https://www.housing-critical.com/viewfile.asp?file=2766},
+  keywords={rent burden},
+  annote = 	 {
+    A very good paper.  Simple, informative idea.  Clearly expressed.
+
+\par
+    The idea is that rent burden can be broken into pieces.  The rent burden for household $i$ is $rent_i/income_i$, but it is also the multiplication of four factors:  The "rent gap" is $rent_i$ divided by the median rent for a unit of that size.   The "excess size cost" is the median rent for a unit of the size divided by the median rent of households of that size.  The "demographic baseline" is the median rent of households of that size divided by the median income of households of that size.  And, lastly, the "income gap" is the median income of households of that size divided by that particular household's income.
+
+\par
+    Multiplying those 4 factors together gives you the rent burden.  Now, Furth looks at each factor.  He separates households where the rent burden is greater than 30\% and where it is less than and compares the values of the factors.
+
+\par
+    3 of the factors are roughly the same between the two groups.  The biggest difference is in the "income gap".  The poor are rent burdened.  
+
+\par
+    He does a more localized breakdown for New England.  In Southwest Connecticut and Massachusets Bay, the "rent gap" has a larger effect there, almost equal to the "income gap".
+
+\par
+    A very good paper.  My hypothesis is that families at all income levels spend about 57\% of their consumption on housing and transportation.  Thus, a higher rent burden is where transportation is cheap.  That is, public transit is common.  That the "rent gap" is largest in the densest parts of the state, seems to support that idea.
+  }
+}
+
+
+@TechReport{Gray2019,
+  author    = "M. Nolan Gray and Salim Furth",
+  title     = "Do Minimum-Lot-Size Regulations Limit Housing Supply in Texas?",
+  url = "https://drive.google.com/file/d/1XrA1Su0qsD97kks1JjwfiZoj0ezi4bgQ/view?usp=sharing",
+  institution="Mercatus Center",
+  year      = 2019,
+  abstract={
+  Minimum lot sizes regulate the density of housing in almost all American municipalities. Our findings suggest that even moderate lot size minimums in rapidly growing Texas suburbs constrain density. Market outcomes are consistent with strong demand for single-family detached housing units built on lots of 5,000 to 7,000 square feet, a lot size rarely allowed by local zoning laws. The four suburban cities we examine depart frequently from their written zoning codes in order to offer such lots, approving noncompliant subdivisions and making extensive use of customized regulation for planned unit developments. Scholars agree that large-lot zoning as practiced in exclusionary coastal jurisdictions is a binding constraint on density. We go further: even modest minimum lot sizes in automobile-oriented suburbs are less dense than Americans want.
+  },
+  keywords={minimum lot size},
+  annote    = {
+    This report looks at zoning regulation and the distribution of lot sizes in fast-growing suburban Texas cities: Round Rock (near Austin), Pfluggerville (near Austin), Frisco (near Dallas), and Pearland (near Houston).
+
+\par
+    The fascinating part of this paper is the graphs of the distribution of lot sizes.  You can see spikes near the minimum lot sizes.  
+
+\par
+    The Round Rock graph has wide distribution.  It makes me think that the distribution is actually a log-normal one.  It has a small spike and a number of lots smaller than the minimum lot size of 6,500 sqft.
+
+\par
+    The Pfluggerville distribution has huge spike at the minimum lot size of 9,000 sqft.
+
+\par
+    I love this paper, because it has data that isn't available elsewhere.  I really would have loved if they had plotted the lot sizes on a logrithmic axis and tried to fit a log-normal distribution to the tail above the minimum lot size.  If that is the natural distribution for demand, we can use it to measure the short fall (not enough supply) and the distortion (people who buy a larger lot than they want).  
+  }
+}
+
+
+
+
 @book{Gray2022,
   author    = "M. Nolan Gray",
   title     = "Arbitrary Lines",
@@ -284,6 +572,7 @@
   journal = 	 {Vox},
   year = 	 {2016},
   url = 	 {https://www.vox.com/2016/3/8/11173304/homeless-in-america},
+  keywords={homelessness, homeless experience},
   annote = 	 {
     A touching and enlightening article.  The author explains how she delt with poverty by occasionally living in her car.
 
@@ -317,7 +606,7 @@
   publisher = "The Modern Library",
   address   = "New York, NY",
   year      = 1961,
-  keywords  = {},
+  keywords  = {planning, safety},
   annote    = {
     This is the kindest, wholehearted, literate attack I've ever read.  It is dense with ideas and feelings and examples.
 
@@ -366,7 +655,7 @@
   publisher = "Random House",
   address   = "New York, NY",
   year      = 1969,
-  keywords={},
+  keywords={urban economics, economic growth},
   annote    = {
     This is a big-thought book about the economic development of humanity, like "Guns, Germs, and Steel", by Jane Jacobs.  She wrote "The Death and Life of Great American Cities" which is a classic book that upset the world of urban planning.  This book is facinating, dense with ideas backed by anecdotes from cities.  It tries to show that cities are vital to economics and a particular process in cities drives economic growth.  My major problem with it is that it doesn't use math.  While this book is fertile for ideas, its main argument should have use the precision and rigor of mathematics to prove its point.
 
@@ -385,6 +674,7 @@
 \par
     I will say that two of her strongest stories did not move me.  They were about the growth in Japan and Los Angeles after WWII.  Both were far away from where they imported goods from (USA, East Coast).  So, the standard economic motivations to move production locally make sense --- transportation costs were high (at that time).  It would be interesting to compare where expensive transportation drives local growth and where it does not.  In the 1600 to 1900's, colonies were far away but only some grew.  Jacob's view is that colonies were either focused on single-product mass production or the colonizers prevented locals from making imports locally.  
     
+\par
     She has distain for Adam Smith's view that specialization leads to more production.  Smith's classic example is the 10 specialists doing different jobs will make 4,800 pins per day per person, and 1 generalist struggles to make a handful.  Jacobs says "Division of labor is a device for achieving operating efficiency, nothing more." (pg. 82).  She considers the idea of creating the pin in the first place to be the important part.  Innovation eventually lead to a pin-making machine that put all the specialists out of business!  She does value the division of labor because a 10-step process has 10 (or even 45) places where innovation can occur, if allowed.  
 
 \par
@@ -399,12 +689,37 @@
 }
 
 
+@comment RePEc:oup:qjecon:v:134:y:2019:i:3:p:1225-1298.
+@Article{Jorda2019,
+  author={Òscar Jordà and Katharina Knoll and Dmitry Kuvshinov and Moritz Schularick and Alan M Taylor},
+  title={{The Rate of Return on Everything, 1870–2015}},
+  journal={The Quarterly Journal of Economics},
+  year=2019,
+  volume={134},
+  number={3},
+  pages={1225-1298},
+  month={},
+  doi={},
+  abstract={What is the aggregate real rate of return in the economy? Is it higher than the growth rate of the economy and, if so, by how much? Is there a tendency for returns to fall in the long run? Which particular assets have the highest long-run returns? We answer these questions on the basis of a new and comprehensive data set for all major asset classes, including housing. The annual data on total returns for equity, housing, bonds, and bills cover 16 advanced economies from 1870 to 2015, and our new evidence reveals many new findings and puzzles.},
+  url={https://economics.harvard.edu/files/economics/files/ms28533.pdf},
+  keywords={economic history, asset prices},
+  annote = {
+    An amazing paper that tries to fulfill its title's claim: the rate of return on everything.  It measures historical values of equities, bonds, and housing.
+
+\par
+    For housing, an interesting table is Table VIII on Page 39.  It breaks down the mean return and standard deviation for rent and capital gains.  The same is done for equity dividends and capital gains.  Housing has a better Sharpe ratio!  
+  }
+}
+
+
+
 @misc{Landes2022,
   author = {Craig Landes},
   title = {The Cost of Being Poor: Why It Costs So Much to Be Poor in America},
   howpublished = {\url{https://finmasters.com/cost-of-being-poor/}},
   year={2022},
   note = {},
+  keywords={homelessness, poverty, cost of living},
   annote={
      This blog post covers a topic that I intended to write about.  That being poor is expensive: buying pre-cooked food, not being able to store winter clothes, fewer transportation options, etc..  The author's writing is clunky, but they cover a lot of topics.
 
@@ -586,10 +901,10 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   number={2},
   pages={77-100},
   month={},
-  keywords={Homelessness; Homelessness prevention; Stochastic control theory},
   doi={10.1016/j.jhe.2012.04.006},
   abstract={Homelessness is part of the lives of many people. But almost no one is homeless for all or most of his or her life. The median shelter homeless spell is well under a month, and even “chronic homelessness” officially entails spells of a year or so. I model homelessness as part of people’s lives in a dynamic stochastic framework in continuous time. I can explain many empirical regularities with a parsimonious model: for instance, why the last addresses of homeless people are concentrated in a few low-rent neighborhoods, why homeless entries are hard to predict, why recidivism is common and past homelessness is a good predictor of future homelessness, why some groups recidivate more often than others, why the hazard rate for shelter exit is single-peaked, why effective homelessness prevention programs do not alter the average length of homeless spells. I also examine policy. The optimal homelessness prevention program is Pigouvian and starkly simple. With an optimal prevention program in place, optimal shelter quality maximizes a simple and intuitive expression, and insurance programs always raise social welfare. Most of the previous economics literature about homelessness has been static, but most literature about homelessness outside economics has been dynamic. This paper tries to bring the two strands of literature closer together.},
   url={https://ideas.repec.org/a/eee/jhouse/v21y2012i2p77-100.html},
+  keywords={Homelessness; Homelessness prevention; Stochastic control theory},
   annote    = {
     Skimmed.
 
@@ -703,10 +1018,10 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   number={3},
   pages={323-336},
   month={},
-  keywords={homelessness},
   doi={10.1080/14616710110091525},
   abstract={It is generally believed that the increased incidence of homelessness in the US has arisen from broad societal factors - changes in the institutionalization of the mentally ill, increases in drug addiction and alcohol usage, etc. This paper reports on a comprehensive test of the alternate hypothesis that variations in homelessness arise from changed circumstances in the housing market and in the income distribution. We utilize essentially all the systematic information available on homelessness in US urban areas - census counts, shelter bed counts, records of transfer payments, and administrative agency estimates. We use these data to estimate the effects of housing prices, vacancies, and rentto-income ratios upon the incidence of homelessness. Our results suggest that simple economic principles governing the availability and pricing of housing and the growth in demand for the lowest quality housing explain a large portion of the variation in homelessness among US metropolitan housing markets. Furthermore, rather modest improvements in the affordability of rental housing or its availability can substantially reduce the incidence of homelessness in the US.},
   url={https://urbanpolicy.berkeley.edu/pdf/QR_EJHP01PB.pdf},
+  keywords={homelessness, causes of homelessness},
   annote    = {
      I quickly skimmed this paper.
 
@@ -727,6 +1042,30 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   }
 }
 
+
+@comment RePEc:cwl:cwldpp:1036
+@TechReport{Shiller1992,
+  author={Robert J. Shiller},
+  title={{Measuring Asset Values for Cash Settlement in Derivative Markets: Hedonic Repeated Measures Indices and Perpetual Futures}},
+  year=1992,
+  month=Nov,
+  institution={Cowles Foundation for Research in Economics, Yale University},
+  type={Cowles Foundation Discussion Papers},
+  url={https://ideas.repec.org/p/cwl/cwldpp/1036.html},
+  number={1036},
+  abstract={Two proposals are made that may facilitate the creation of derivative market instruments, such as futures contracts, cash-settled based on economic indices. The first proposal concerns index number construction: indices based on infrequent measurements of nonstandardized items may control for quality change by using a hedonic repeated measures method, an index number construction method that follows individual assets or subjects through time and also takes account of measured quality variables. The second proposal is to establish markets for perpetual claims on cash flows matching indices of dividends or rents. Such markets may help us to measure the prices of the assets generating these dividends or rents even when the underlying asset prices are difficult or impossible to observe directly. A perpetual futures contract is proposed that would cash settle every day in terms of both the change in the futures price and the dividend or rent index for that day.},
+  doi={},
+  keywords={hedonic regression},
+  annote = {
+    This paper covers 2 techniques that might be useful in derivatives markets.
+
+    One section covers the math for combining hedonic regression with repeated-sales data.
+
+    The other section covers "perpetual futures".  This is a financial instrument that regularly pays the different between two indexes.  One is the index to measure; the other is a reference index, like the CPI or risk-free short-term interest rate.  The instrument lasts forever, making its price equal to the discounted future flows from the index.  
+  }
+}
+
+
 @comment AI techniques
 
 @article{Kube2019,
@@ -741,6 +1080,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   url={https://ojs.aaai.org/index.php/AAAI/article/view/3838},
   DOI={10.1609/aaai.v33i01.3301622},
   abstract={Modern statistical and machine learning methods are increasingly capable of modeling individual or personalized treatment effects. These predictions could be used to allocate different interventions across populations based on individual characteristics. In many domains, like social services, the availability of different possible interventions can be severely resource limited. This paper considers possible improvements to the allocation of such services in the context of homelessness service provision in a major metropolitan area. Using data from the homeless system, we use a counterfactual approach to show potential for substantial benefits in terms of reducing the number of families who experience repeat episodes of homelessness by choosing optimal allocations (based on predicted outcomes) to a fixed number of beds in different types of homelessness service facilities. Such changes in the allocation mechanism would not be without tradeoffs, however; a significant fraction of households are predicted to have a higher probability of re-entry in the optimal allocation than in the original one. We discuss the efficiency, equity and fairness issues that arise and consider potential implications for policy.&lt;/p&gt;},
+  keywords={homelessness, AI},
   annote={
     This paper uses AI to decide which homeless people to assign to which treatment, such as sending them to the homeless shelter or rapid rehousing.
 
@@ -761,6 +1101,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   howpublished = {\url{https://www.austintexas.gov/edims/document.cfm?id=218480}},
   year={2014},
   note = {},
+  keywords={microunits, Austin},
   annote={
     Applies to zoning districts MF-1 through MF-5, and MU combining districts.
     
@@ -778,6 +1119,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   howpublished = {\url{https://www.austintexas.gov/edims/document.cfm?id=214752}},
   year={2014},
   note = {},
+  keywords={microunits, Austin},
   annote={
     Slides on a proposed amendment to Austin's zoning to allow "units" of 200 sqft.  The minimum at the time was 400 sqft. 
 
@@ -792,6 +1134,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   howpublished = {\url{https://www.austincontrarian.com/files/03-18-14-memo-to-mc-re--micro-units-resolution-no-20140123-059.pdf}},
   year={2014},
   note = {},
+  keywords={microunits, Austin},
   annote={
     The Director of Austin's Planning and Development Review responded to City Council request to look at "micro units", which have less than 500 square feet of space.  It defines them and the restrictions in Austin's zoning and building code.
 
@@ -811,6 +1154,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   howpublished = {\url{https://austin.towers.net/east-austin-micro-unit-apartments-break-ground-at-sixth-and-chicon/}},
   year={2022},
   note = {},
+  keywords={microunits, Austin},
   annote={
     Building near Plaza Saltillo claims to have "micro-units".  Average unit size is 355 square feet.  However, the building has 34,364 sqft and, for 60 units, that means 572 sqft per unit.
 
@@ -836,7 +1180,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   volume={20},
   pages={89-102},
   url={https://digitalcommons.unomaha.edu/cgi/viewcontent.cgi?article=1006&context=pubadfacpub},
-  keywords={city governance},
+  keywords={city governance, public choice},
   annote={
     Focuses on William A. Niskanen's theory that bureaucrats maximize their agency's discretionary budget.  Presumes it can be measured by looking at City Managers who contract outside.  When going outside, the price is visible to their "polical sponsor".  So, if City Managers contract outside more than other top city officials, it validates the theory.  
 
