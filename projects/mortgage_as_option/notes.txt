@@ -1,0 +1,28 @@
+
+S&P/Case-Shiller U.S. National Home Price Index 
+CSUSHPINSA.csv
+https://fred.stlouisfed.org/series/CSUSHPINSA
+1987-01-01 to 2022-11-01
+monthly, on the 1st of month.
+432 lines
+
+30-Year Fixed Rate Mortgage Average in the United States
+MORTGAGE30US.csv
+https://fred.stlouisfed.org/series/MORTGAGE30US
+1971-04-02 to 2023-02-16
+weekly, on thursdays?
+2709 lines
+
+5/1-Year Adjustable Rate Mortgage Average in the United States (DISCONTINUED) 
+MORTGAGE5US.csv
+https://fred.stlouisfed.org/series/MORTGAGE5US
+2005-01-06 to 2022-11-10
+weekly, on thursdays?
+933 lines
+
+Median Sales Price of Houses Sold for the United States (MSPUS)
+MSPUS.csv
+https://fred.stlouisfed.org/series/MSPUS
+1963-01-01 to 2022-10-01
+quarterly, on 1st of day of quarter
+241 lines
