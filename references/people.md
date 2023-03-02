@@ -179,6 +179,11 @@
 - ["smart growth" group in Washington D.C.](https://smartergrowth.net)
 - [https://twitter.com/betterdcregion](https://twitter.com/betterdcregion)
 
+### New Urbanist Memes for Transit-Oriented Teens ("NUMTOT")
+- [https://www.facebook.com/groups/whatwouldjanejacobsdo/](https://www.facebook.com/groups/whatwouldjanejacobsdo/)
+- "We are not explicitly Leftbook, but we are certainly left-leaning. We won’t ban you for being a capitalist, but don't expect us to defend you either."
+- Admins are Emily Orenstein (she/her, Chicago, IL), Juliet Eldred (she/her, Washington, DC), and Jonathan Marty (he/him, New York, NY)
+
 ### Greater Greater Washington
 - ["growing" "walkable urban"  Washington D.C.](https://ggwash.org)
 - [https://twitter.com/ggwash/](https://twitter.com/ggwash/)
