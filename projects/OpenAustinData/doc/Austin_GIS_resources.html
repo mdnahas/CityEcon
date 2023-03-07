@@ -1,0 +1,47 @@
+<h1>Austin GIS Resources</h1>
+
+<h1>Software</h1>
+
+<ul>
+<li><a href="https://www.qgis.org">QGIS</a> is free software to view maps and manipulate GIS data.</li>
+</ul>
+
+<h1>Basic Data</h1>
+
+<ul>
+<li><a href="https://gis.traviscountytx.gov/server1/rest/services/Boundaries_and_Jurisdictions/TCAD_public/MapServer/0">Parcel shapefiles for Travis County</a>  This file holds the polygon boundary of each lot.  This is a HUGE file.  It takes hours to download.  You want to save it to your diskdrive and use the saved copy, rather than download it each time.
+<ul>
+<li>PROP<em>ID is the key field for identifying parcels</li>
+<li>Shape</em>_Area is the parcel's area in square feet.</li>
+</ul></li>
+</ul>
+
+<!-- I have it saved locally to:  file:///home/mike/Desktop/Home/projects/AURA/min_lot_size_calculation/TCAD_Parcels.gpkg -->
+
+<ul>
+<li><p>Basemap (background map) from OpenStreetMap: Install the "QuickMapServices" plugin.  In the toolbar, there will be a little globe with a "plus sign".  (The tooltip will say "QuickMapService".)  Click on that.  In the pop-up menu, select "OSM" and then "OSM Standard".</p></li>
+<li><p><a href="https://data.austintexas.gov/Locations-and-Maps/Zoning-Ordinance/xt8n-xrjg">Austin City Zoning Zones</a>  You will to click the "Export" button and select "GEOJSON".  </p></li>
+<li><p>Appraisal data from TCAD (Travis County Appraisal District).  You can download appraisal data from the "2022 Appraisal Roll Export" link on <a href="https://traviscad.org/publicinformation">this page</a>.  It contains data like the appraised value, size, state zoning code, number of structures, squarefootage, etc..  The data is fixed-width.  The fields are described in the "Appraisal Export Layout" file.</p></li>
+</ul>
+
+<h1>Other Data</h1>
+
+<ul>
+<li><p><a href="https://www.austintexas.gov/department/gis-data">City of Austin GIS Website</a>  No data.  Just links to stuff.  </p></li>
+<li><p><a href="https://data.austintexas.gov/browse?category=Locations+and+Maps&amp;sortBy=most_accessed&amp;utf8=%E2%9C%93">Austin's Open Data on Locations sorted by popularity</a>   Open data include zoning cases, construction permits, business permits, police stations, pools, City-owned trees, etc..  Some specific ones are below.</p></li>
+<li><p><a href="https://data.austintexas.gov/Locations-and-Maps/Zoning-by-Address/nbzi-qabm">Address to Austin Zoning</a></p>
+
+<ul>
+<li>BASE_ZONE field has stuff like "SF-3"</li>
+</ul></li>
+<li><p><a href="https://maps.austintexas.gov/GIS/CouncilDistrictMap/">Austin's City Council Districts</a></p></li>
+<li><p><a href="https://data.austintexas.gov/Building-and-Development/Subdivision-Cases/s7gx-9m54">Austin's subdivision cases</a></p></li>
+</ul>
+
+<!-- Need roads from TCAD, to find curb width -->
+
+<ul>
+<li><p><a href="https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer">Roads from USGS</a>  People use rivers and highways as reference points and you can download the highways here.  The largest highways are "controlled-access highways".  </p></li>
+<li><p><a href="https://data.austintexas.gov/Locations-and-Maps/Counties/u6wx-p5c8">Boundaries of Travis and Surrounding Counties</a> There is also a map of <a href="https://services.arcgis.com/KTcxiTD9dsQw4r7Z/ArcGIS/rest/services/Texas_County_Boundaries/FeatureServer/0">All of Texas County Boundaries</a></p></li>
+<li><p><a href="https://data.austintexas.gov/Locations-and-Maps/Lakes-and-Rivers/p2uq-mkbt">Travis County Lakes and Rivers</a></p></li>
+</ul>

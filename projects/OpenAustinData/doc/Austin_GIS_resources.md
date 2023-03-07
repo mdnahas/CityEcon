@@ -6,7 +6,7 @@
 
 # Basic Data
 
-- [Parcel shapefiles for Travis County](https://gis.traviscountytx.gov/server1/rest/services/Boundaries_and_Jurisdictions/TCAD_public/MapServer/0)  This is the outline of each lot.  This is a HUGE file.  It takes hours to download.  You want to save it to your diskdrive and use the saved copy, rather than download it each time.
+- [Parcel shapefiles for Travis County](https://gis.traviscountytx.gov/server1/rest/services/Boundaries_and_Jurisdictions/TCAD_public/MapServer/0)  This file holds the polygon boundary of each lot.  This is a HUGE file.  It takes hours to download.  You want to save it to your diskdrive and use the saved copy, rather than download it each time.
     - PROP_ID is the key field for identifying parcels
     - Shape__Area is the parcel's area in square feet.
 
@@ -14,7 +14,10 @@
 
 - Basemap (background map) from OpenStreetMap: Install the "QuickMapServices" plugin.  In the toolbar, there will be a little globe with a "plus sign".  (The tooltip will say "QuickMapService".)  Click on that.  In the pop-up menu, select "OSM" and then "OSM Standard".
 
-- [Austin City Zoning Zones](https://data.austintexas.gov/Locations-and-Maps/Zoning-Ordinance/xt8n-xrjg)  You will to click the "Export" button and select "GEOJSON".  
+- Austin City Zoning
+    - [ArcGIS Small Zones](https://www.arcgis.com/home/item.html?id=c7f778d52d6145e99c7e36e61cf6998f)
+    -  [Data AustinTexas dot Gov](https://data.austintexas.gov/Locations-and-Maps/Zoning-Ordinance/xt8n-xrjg)  You will to click the "Export" button and select "GEOJSON".
+
 
 - Appraisal data from TCAD (Travis County Appraisal District).  You can download appraisal data from the "2022 Appraisal Roll Export" link on [this page](https://traviscad.org/publicinformation).  It contains data like the appraised value, size, state zoning code, number of structures, squarefootage, etc..  The data is fixed-width.  The fields are described in the "Appraisal Export Layout" file.
 
@@ -23,7 +26,7 @@
 
 - [City of Austin GIS Website](https://www.austintexas.gov/department/gis-data)  No data.  Just links to stuff.  
 
-- [Austin's Open Data on Locations sorted by populariy](https://data.austintexas.gov/browse?category=Locations+and+Maps&sortBy=most_accessed&utf8=%E2%9C%93)   Open data include zoning cases, construction permits, business permits, police stations, pools, City-owned trees, etc..  Some specific ones are below.
+- [Austin's Open Data on Locations sorted by popularity](https://data.austintexas.gov/browse?category=Locations+and+Maps&sortBy=most_accessed&utf8=%E2%9C%93)   Open data include zoning cases, construction permits, business permits, police stations, pools, City-owned trees, etc..  Some specific ones are below.
 
 - [Address to Austin Zoning](https://data.austintexas.gov/Locations-and-Maps/Zoning-by-Address/nbzi-qabm)
     - BASE_ZONE field has stuff like "SF-3"
