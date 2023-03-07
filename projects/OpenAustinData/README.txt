@@ -7,6 +7,7 @@ Directory layout:
     * doc/ Documentation
     * downloads/ This is where large downloaded files are put
     * inputs/    This holds pre-downloaded data files 
-    * src/       This holds the python code
     * outputs/   This is where the resulting data is stored
+    * src/       This holds the python code
+    * tmp/       This holds temporary files being worked on
 
