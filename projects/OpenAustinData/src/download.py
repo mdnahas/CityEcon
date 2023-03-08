@@ -1,4 +1,9 @@
-#! /usr/bin/python3
+#! /usr/bin/env python3
+
+#
+# Helper functions for downloading files.
+# For the ArcGIS REST API, it uses the library "esridumper".
+#
 
 import sys
 import json
