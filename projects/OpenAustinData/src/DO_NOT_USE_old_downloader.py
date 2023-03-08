@@ -1,6 +1,18 @@
 #! /usr/bin/python3
 
 #
+#  THIS IS NOT USED.
+#
+#  It contains some code that was tried but did not work.
+#  It does make requests and write the file, but the
+#  server only sent 1000 polygons, not the whole layer.
+#  We now use the esridumper to download JSON.
+#
+#  This code might be useful in the future, so I kept it around.
+#
+
+
+#
 # Downloads JSON from an ArcGIS REST Service to file
 #
 # URLs must be the query URL.

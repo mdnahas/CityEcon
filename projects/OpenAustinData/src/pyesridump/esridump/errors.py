@@ -1,0 +1,2 @@
+class EsriDownloadError(Exception):
+    pass
