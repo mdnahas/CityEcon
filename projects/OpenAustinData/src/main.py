@@ -9,6 +9,9 @@ import os.path
 #import zipfile
 import subprocess
 
+import pandas as pd
+import geopandas as gpd
+
 from download import download_file_if_needed
 from download import download_json_zip_if_needed
 from convert_fixedwidth_to_CSV import convert_fixedwidth_to_CSV
@@ -25,7 +28,7 @@ zoning_url = "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/
 
 appraisal_roll_download_url = "https://traviscad.org/wp-content/largefiles/2022%20Certified%20Appraisal%20Export%20Supp%200_07252022.zip"
 
-
+#TODO: Zipcode?
 
         
         
@@ -88,6 +91,37 @@ def main():
                 print("converting file " + full_filename_fw + " to CSV")
                 convert_fixedwidth_to_CSV(filename, full_filename_fw, full_filename_csv)
                 
+    #
+    # Join parcels with zoning file and appraisal file
+    #
+
+    print("reading parcels")
+    parcels = gpd.read_file("downloads/TCAD_public.json.zip")
+
+    print("reading zoning")
+    zoning = gpd.read_file("inputs/PLANNINGCADASTRE_zoning_small_map_scale.json.zip")
+
+
+    print("computing centroids of parcels")
+    # save geometry in a column
+    parcels['polygons'] = parcels.geometry
+
+    # set geometry to centroids
+    parcels['centroid'] = parcels.geometry.centroid   
+    parcels = parcels.set_geometry('centroid')
+
+    # join
+    print("joining parcels with zoning")
+    parcels_with_zoning = gpd.sjoin(parcels, zoning, how="left", predicate="intersects")
+
+    # restore geometry and remove added columns
+    parcels_with_zoning = parcels_with_zoning.set_geometry('polygons')
+    #parcels_with_zoning = parcels_with_zoning[[column for column in parcels_with_zoning.columns if column not in ('centroid','polygons')]]     
+    parcels_with_zoning = parcels_with_zoning[[column for column in parcels_with_zoning.columns if column not in ('polygons')]] 
+
+    print("outputing")
+    # Has columns "geometry" and "centroid"
+    pd.DataFrame(parcels_with_zoning).to_csv("outputs/parcels_with_zoning.csv")
 
     
 if __name__ == "__main__":

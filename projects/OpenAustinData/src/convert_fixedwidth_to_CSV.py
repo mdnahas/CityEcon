@@ -22,7 +22,7 @@ description_excel_sheet = "TP File Layout"
 description_excel_rows = {
     "APPR_HDR.TXT": (25, 37),
     "PROP.TXT": (56, 491),
-    "PROP_ENT.TXT": (506, 682),
+#    "PROP_ENT.TXT": (506, 682),   # 7GB file
     "TOTALS.TXT": (687, 830),
     "ABS_SUBD.TXT": (836, 838),
     "STATE_CD.TXT": (855, 860),

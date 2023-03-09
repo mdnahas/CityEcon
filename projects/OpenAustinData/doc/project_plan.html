@@ -46,7 +46,7 @@
 
 <p>For most data, this project will use CSV files following the <a href="https://datatracker.ietf.org/doc/html/rfc4180.html">RFC 4180 format</a>.  They may be compressed.  </p>
 
-<p>For the polygons describing the shape of properties, zones, districts, etc., Mark Isley recommends the GeoPackage format, which has the extension ".gpkg".  There is also a "GeoJSON" format, which we should consider.</p>
+<p>For the polygons describing the shape of properties, zones, districts, etc., Mark Isley recommends the GeoPackage format, which has the extension ".gpkg".  There is also a <a href="https://geojson.org/">"GeoJSON" format</a>, which we should consider.</p>
 
 <p>The GIS software <a href="https://www.qgis.org">QGIS</a> will be used to test files. </p>
 
@@ -60,13 +60,13 @@
 
 <p>GIS files can be huge.  Travis County's parcel file is 187M.  There are web-based protocols for sending parts of files.  GIS software can download just the part that the user is viewing or working on.  It's pretty cool.</p>
 
-<p>An issue that we will need to address is the Coordinate Reference System ("CRS").  GIS uses 2D polygons to encode boundaries.  But the earth is not flat and, thanks to plate tectonics, things move around.  So, each file with polygons specifies how points on the physical earth were mapped onto a plane.  The mathematical function for doing that is the CRS.</p>
+<p>Every GIS file has a CRS, which stands for the Coordinate Reference System.  The GIS files use 2D polygons to encode boundaries.  But the earth is not flat and, thanks to plate tectonics, things move around.  So, each file with polygons specifies how points on the physical earth are mapped onto a plane.  The mathematical function for doing that is the CRS.</p>
 
-<p>Different files often have different CRS.  The CRS always introduces some distortion.  Each file's creator will choose the CRS that works best with their data.  We will need to pick a single CRS for our data and translate the polygons from other CRSes to our chosen CRS.  </p>
+<p>Different GIS files often have different CRS.  The CRS always introduces some distortion.  Each file's creator will choose the CRS that works best with their data.  We will need to pick a single CRS for our data and translate the polygons from other CRSes to our chosen CRS.  The likely choice of CRS is GeoJSON's default CRS, where points are identified by latitude and longitude and mapped on to an elipsoid known as "WGS84".  (It is an elipsoid, not a sphere, because the earth is not perfectly round.)  </p>
 
 <h2>Contributing</h2>
 
-<p>At the moment, we're using the directory "projects/OpenAustinData" in this git repository: <a href="https://github.com/mdnahas/CityEcon/">https://github.com/mdnahas/CityEcon/</a>.</p>
+<p>At the moment, we're using the directory "projects/OpenAustinData/" in this git repository: <a href="https://github.com/mdnahas/CityEcon/">https://github.com/mdnahas/CityEcon/</a>.</p>
 
 <p>At the moment, we're communicating by an email thread.  To be added to the thread, email <a href="mailto:openaustin@mike.nahasmail.com">openaustin@mike.nahasmail.com</a>.</p>
 

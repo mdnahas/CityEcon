@@ -44,7 +44,7 @@ This project will use python3 for code.  The GeoPandas library will be used for 
 
 For most data, this project will use CSV files following the [RFC 4180 format](https://datatracker.ietf.org/doc/html/rfc4180.html).  They may be compressed.  
 
-For the polygons describing the shape of properties, zones, districts, etc., Mark Isley recommends the GeoPackage format, which has the extension ".gpkg".  There is also a "GeoJSON" format, which we should consider.
+For the polygons describing the shape of properties, zones, districts, etc., Mark Isley recommends the GeoPackage format, which has the extension ".gpkg".  There is also a ["GeoJSON" format](https://geojson.org/), which we should consider.
 
 The GIS software [QGIS](https://www.qgis.org) will be used to test files. 
 
@@ -58,9 +58,9 @@ GIS software is basically a map viewer with a lot of database operations built i
 
 GIS files can be huge.  Travis County's parcel file is 187M.  There are web-based protocols for sending parts of files.  GIS software can download just the part that the user is viewing or working on.  It's pretty cool.
 
-An issue that we will need to address is the Coordinate Reference System ("CRS").  GIS uses 2D polygons to encode boundaries.  But the earth is not flat and, thanks to plate tectonics, things move around.  So, each file with polygons specifies how points on the physical earth were mapped onto a plane.  The mathematical function for doing that is the CRS.
+Every GIS file has a CRS, which stands for the Coordinate Reference System.  The GIS files use 2D polygons to encode boundaries.  But the earth is not flat and, thanks to plate tectonics, things move around.  So, each file with polygons specifies how points on the physical earth are mapped onto a plane.  The mathematical function for doing that is the CRS.
 
-Different files often have different CRS.  The CRS always introduces some distortion.  Each file's creator will choose the CRS that works best with their data.  We will need to pick a single CRS for our data and translate the polygons from other CRSes to our chosen CRS.  
+Different GIS files often have different CRS.  The CRS always introduces some distortion.  Each file's creator will choose the CRS that works best with their data.  We will need to pick a single CRS for our data and translate the polygons from other CRSes to our chosen CRS.  The likely choice of CRS is GeoJSON's default CRS, where points are identified by latitude and longitude and mapped on to an elipsoid known as "WGS84".  (It is an elipsoid, not a sphere, because the earth is not perfectly round.)  
 
 ## Contributing
 
