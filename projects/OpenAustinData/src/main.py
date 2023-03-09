@@ -8,7 +8,9 @@ import sys
 import os.path
 #import zipfile
 import subprocess
+import gc
 
+import csv
 import pandas as pd
 import geopandas as gpd
 
@@ -29,6 +31,18 @@ zoning_url = "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/
 appraisal_roll_download_url = "https://traviscad.org/wp-content/largefiles/2022%20Certified%20Appraisal%20Export%20Supp%200_07252022.zip"
 
 #TODO: Zipcode?
+
+def ignore_fields(filename):
+    result = []
+    
+    with open('src/which_columns.csv') as csvfile:
+        csvreader = csv.DictReader(csvfile)
+        for row in csvreader:
+            if row["File"] == filename and row["Ignore"].strip() != "":
+                result.append(row["Field"])
+
+    return result
+
 
         
         
@@ -97,9 +111,14 @@ def main():
 
     print("reading parcels")
     parcels = gpd.read_file("downloads/TCAD_public.json.zip")
+    ignore_fields_list = ignore_fields("Parcels")
+    parcels = parcels[[column for column in parcels.columns if column not in ignore_fields_list]] 
 
+    
     print("reading zoning")
     zoning = gpd.read_file("inputs/PLANNINGCADASTRE_zoning_small_map_scale.json.zip")
+    ignore_fields_list = ignore_fields("Zoning")
+    zoning = zoning[[column for column in zoning.columns if column not in ignore_fields_list]] 
 
 
     print("computing centroids of parcels")
@@ -114,14 +133,27 @@ def main():
     print("joining parcels with zoning")
     parcels_with_zoning = gpd.sjoin(parcels, zoning, how="left", predicate="intersects")
 
+    # free memory
+    del parcels 
+    del zoning
+    gc.collect()
+    
     # restore geometry and remove added columns
     parcels_with_zoning = parcels_with_zoning.set_geometry('polygons')
-    #parcels_with_zoning = parcels_with_zoning[[column for column in parcels_with_zoning.columns if column not in ('centroid','polygons')]]     
-    parcels_with_zoning = parcels_with_zoning[[column for column in parcels_with_zoning.columns if column not in ('polygons')]] 
+    parcels_with_zoning = parcels_with_zoning[[column for column in parcels_with_zoning.columns if column not in ('centroid','polygons')]]     
+
+    print("reading appraisals")
+    appraisals = gpd.read_file("tmp/appraisal_CSV/PROP.csv", ignore_fields=ignore_fields("PROP.TXT"))
+
+    # Make sure prop_id is an int.  I had trouble with this.
+    appraisals["prop_id"] = appraisals["prop_id"].astype(int)
+    
+    print("joining parcels&zoning with appraisals")    
+    parcels_with_zoning_and_appraisals = pd.merge(parcels_with_zoning, appraisals, how="left", left_on="PROP_ID", right_on="prop_id")
 
     print("outputing")
     # Has columns "geometry" and "centroid"
-    pd.DataFrame(parcels_with_zoning).to_csv("outputs/parcels_with_zoning.csv")
+    pd.DataFrame(parcels_with_zoning_and_appraisals).to_csv("outputs/parcels_with_zoning_and_appraisals.csv")
 
     
 if __name__ == "__main__":
