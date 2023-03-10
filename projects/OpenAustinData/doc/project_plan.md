@@ -50,9 +50,9 @@ The GIS software [QGIS](https://www.qgis.org) will be used to test files.
 
 ## About GIS
 
-GIS stands for "geographic information systems".  It is a mix of software and data for working with land boundaries and data about land.  It is used city planners, geologist, mapmakers, archiologist, and others.  They make maps and display data on maps.  Maps with data are called "[choropleth maps](https://en.wikipedia.org/wiki/Choropleth_map)", which is the most awkward word I've ever heard.
+GIS stands for "geographic information systems".  It is a mix of software and data for working with land boundaries and data about land.  It is used by city planners, geologist, mapmakers, archiologist, and others.  They make maps and display data on maps.  Maps with data are called "[choropleth maps](https://en.wikipedia.org/wiki/Choropleth_map)", which is the most awkward word I've ever heard.
 
-GIS data can be thought of as a database, where some of the pieces of data are polygons.  The data for properties will include a polygon that marks the boundary of the property and other data, such as the property's owner, buildings on the property, etc..
+GIS data can be thought of as a database, where some of the pieces of data are polygons.  A row of data can include a polygon that marks the boundary of the property.  With that polygon in the row is other data, such as the property's owner, buildings on the property, etc..
 
 GIS software is basically a map viewer with a lot of database operations built in.  [QGIS](https://www.qgis.org) is the open-source GIS software that we'll be using.  It can load files that contain data.  It can generate choropleth maps.  It can manipulate the data, such as intersect polygons or do a database join of two files.
 
@@ -60,7 +60,10 @@ GIS files can be huge.  Travis County's parcel file is 187M.  There are web-base
 
 Every GIS file has a CRS, which stands for the Coordinate Reference System.  The GIS files use 2D polygons to encode boundaries.  But the earth is not flat and, thanks to plate tectonics, things move around.  So, each file with polygons specifies how points on the physical earth are mapped onto a plane.  The mathematical function for doing that is the CRS.
 
-Different GIS files often have different CRS.  The CRS always introduces some distortion.  Each file's creator will choose the CRS that works best with their data.  We will need to pick a single CRS for our data and translate the polygons from other CRSes to our chosen CRS.  The likely choice of CRS is GeoJSON's default CRS, where points are identified by latitude and longitude and mapped on to an elipsoid known as "WGS84".  (It is an elipsoid, not a sphere, because the earth is not perfectly round.)  
+Different GIS files often have different CRS.  The CRS always introduces some distortion.  Each file's creator will choose the CRS that works best with their data.  We will need to pick a single CRS for our data and translate the polygons from other CRSes to our chosen CRS.  The likely choice of CRS is GeoJSON's default CRS, where points are identified by latitude and longitude and mapped on to an elipsoid known as "WGS84".  (It is an elipsoid, not a sphere, because the earth is not perfectly round.)  This CRS is known as "EPSG:4326".
+
+Other CRSes we should look at (and occasionally use) are: UTM (which has various zones) and state-plane (for particular states).  Central Texas is in UTM zone 14 North.   ("EPSG:32614" is WGS84 with UTM zone 14N.)  UTM is measured in meters.   Texas has 5 state-planes and we're in "State Plane Zone 3".  It is usually measured in feet.  (Is this "EPSG:2277"?  [This page](https://epsg.io/2277) calls it "Texas Central" and it uses "NAD83" elipsoid.")  [This map](https://tpwd.texas.gov/publications/pwdpubs/media/pwd_mp_e0100_1070af_24.pdf) has the UTM zones and Texas state-planes.  
+
 
 ## Contributing
 
@@ -74,4 +77,4 @@ There is a list of links to the data we want to merge on [this page](Austin_GIS_
 
 There are some notes on how to use QGIS on [this page](QGIS_user_notes.html)
 
-
+There is are notes on [understanding the data in the files](understanding_files.html).

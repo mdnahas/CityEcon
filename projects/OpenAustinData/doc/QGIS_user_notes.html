@@ -1,0 +1,94 @@
+<h1>QGIS notes</h1>
+
+<h2>Vocabulary</h2>
+
+<p>GeoPackage --- a database format for storing GIS and other data</p>
+
+<p>Leaflet --- javascript library for displaying maps on the web.  You need to make "tiles" first.  Leaflet will display the tiles.</p>
+
+<h2>HOWTOS:</h2>
+
+<h3>HOWTO: Add layer</h3>
+
+<p>In toolbar, click on icon with 3 squares on top of each other with a "plus sign".  (Tooltip says "Data Source Manager".)   </p>
+
+<p>For files with the "gpkg" extension: Select "GeoPackage" on the left side.  Click the "new" button (at the top).  Select the file.  Click the "connect" button (at the top).  Select the layer you want in the table.  Click the "Add" button (at the bottom).   </p>
+
+<p>For files with the "geojson" extension: Select "Vector" on the left side.  At the top, "Source Type" should be "file".  Under "Source", at the extreme right click on "...".  Select the file.  Click the "Add" button (at the bottom).   </p>
+
+<!-- How to create a small dataset to work with? -->
+
+<h3>HOWTO: Add Plugin</h3>
+
+<p>From the menu, select "Plugins", and then "Manage and Install Plugins".  It will download a list of available plugins from QGIS's repository.</p>
+
+<h3>HOWTO: Export a subset</h3>
+
+<p>Use selection tool (in the middle, looks like a rectangle, a dotted rectangle, and a mouse pointer).</p>
+
+<p>Select the area.</p>
+
+<p>Go to Layers, the layer you want, and right click.  Mouse over "Export" and, from the submenu, select "Save Selected Features as..."</p>
+
+<h3>HOWTO: Intersect zoning with parcels</h3>
+
+<ul>
+<li>compute centroid of each parcel.  The centroid is a point inside the parcel.</li>
+<li>determine which zoning polygon the centroid lies in.</li>
+</ul>
+
+<h3>HOWTO: Find the length of a lot on the street ("curb length")</h3>
+
+<p>Mark Isley said you will need to:</p>
+
+<ul>
+<li>download road lines</li>
+<li>"buffer" the road lines (expand the boundary by a small amount, so that they overlap the lots)</li>
+<li>intersect to identify the buffered line <em>inside</em> each parcel</li>
+<li>length of the <em>buffered</em> line will tell you the curb length.</li>
+</ul>
+
+<h3>HOWTO: Compute time to drive from a parcel to center of city</h3>
+
+<p>Mark Isley said you will need to:</p>
+
+<ul>
+<li>You will need a "routing"</li>
+<li>You will need a "weighted cost surface"</li>
+</ul>
+
+<h3>HOWTO: Compute which parcels are near a particular parcel</h3>
+
+<ul>
+<li>"buffer" the particular parcel</li>
+<li>you can test which parcels intersect the buffered parcel</li>
+</ul>
+
+<h3>HOWTO: Compute how close each parcel is to a major highway</h3>
+
+<ul>
+<li>you can use "proximity search", which computes "distance to the closest X"</li>
+</ul>
+
+<h3>HOWTO: Determine how square or round a parcel is</h3>
+
+<ul>
+<li>you can divide the area of the parcel by the longest internal line segement</li>
+</ul>
+
+<h3>HOWTO: Compute the square footage allowed under zoning laws</h3>
+
+<ul>
+<li>?</li>
+</ul>
+
+<h3>HOWTO: Compute the height of a building allowed on a parcel under Austin's "Compatibility" law</h3>
+
+<ul>
+<li>select all the single family parcels</li>
+<li>"dissolve" merges multiple polygons into 1 polygon</li>
+<li>"buffer" around the dissolved polygon, for each height limit level (20ft)</li>
+<li>repeat buffering for the 30ft, 40ft, etc. height limits</li>
+<li>intersect buffered polygons with parcels</li>
+<li>merge the intersecting with the parcel to determine compatibility limit</li>
+</ul>
