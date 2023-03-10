@@ -2,6 +2,11 @@
 
 ## Intellectuals
 
+### Alex Armlovich
+- [Senior Housing Policy Analyst at Niskanen Center](https://www.niskanencenter.org/author/aarmlovich/)
+- MPP in Social and Urban Policy, BA in Econ. and Poly. Sci.
+- [https://twitter.com/aarmlovi](https://twitter.com/aarmlovi)
+
 ### Gregg Colburn
 - [Asst. Professor in Real Estate at U. of Washington](https://re.be.uw.edu/people/gregg-colburn/)
 - PhD in Public Affairs at UMN, MBA, MSW
