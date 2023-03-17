@@ -62,8 +62,13 @@ Every GIS file has a CRS, which stands for the Coordinate Reference System.  The
 
 Different GIS files often have different CRS.  The CRS always introduces some distortion.  Each file's creator will choose the CRS that works best with their data.  We will need to pick a single CRS for our data and translate the polygons from other CRSes to our chosen CRS.  The likely choice of CRS is GeoJSON's default CRS, where points are identified by latitude and longitude and mapped on to an elipsoid known as "WGS84".  (It is an elipsoid, not a sphere, because the earth is not perfectly round.)  This CRS is known as "EPSG:4326".
 
-Other CRSes we should look at (and occasionally use) are: UTM (which has various zones) and state-plane (for particular states).  Central Texas is in UTM zone 14 North.   ("EPSG:32614" is WGS84 with UTM zone 14N.)  UTM is measured in meters.   Texas has 5 state-planes and we're in "State Plane Zone 3".  It is usually measured in feet.  (Is this "EPSG:2277"?  [This page](https://epsg.io/2277) calls it "Texas Central" and it uses "NAD83" elipsoid.")  [This map](https://tpwd.texas.gov/publications/pwdpubs/media/pwd_mp_e0100_1070af_24.pdf) has the UTM zones and Texas state-planes.  
+Other CRSes we should look at (and occasionally use):
 
+- UTM, which has various zones.  Central Texas is in UTM zone 14 North.   UTM is measured in meters.  "EPSG:32614" is WGS84 with UTM zone 14N.   [This map](https://tpwd.texas.gov/publications/pwdpubs/media/pwd_mp_e0100_1070af_24.pdf) has the UTM zones for Texas.
+
+- A state plane CRS.  Texas has 5 state-planes and we're in "State Plane Zone 3".  It is measured in feet.  (Is this "EPSG:2277"?  [This page](https://epsg.io/2277) calls it "Texas Central" and it uses "NAD83" elipsoid.")  [This map](https://tpwd.texas.gov/publications/pwdpubs/media/pwd_mp_e0100_1070af_24.pdf) has the Texas state-planes.  
+
+- [Web Mercator](https://en.wikipedia.org/wiki/Web_Mercator_projection).  This is the projection used by most online mapping tools, such as Google Maps.   Coordinates are in the range 0 to 256, with (0,0) in the upper-left near Alaska and (256,256) in the lower-right near Australia.  It is known officially as "EPSG:3857".  (It also appears as "EPSG:3785" and "EPSG:900913".)
 
 ## Contributing
 

@@ -29,6 +29,9 @@ zoning_url = "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/
 #zoning_ordinance_download_url = "https://data.austintexas.gov/api/geospatial/xt8n-xrjg?accessType=DOWNLOAD&method=export&format=GeoJSON"
 
 appraisal_roll_download_url = "https://traviscad.org/wp-content/largefiles/2022%20Certified%20Appraisal%20Export%20Supp%200_07252022.zip"
+# 2021 appraisals
+# appraisal_roll_download_url = ""https://traviscad.org/wp-content/largefiles/2021-08-02_008042_APPRAISAL_STD%20EXPORT%20R%26P%20ALLJUR%20AS%20OF%202021.zip"
+
 
 #TODO: Zipcode?
 
@@ -147,7 +150,8 @@ def main():
 
     # Make sure prop_id is an int.  I had trouble with this.
     appraisals["prop_id"] = appraisals["prop_id"].astype(int)
-    
+
+### RIGHT JOIN???
     print("joining parcels&zoning with appraisals")    
     parcels_with_zoning_and_appraisals = pd.merge(parcels_with_zoning, appraisals, how="left", left_on="PROP_ID", right_on="prop_id")
 

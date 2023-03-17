@@ -7,6 +7,8 @@
 # into CSV files with headers
 #
 
+import sys
+
 import pandas as pd
 import openpyxl
 
@@ -65,17 +67,18 @@ def convert_fixedwidth_to_CSV(filename, src_full_filename, dest_full_filename):
 #
 
 def main():
-    filename = "APPR_HDR.TXT"
-    (start_row, end_row) = description_excel_rows[filename]
+    if len(sys.argv) != 4:
+        print("Needs 4 arguments.  Filename, full-src-filename, and full-dest-filename")
+    else:
+        convert_fixedwidth_to_CSV(sys.argv[1], sys.argv[2], sys.argv[3])
 
-    print("From " + str(start_row) + " to " + str(end_row))
-    
-    colspec = pd.read_excel(description_excel_file, sheet_name=description_excel_sheet, skiprows=start_row-2, nrows=(end_row-start_row), engine='openpyxl').iloc[:,:6]
+    # filename = "APPR_HDR.TXT"
+    # (start_row, end_row) = description_excel_rows[filename]
+    # print("From " + str(start_row) + " to " + str(end_row))
+    # colspec = pd.read_excel(description_excel_file, sheet_name=description_excel_sheet, skiprows=start_row-2, nrows=(end_row-start_row), engine='openpyxl').iloc[:,:6]
+    # print(str(colspec))
 
-    print(str(colspec))
-    
-    
-
+        
 if __name__ == "__main__":
     # execute only if run as a script
     main()
