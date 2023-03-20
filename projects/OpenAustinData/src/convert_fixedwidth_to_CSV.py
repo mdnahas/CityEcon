@@ -8,6 +8,7 @@
 #
 
 import sys
+import csv
 
 import pandas as pd
 import openpyxl
@@ -24,7 +25,7 @@ description_excel_sheet = "TP File Layout"
 description_excel_rows = {
     "APPR_HDR.TXT": (25, 37),
     "PROP.TXT": (56, 491),
-#    "PROP_ENT.TXT": (506, 682),   # 7GB file
+    "PROP_ENT.TXT": (506, 682),   # 7GB file
     "TOTALS.TXT": (687, 830),
     "ABS_SUBD.TXT": (836, 838),
     "STATE_CD.TXT": (855, 860),
@@ -42,7 +43,51 @@ description_excel_rows = {
 }
 
 
+
 def convert_fixedwidth_to_CSV(filename, src_full_filename, dest_full_filename):
+    if filename not in description_excel_rows:
+        print("Could not find description of fixed-width file named " + filename + ".  Skipping.")
+        return
+
+    # tuple assignment!
+    (start_row, end_row) = description_excel_rows[filename]
+
+    # extract column descriptions from Excel file
+    # I'm not sure why it is "start_row-2".
+    # (May be rows start at 0 and it includes the header row?)
+    colspec = pd.read_excel(description_excel_file, sheet_name=description_excel_sheet, skiprows=start_row-2, nrows=(end_row-start_row), engine='openpyxl').iloc[:,:6]
+
+    with open(src_full_filename, 'r') as input_file:
+        with open(dest_full_filename, 'w', newline='') as output_file:
+            writer = csv.writer(output_file)
+
+            # write headers
+            writer.writerow(list(colspec['Field Name']))
+            
+            for line in input_file:
+                # Split the line into fields based on the given widths
+                fields = []
+                start_char = 0
+                for width in colspec.Length:
+                    field = line[start_char:start_char+width]
+                    if field.isdigit():  # if only digits
+                        field = field.lstrip("0") # strip leading zeros
+                    else:
+                        field = field.strip()     # strip whitespace
+                        
+                    fields.append(field)
+                    start_char += width
+                    
+                # Write the fields to the output file
+                writer.writerow(fields)
+
+#
+# Older version written by Mark Isley.
+#
+# It reads the whole file into memory.  That's a problem with a 7GB file.
+#
+
+def convert_fixedwidth_to_CSV__MEMORYHOG(filename, src_full_filename, dest_full_filename):
     if filename not in description_excel_rows:
         print("Could not find description of fixed-width file named " + filename + ".  Skipping.")
         return
@@ -62,6 +107,11 @@ def convert_fixedwidth_to_CSV(filename, src_full_filename, dest_full_filename):
     propraw.to_csv(dest_full_filename)
 
 
+    
+
+
+
+    
 #
 # Testing
 #
