@@ -93,10 +93,13 @@
   year = {2022},
   journal = {Journal of Money, Credit and Banking},
   abstract = {
-    This paper develops a quality-adjusted measure of marginal housing rents using a monthly statistic of landlord net rental income. The Marginal Rent Index (MRI) exhibits deflation during recessions and leads the official rent index by seven months. The modified inflation rate based on MRI suggests that the annual official inflation rate was overestimated by 1.7 to 4.1\% during the Great Recession but underestimated by 0.3 to 0.7% during the subsequent expansionary period. 
+    This paper develops a quality-adjusted measure of marginal housing rents using a monthly statistic of landlord net rental income. The Marginal Rent Index (MRI) exhibits deflation during recessions and leads the official rent index by seven months. The modified inflation rate based on MRI suggests that the annual official inflation rate was overestimated by 1.7 to 4.1\% during the Great Recession but underestimated by 0.3 to 0.7\% during the subsequent expansionary period. 
   }
   keywords={rent, rent index, inflation},
-  annote    = {
+  annote = {
+    This paper creates rent indexes.  The authors think that inflation is miscalculated because it isn't handling rent correctly.
+
+    
   }
 }
 
@@ -112,6 +115,27 @@
     The author suggests metro-area GDP-linked bonds.  He calls them "GDI" or Gross Domestic Income bonds.  The author claims that renters would want to buy these, since they hedge the cost of housing.  Likewise, homeowners would want to sell them, to hedge their ownership.  
   }
 }
+
+@Article{Bettencourt2007
+  author = 	 {Lu\'i M. A. Bettencourt and Jos\'e Lobo and  Dirk Helbing and Christian K\:uhnert and Geoffrey B. West},
+  title = 	 {Growth, innovation, scaling, and the pace of life in cities},
+  journal = 	 {Proceedings of the National Academy of Sciences},
+  year = 	 {2007},
+  url = 	 {https://www.pnas.org/doi/pdf/10.1073/pnas.0610172104},
+  volume={104},
+  number={7},
+  keywords={power laws, scaling},
+  annote = {
+    This is an innovative paper that showed a lot of statistics on cities follow a power-law distribution of the city's population.  An important statistic is GDP and, because the coefficient is greater than 1, it means that GDP grows super-linearly with the size of the city.  Or, equivalently, that GDP-per-capita grows with the size of a city.  But many other statistics follow the same pattern: new patents, R&D spending, bank deposits, crime, walking speed, gas stations, road surface, etc..  The coefficients are different for different statistics.  For roads and gas stations, the coefficient is below 1, so the larger the city is, the fewer gas-stations-per-capita.
+
+\par
+    The authors go further and set up an differential equation for city growth based on a power law distribution.  I don't like this extrapolation.   It leads to infinite growth in a finite amount of time.  The authors get around this by saying that innovation must happen which reset the equation to initial conditions.  I don't like that fix.  It would be easier to add additional terms to the differential equation.  E.g., crime or disease grows with a different coefficient, restricting city size.
+
+\par
+    It's an interesting paper.  The collection of different statistics governed by power laws is very interesting.  
+  }
+}
+
 
 
 @Article{Bryne2021,
@@ -356,6 +380,34 @@
     I don't like the solution.  It ignores all the good things about homeownership.  It recommends government mistreat an investment good, and one that represents \emph{half} of all investment! 
   }
 }
+
+
+@Article{Depersin2018,
+  author = 	 {Jules Depersina and Marc Barthelemy},
+  title = 	 {From global scaling to the dynamics of individual cities},
+  journal = 	 {Proceedings of the National Academy of Sciences},
+  year = 	 {2018},
+  url = 	 {https://www.pnas.org/doi/pdf/10.1073/pnas.1718690115},
+  volume={115},
+  number={10},
+  keywords={power laws, scaling, congestion},
+  annote = {
+    This is a great paper which covers traffic congestion in cities.  The show that cities with more commuters have more traffic congestion and that the congestion follows a power law.  But then they look at individual cities and its different!
+
+\par
+    Some cities follow a power law, but with a different exponent.  Other cities' plots of population vs. delay have two regimes: a power law where delay rose quickly until a certain amount and, then, a flatter portion following another power law.  The authors believe a capacity or behaviorial limit was hit.  E.g., in Birmingham, the distance driven per driver was increasing until 1998, at which it started to decrease and the delay-per-driver flattened.
+
+\par
+    The delay is on a log scale, so fast growing cities really hit a wall in congestion.   So, Cincinnati started on the steep portion of the plot with 10 hours of delay per year.  A decade later, it hit 25 or 30 hours of delay per year and then started to flat-line.  Three decades later, the delay was still under 40 hours per year.  
+
+\par
+    I'm fascinated by the paper's Figure 2.  It shows that the power-law coefficient for all cities dropped from 1980 to 2007, and then flattened.  So, delay was much worse in large cities in 1980, but the difference between large and small cities got less over time.  Figure 3 makes me believe that this is because delay got worse in smaller cities, not better in large ones.  Maybe it is because more small cities grew into larger cities and hit their capacity limits?  
+
+\par
+    Uses a public dataset from Texas A\&M.
+  }
+}
+
 
 
 
@@ -792,6 +844,52 @@ Evidence from Administrative Data},
 
 \par
     I do like her view of cities as organic.  If we view a city as a network of processes, where each takes input goods and produces output goods, then the network can only change by little steps.  A process can grow.  A process can mutate to produce a slightly different product.  A process can move from outside the city to inside it.  A process can split or a new process can replicate an existing process.  Innovation can create a brand new process, but it still has to connect it into the network.  It helps where there are lots of places to connect it to.  That may be why cities succeed: not just lots of products for customers but lots of places in a network where innovation can find a place. 
+  }
+}
+
+
+@book{Jacobs1961,
+  author    = "Jane Jacobs",
+  title     = "The Nature of Economies",
+  publisher = "Random House",
+  address   = "New York, NY",
+  year      = 2000,
+  keywords  = {agglomeration, cities},
+  annote    = {
+    This is a weird book that contains an interesting idea.  The author, Jane Jacobs, is a seasoned observer of cities and wrote \emph{the} book in Urban Planning, "The Death and Life of Great American Cities".  In this book, she tries to explain the agglomerations effects of cities by exploring the metaphor of ecology.  That is, that businesses succeed in a vibrant city in similar ways to species succeeding in a verdant environment.  It is an interesting idea.  But she doesn't explain the idea directly.  The book written as a sequence of conversations by a handful of characters.  That's weird.
+
+\par
+   Explaining science using dialog has a long history.  The Socratic dialogs date to around 400 B.C..  Galileo's "A Dialog Concerning the Two Chief World Systems", which convinced people that the Earth goes around the Sun, was published in 1632.  It can be an interesting informal format, where questions and answers go back an forth between an expert and a skeptic.  Eventually, the skeptic is won over and so is the reader.  But, sadly, this book is not in that format.  It's a handful of not-very-well-defined characters talking.  It's just weird.
+
+\par
+   But the idea deserves our consideration.  Silicon Valley has seen amazing productivity and growth since 1957.  Startups have thrived there and changed the world.  But there's nothing special about the land there.  An Internet-based startup could be started anywhere.  But that place seems to be different.  Jane Jacobs thinks it is the ecology of businesses there.
+
+\par
+   Jane Jacobs believes that growth comes through innovation.  Focussing on efficiency can help growth, but a single-company city or a single-industry city is like a monocrop.  A monocrop doesn't change and A single predator or disease can wipe it out.  A single-company or single-industry city can collapse.  Rochester, NY was tied to Kodak's rise and fall.  Detroit to America's car industry.
+
+\par
+   Jane Jacobs sees innovations happening when a process mutates into a new process, just as a species mutates into a new species.  An entrepreur might first learn to bake bread as an employee at a bread shop.  Then, spends his savings to rent his own bakery.  The process of the new baker at the new bakery will be slightly different: new products, new ways to deliver products, etc.  If the new bakery is successful, it will grow and hire its own employees, who might go on to start their own bakeries.
+
+\par
+   But starting a business requires a lot more things than know-how and starting capital.  A new business needs to find suppliers and customers.  It needs banks to give mortgages or landlords who rent buildings.  It needs lawyers to draw up founding documents and contracts.   This means that new processes don't arrive in a city, sprung from the forehead of an entrepreneur.  They usually come by small changes to the existing processes in the city.  It is far easier for that new baker to get started if his previous employer is an ally, introducing him to suppliers, advertisers, lawyers, etc..  The new bakery would look separate, but it has a lot in common with the old bakery.  
+
+\par
+   Some of the small changes are:  Replacing a supplier.  Adding a new customer.  A slightly different product, tunes to specific customers.  Growing the process.  Making the process more efficient.  Outsourcing part of the process.  Opening a new location or moving to a more advantagous location.  Turning waste into a product.  (E.g., kitchen oil became "bio diesel", waste rags from making clothes became stuffing for teddy bears, manure became fuel or fertilizer.)  A new delivery mechanism.
+
+\par
+   A common story of innovation is adding some new customers, discovering that they're using the product in a new way, making a slightly different product for that group of customers, which draws in even more customers who want to use the product that way, etc..  After a little while, there's a completely different product available with a completely separate group of customers.  Jacobs calls this splitting a "bifurcation".  
+
+\par
+   But part of the process is brand new companies.  Every new business needs startup capital.  In an ecology, we can think of this as the energy stored in eggs and seeds.
+
+\par
+   The book has an interesting discussion of energy.  Life on earth is powered by sunlight.  A desert has sunlight.  So does a tropical forest.  But only the forest has lots of life.  Why?  It seems the forest has lots of small steps between sunlight being captured and it is used.  Plants grow, become food for herbivores, which become food for carnivores, which die and become food for mushrooms.  It wasn't clear to me what "energy" was in the metaphor of business.  Maybe it is "demand"?
+
+\par
+   The book talks for some time about feedback cycles.  An interesting point was that subsidies can cause unintended feedback cycles.  Cod was overfished, partially because Canada subsidized fisheries.  When fewer fish should have meant fewer profits and fewer fisherman, the subsidy kept them fishing. 
+
+\par
+   Again, this is a weird book.  It was hard to summarize the content, because it's written as dialog.  And it is hard to read --- I never did understand who the characters were.  But I do like the idea that businesses are processes and cities grow by lots of little changes to those processes.  It might explain why innovation is so localized.  
   }
 }
 

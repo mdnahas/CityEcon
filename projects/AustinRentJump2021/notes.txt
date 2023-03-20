@@ -1,0 +1,140 @@
+Austin's rent jumped 20% within 6 months in 2021.  Why?
+
+National rents over the same time increased 12%, but Austin's jumped 8% larger.
+
+I'm still trying to figure out the timing.
+
+Active listings drop in May 2020.  Plummet and hit bottom Feb. 2021.   Similar thing happens nationally, but Austin falls father faster.  Nation bottoms out in Feb. 2021.
+
+Housing prices increase thru 2020.  But then shoot up after Feb. 2021.  Keep going up until April 2022.
+
+Rent peaks at 1483 in March 2020.  Drops thru Feb. 2021.  Then goes upward quickly!  Hits 1797 in October 2021.  Rents peak at 1934 in August 2022.
+
+
+Oct. 9, 2020: Indeed
+Feb 10, 2021: Salesforce permanently remote
+March 17, 2021: Ford
+June 24, 2021: Cisco permanent hybrid work
+June 25, 2021: Adobe announces permanent hybrid work
+July 21, 2021: LinkedIn
+
+Tax jump is in October of 2022.  Th
+
+
+
+
+My guess is that property taxes on rental properties increased and landlords pass this on to renters.
+
+Property taxes on rental properties increased because of:
+  1) Home prices increased 11% in Austin and state law caps the increase at 10%
+  2) City of Austin increased its homestead exemption by 12% of value
+ 
+It looks like the cap on assessed values was the largest factor.
+  AISD cap was $23B of assessed value 
+  CoA cap was $27B of assessed value 
+  AISD taxes are about twice CoA's.
+
+The difference was 426 million in taxes not taken from homeowners.
+426M / 200,000 rental units = 2,080 dollars per year = 173 dollars per month.
+
+On the right scale.
+
+Monthly payment on median home also went up about that price: 200 or so.
+
+Step by step:
+  1. property prices rise
+  2. taxes are calculated and publicized
+  3. rents are raised
+  4. renters switch to homeowners, driving up prices
+  ? can I make a prediction about this year?
+  ? can I make a prediction about HB2's effect?
+
+
+The increase in the homestead exemption was:
+On June 10th of 2021, Austin City Council passed ORDINANCE NO. 20210610-094 which increased the homestead exemption from 8% to 20%.
+
+Other things having to do with taxes and property
+  * Austin's active listings dropped like a rock!
+  * LDC Rewrite was stopped by a lawsuit in March 2022
+  * Inflation mostly increased in 2022
+  * Mortgage rates mostly increased in 2022
+
+Housing statistics from 2021:
+
+Zillow's ZORI index for Austin from May 2021 to October 2021 increased by 20%.  
+Zillow's ZORI index for whole USA from May 2021 to October 2021 increased by 12%.  
+The Case-Shiller House Price Index for Austin-Round Rock-Georgetown rose 33% over the next year.
+The Case-Shiller House Price Index for U.S. Nationally rose 19%.
+Housing inventory in Austin went from 6,360 in May of 2021 to 1,811 by January of 2022.  A fall of 72%.
+Housing inventory nationally went from 444,085 to 375,226. A fall of 16%
+Fed Funds remained below 0.1% until March 2022.  (The Fed announced its first increase on March 17, 2022.)
+Mortgage rates stayed below 3.2% until January 2022.
+Inflation, as measured by the 5-year TIPS breakeven, was 2.60% in May 2021 and 2.95% in January 2021.
+
+
+From TCAD's Certified Totals Report.
+It looks like the year 2022 means properties were assessed Jan. 2022.
+
+In billions:
+2020, AISD, Land HS  value, 29.793
+2020, AISD, Land NHS value, 43.302
+2020, AISD, Impr HS  value, 42.080
+2020, AISD, Impr NHS value, 53.423
+2020, AISD, HS CAP Lmt val,  1.344
+2020, AISD, HS HS-Conversn,  2.938
+2020, AISD, OV65 OV65-Cvsn,  1.140
+2020, CoA, Land HS  value, 33.455 
+2020, CoA, Land NHS value, 48.003 
+2020, CoA, Impr HS  value, 48.773
+2020, CoA, Impr NHS value, 65.099
+2020, CoA, HS CAP Lmt val,  1.444
+2020, CoA, HS HS-Conversn,  6.129
+2020, CoA, OV65 OV65-Cvsn,  3.182
+
+2021, AISD, Land HS  value, 30.459
+2021, AISD, Land NHS value, 43.591
+2021, AISD, Impr HS  value, 54.602
+2021, AISD, Impr NHS value, 57.166
+2021, AISD, HS CAP Lmt val,  5.640
+2021, AISD, HS HS-Conversn,  2.847
+2021, AISD, OV65 OV65-Cvsn,  1.132
+2021, CoA, Land HS  value, 34.229 
+2021, CoA, Land NHS value, 48.400 
+2021, CoA, Impr HS  value, 63.142
+2021, CoA, Impr NHS value, 69.777
+2021, CoA, HS CAP Lmt val,  6.372
+2021, CoA, HS HS-Conversn, 13.021
+2021, CoA, OV65 OV65-Cvsn,  4.050
+
+2022, AISD, Land HS  value, 50.906
+2022, AISD, Land NHS value, 50.632
+2022, AISD, Impr HS  value, 73.631
+2022, AISD, Impr NHS value, 70.264
+2022, AISD, HS CAP Lmt val, 28.670
+2022, AISD, HS HS-Conversn,  4.906
+2022, AISD, OV65 OV65-Cvsn,  0.871
+2022, CoA, Land HS  value, 58.090 
+2022, CoA, Land NHS value, 55.730 
+2022, CoA, Impr HS  value, 86.546
+2022, CoA, Impr NHS value, 85.780
+2022, CoA, HS CAP Lmt val, 33.503
+2022, CoA, HS HS-Conversn, 15.797
+2022, CoA, OV65 OV65-Cvsn,  4.394
+
+
+2019,AISD,Tax rate,1.1220
+2020,AISD,Tax rate,1.1027
+2021,AISD,Tax rate,1.0617
+2022,AISD,Tax rate,0.9966
+2019,CoA,Tax rate,.4431, actually FY2019-20
+2020,CoA,Tax rate,.5335, actually FY2020-21
+2021,CoA,Tax rate,.5410, actually FY2021-22
+2022,CoA,Tax rate,.4627, actually FY2022-23
+
+
+2020,AISD,Tax raised,1.543
+2021,AISD,Tax raised,1.604
+2022,AISD,Tax raised,1.809
+2020,CoA,Tax raised, .888
+2021,CoA,Tax raised, .928
+2022,CoA,Tax raised, .961
