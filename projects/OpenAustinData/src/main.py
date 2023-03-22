@@ -31,17 +31,17 @@ zoning_url = "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/
 zoning_local_file = "inputs/PLANNINGCADASTRE_zoning_small_map_scale.json.zip"
 
 # Appraisal are 260MB compressed
-appraisal_url = "https://traviscad.org/wp-content/largefiles/2022%20Certified%20Appraisal%20Export%20Supp%200_07252022.zip"
-appraisal_local_file = "downloads/2022 Certified Appraisal Export Supp 0_07252022.zip"
+appraisals = {
+    "2022" : { "url": "https://traviscad.org/wp-content/largefiles/2022%20Certified%20Appraisal%20Export%20Supp%200_07252022.zip",
+               "local_file" : "downloads/2022 Certified Appraisal Export Supp 0_07252022.zip" },
 
-# 2021 appraisals
-# appraisal_url = "https://traviscad.org/wp-content/largefiles/2021-08-02_008042_APPRAISAL_STD%20EXPORT%20R%26P%20ALLJUR%20AS%20OF%202021.zip"
-# appraisal_local_file = "downloads/2021-08-02_008042_APPRAISAL_STD EXPORT R&P ALLJUR AS OF 2021.zip"
+    "2021" : { "url": "https://traviscad.org/wp-content/largefiles/2021-08-02_008042_APPRAISAL_STD%20EXPORT%20R%26P%20ALLJUR%20AS%20OF%202021.zip",
+               "local_file" : "downloads/2021-08-02_008042_APPRAISAL_STD EXPORT R&P ALLJUR AS OF 2021.zip" },
 
-# 2012 appraisals, from Open Records Request - R004028-112122
-# appraisal_url = ""
-# appraisal_local_file = "downloads/2019-08-03_007107_APPRAISAL_R_P_ALLJUR_AS_OF_2012.zip"
-
+    # 2012 appraisal file, from Open Records Request - R004028-112122
+    "2012" : { "url" : "",
+               "local_file" : "downloads/2019-08-03_007107_APPRAISAL_R_P_ALLJUR_AS_OF_2012.zip"}
+}
 
 
 def ignore_fields(filename):
@@ -54,8 +54,6 @@ def ignore_fields(filename):
                 result.append(row["Field"])
 
     return result
-
-
         
         
 #
@@ -82,87 +80,96 @@ def main():
     # Download data 
     #
             
-    print("Downloading appraisal data")
-    download_file_if_needed(appraisal_url, appraisal_local_file)
-    
+    print("Downloading parcels")
+    download_json_zip_if_needed(parcels_url, parcels_local_file)
+
     print("Downloading zoning")
     download_json_zip_if_needed(zoning_url, zoning_local_file)
 
-    print("Downloading parcels")
-    download_json_zip_if_needed(parcels_url, parcels_local_file)
+    for year_str in appraisals:
+        print("Downloading appraisal data " + year_str)
+        download_file_if_needed(appraisals[year_str]["url"], appraisals[year_str]["local_file"])
+    
     
     #
     # Unzip Appraisal data and convert to CSV
     #
 
-    appraisal_fw_dir = "tmp/appraisal_fixedwith"
-    if not os.path.exists(appraisal_fw_dir):
-        os.mkdir(appraisal_fw_dir)
-        # Zip file's compression method was not supported.
-        #with zipfile.ZipFile("downloads/2022 Certified Appraisal Export Supp 0_07252022.zip", 'r') as zip_ref:
-        #    zip_ref.extractall(appraisal_fw_dir)
-        subprocess.run(["unzip", "downloads/2022 Certified Appraisal Export Supp 0_07252022.zip", "-d", appraisal_fw_dir])
+    for year_str in appraisals:
+        if not os.path.isfile(appraisals[year_str]["local_file"]):
+            continue
+        appraisal_fw_dir = "tmp/appraisal_fixedwidth_" + year_str
+        if not os.path.exists(appraisal_fw_dir):
+            os.mkdir(appraisal_fw_dir)
+            # Zip file's compression method was not supported.
+            #with zipfile.ZipFile("downloads/2022 Certified Appraisal Export Supp 0_07252022.zip", 'r') as zip_ref:
+            #    zip_ref.extractall(appraisal_fw_dir)
+            subprocess.run(["unzip", appraisals[year_str]["local_file"], "-d", appraisal_fw_dir])
 
-    appraisal_csv_dir = "tmp/appraisal_CSV"
-    if not os.path.exists(appraisal_csv_dir):    
-        os.mkdir(appraisal_csv_dir)
-    appraisal_files = os.listdir(appraisal_fw_dir)
-    for filename in appraisal_files:
-        if filename[-4:] != ".TXT":
-            print("Not converting file " + filename + " to CSV")
-        else:
-            full_filename_fw  = appraisal_fw_dir  + "/" + filename
-            full_filename_csv = appraisal_csv_dir + "/" + filename[0:-4] + ".csv"
-            if not os.path.isfile(full_filename_csv):
-                print("converting file " + full_filename_fw + " to CSV")
-                convert_fixedwidth_to_CSV(filename, full_filename_fw, full_filename_csv)
+        appraisal_csv_dir = "tmp/appraisal_CSV_" + year_str
+        if not os.path.exists(appraisal_csv_dir):    
+            os.mkdir(appraisal_csv_dir)
+        appraisal_files = os.listdir(appraisal_fw_dir)
+        for filename in appraisal_files:
+            if filename[-4:] != ".TXT":
+                print("Not converting file " + filename + " to CSV")
+            else:
+                full_filename_fw  = appraisal_fw_dir  + "/" + filename
+                full_filename_csv = appraisal_csv_dir + "/" + filename[0:-4] + ".csv"
+                if not os.path.isfile(full_filename_csv):
+                    print("converting file " + full_filename_fw + " to CSV")
+                    convert_fixedwidth_to_CSV(filename, full_filename_fw, full_filename_csv)
                 
     #
     # Join parcels with zoning file and appraisal file
     #
+    pz_filename = "outputs/parcels_with_zoning.csv"    
+    if not os.path.isfile(pz_filename):
+        print("reading parcels")
+        parcels = gpd.read_file(parcels_local_file)
+        ignore_fields_list = ignore_fields("Parcels")
+        parcels = parcels[[column for column in parcels.columns if column not in ignore_fields_list]] 
 
-    print("reading parcels")
-    parcels = gpd.read_file("downloads/TCAD_public.json.zip")
-    ignore_fields_list = ignore_fields("Parcels")
-    parcels = parcels[[column for column in parcels.columns if column not in ignore_fields_list]] 
+        print("reading zoning")
+        zoning = gpd.read_file(zoning_local_file)
+        ignore_fields_list = ignore_fields("Zoning")
+        zoning = zoning[[column for column in zoning.columns if column not in ignore_fields_list]] 
 
-    
-    print("reading zoning")
-    zoning = gpd.read_file("inputs/PLANNINGCADASTRE_zoning_small_map_scale.json.zip")
-    ignore_fields_list = ignore_fields("Zoning")
-    zoning = zoning[[column for column in zoning.columns if column not in ignore_fields_list]] 
+        print("computing centroids of parcels")
+        # save geometry in a column
+        parcels['polygons'] = parcels.geometry
+
+        # set geometry to centroids
+        parcels['centroid'] = parcels.geometry.centroid   
+        parcels = parcels.set_geometry('centroid')
+
+        # join
+        print("joining parcels with zoning")
+        parcels_with_zoning = gpd.sjoin(parcels, zoning, how="left", predicate="intersects")
+
+        # restore geometry and remove added columns
+        parcels_with_zoning = parcels_with_zoning.set_geometry('polygons')
+        parcels_with_zoning = parcels_with_zoning[[column for column in parcels_with_zoning.columns if column not in ('centroid','polygons')]]     
+
+        # free memory
+        #del parcels 
+        #del zoning
+        #gc.collect()
+        
+        pd.DataFrame(parcels_with_zoning).to_csv(pz_filename)
 
 
-    print("computing centroids of parcels")
-    # save geometry in a column
-    parcels['polygons'] = parcels.geometry
-
-    # set geometry to centroids
-    parcels['centroid'] = parcels.geometry.centroid   
-    parcels = parcels.set_geometry('centroid')
-
-    # join
-    print("joining parcels with zoning")
-    parcels_with_zoning = gpd.sjoin(parcels, zoning, how="left", predicate="intersects")
-
-    # free memory
-    del parcels 
-    del zoning
-    gc.collect()
-    
-    # restore geometry and remove added columns
-    parcels_with_zoning = parcels_with_zoning.set_geometry('polygons')
-    parcels_with_zoning = parcels_with_zoning[[column for column in parcels_with_zoning.columns if column not in ('centroid','polygons')]]     
+    sys.exit(1)
 
     print("reading appraisals")
-    appraisals = gpd.read_file("tmp/appraisal_CSV/PROP.csv", ignore_fields=ignore_fields("PROP.TXT"))
+    appraisals_old = gpd.read_file("tmp/appraisal_CSV/PROP.csv", ignore_fields=ignore_fields("PROP.TXT"))
 
     # Make sure prop_id is an int.  I had trouble with this.
-    appraisals["prop_id"] = appraisals["prop_id"].astype(int)
+    appraisals_old["prop_id"] = appraisals_old["prop_id"].astype(int)
 
 ### RIGHT JOIN???
     print("joining parcels&zoning with appraisals")    
-    parcels_with_zoning_and_appraisals = pd.merge(parcels_with_zoning, appraisals, how="left", left_on="PROP_ID", right_on="prop_id")
+    parcels_with_zoning_and_appraisals = pd.merge(parcels_with_zoning, appraisals_old, how="left", left_on="PROP_ID", right_on="prop_id")
 
     print("outputing")
     # Has columns "geometry" and "centroid"

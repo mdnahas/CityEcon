@@ -25,6 +25,9 @@ from dumper import EsriDumper
 
 def download_file_if_needed(url, filename):
     if not os.path.isfile(filename):
+        if url == "":
+            print("Unable to download " + filename + ".  URL not available.")
+            return
         # This simple line got 403 as a response.
         #urllib.request.urlretrieve(url, filename)
         r = requests.get(url, allow_redirects=True)

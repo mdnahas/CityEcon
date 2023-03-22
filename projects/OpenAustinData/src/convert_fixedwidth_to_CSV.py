@@ -57,7 +57,9 @@ def convert_fixedwidth_to_CSV(filename, src_full_filename, dest_full_filename):
     # (May be rows start at 0 and it includes the header row?)
     colspec = pd.read_excel(description_excel_file, sheet_name=description_excel_sheet, skiprows=start_row-2, nrows=(end_row-start_row), engine='openpyxl').iloc[:,:6]
 
-    with open(src_full_filename, 'r') as input_file:
+    # encoding = "ISO-8859-1" is because there are non-UTF-8 character in file
+    # "ISO-8859-1" is the same as the Latin1 character set.
+    with open(src_full_filename, 'r', encoding = "ISO-8859-1") as input_file:
         with open(dest_full_filename, 'w', newline='') as output_file:
             writer = csv.writer(output_file)
 
