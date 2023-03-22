@@ -22,18 +22,27 @@ from convert_fixedwidth_to_CSV import convert_fixedwidth_to_CSV
 # URLs of downloaded files
 #
 
+# Parcels are 455MB uncompressed, 80MB compressed
 parcels_url = "https://gis.traviscountytx.gov/server1/rest/services/Boundaries_and_Jurisdictions/TCAD_public/MapServer/0"
+parcels_local_file = "downloads/TCAD_public.json.zip"
 
+# Zoning is 51MB uncompressed, 12MB compressed
 zoning_url = "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/PLANNINGCADASTRE_zoning_small_map_scale/FeatureServer/0"
+zoning_local_file = "inputs/PLANNINGCADASTRE_zoning_small_map_scale.json.zip"
 
-#zoning_ordinance_download_url = "https://data.austintexas.gov/api/geospatial/xt8n-xrjg?accessType=DOWNLOAD&method=export&format=GeoJSON"
+# Appraisal are 260MB compressed
+appraisal_url = "https://traviscad.org/wp-content/largefiles/2022%20Certified%20Appraisal%20Export%20Supp%200_07252022.zip"
+appraisal_local_file = "downloads/2022 Certified Appraisal Export Supp 0_07252022.zip"
 
-appraisal_roll_download_url = "https://traviscad.org/wp-content/largefiles/2022%20Certified%20Appraisal%20Export%20Supp%200_07252022.zip"
 # 2021 appraisals
-# appraisal_roll_download_url = ""https://traviscad.org/wp-content/largefiles/2021-08-02_008042_APPRAISAL_STD%20EXPORT%20R%26P%20ALLJUR%20AS%20OF%202021.zip"
+# appraisal_url = "https://traviscad.org/wp-content/largefiles/2021-08-02_008042_APPRAISAL_STD%20EXPORT%20R%26P%20ALLJUR%20AS%20OF%202021.zip"
+# appraisal_local_file = "downloads/2021-08-02_008042_APPRAISAL_STD EXPORT R&P ALLJUR AS OF 2021.zip"
+
+# 2012 appraisals, from Open Records Request - R004028-112122
+# appraisal_url = ""
+# appraisal_local_file = "downloads/2019-08-03_007107_APPRAISAL_R_P_ALLJUR_AS_OF_2012.zip"
 
 
-#TODO: Zipcode?
 
 def ignore_fields(filename):
     result = []
@@ -74,13 +83,13 @@ def main():
     #
             
     print("Downloading appraisal data")
-    download_file_if_needed(appraisal_roll_download_url, "downloads/2022 Certified Appraisal Export Supp 0_07252022.zip")
+    download_file_if_needed(appraisal_url, appraisal_local_file)
     
     print("Downloading zoning")
-    download_json_zip_if_needed(zoning_url, "inputs", "PLANNINGCADASTRE_zoning_small_map_scale.json")
+    download_json_zip_if_needed(zoning_url, zoning_local_file)
 
     print("Downloading parcels")
-    download_json_zip_if_needed(parcels_url, "downloads", "TCAD_public.json")
+    download_json_zip_if_needed(parcels_url, parcels_local_file)
     
     #
     # Unzip Appraisal data and convert to CSV

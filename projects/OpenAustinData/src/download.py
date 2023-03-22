@@ -62,13 +62,15 @@ def call_esridumper_library(url, json_full_name):
 
 
 # This function downloads a feature to a JSON file and ZIPs the file.        
-def download_json_zip_if_needed(url, directory_without_slash, destination_json_filename):
-    json_full_filename = directory_without_slash + "/" + destination_json_filename
-    zip_full_filename = json_full_filename + ".zip"
+def download_json_zip_if_needed(url, zip_full_filename):
+    json_full_filename = zip_full_filename[0:-4]
+    slash_location = json_full_filename.find("/")
+    directory_without_slash = json_full_filename[:slash_location]
+    json_filename = json_full_filename[slash_location+1:]
     if not os.path.isfile(zip_full_filename):
         if not os.path.isfile(json_full_filename):
             print("Downloading from " + url)
             call_esridumper_library(url, json_full_filename)
         # shutil.make_archive("downloads/foo.txt", "zip", "downloads", "foo.txt")
             print("Done download")
-        shutil.make_archive(json_full_filename, 'zip', directory_without_slash, destination_json_filename)
+        shutil.make_archive(json_full_filename, 'zip', directory_without_slash, json_filename)
