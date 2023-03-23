@@ -97,7 +97,9 @@ def main():
 
     for year_str in appraisals:
         if not os.path.isfile(appraisals[year_str]["local_file"]):
+            print("No appraisal file for " + year_str + ".  Skipping.")
             continue
+        print("Converting appraisal files for " + year_str + " to CSV.")
         appraisal_fw_dir = "tmp/appraisal_fixedwidth_" + year_str
         if not os.path.exists(appraisal_fw_dir):
             os.mkdir(appraisal_fw_dir)
@@ -112,30 +114,32 @@ def main():
         appraisal_files = os.listdir(appraisal_fw_dir)
         for filename in appraisal_files:
             if filename[-4:] != ".TXT":
-                print("Not converting file " + filename + " to CSV")
+                print("  Not converting file " + filename + " to CSV")
             else:
                 full_filename_fw  = appraisal_fw_dir  + "/" + filename
                 full_filename_csv = appraisal_csv_dir + "/" + filename[0:-4] + ".csv"
                 if not os.path.isfile(full_filename_csv):
-                    print("converting file " + full_filename_fw + " to CSV")
+                    print("  converting file " + full_filename_fw + " to CSV")
                     convert_fixedwidth_to_CSV(filename, full_filename_fw, full_filename_csv)
                 
     #
     # Join parcels with zoning file and appraisal file
     #
+    print("Merging parcel file with zoning file.")
+
     pz_filename = "outputs/parcels_with_zoning.csv"    
     if not os.path.isfile(pz_filename):
-        print("reading parcels")
+        print("  reading parcels")
         parcels = gpd.read_file(parcels_local_file)
         ignore_fields_list = ignore_fields("Parcels")
         parcels = parcels[[column for column in parcels.columns if column not in ignore_fields_list]] 
 
-        print("reading zoning")
+        print("  reading zoning")
         zoning = gpd.read_file(zoning_local_file)
         ignore_fields_list = ignore_fields("Zoning")
         zoning = zoning[[column for column in zoning.columns if column not in ignore_fields_list]] 
 
-        print("computing centroids of parcels")
+        print("  computing centroids of parcels")
         # save geometry in a column
         parcels['polygons'] = parcels.geometry
 
@@ -144,21 +148,21 @@ def main():
         parcels = parcels.set_geometry('centroid')
 
         # join
-        print("joining parcels with zoning")
+        print("  joining parcels with zoning")
         parcels_with_zoning = gpd.sjoin(parcels, zoning, how="left", predicate="intersects")
 
         # restore geometry and remove added columns
         parcels_with_zoning = parcels_with_zoning.set_geometry('polygons')
         parcels_with_zoning = parcels_with_zoning[[column for column in parcels_with_zoning.columns if column not in ('centroid','polygons')]]     
 
-        # free memory
-        #del parcels 
-        #del zoning
-        #gc.collect()
-        
         pd.DataFrame(parcels_with_zoning).to_csv(pz_filename)
 
+        
+    # free memory
+    gc.collect()
+        
 
+        
     sys.exit(1)
 
     print("reading appraisals")
