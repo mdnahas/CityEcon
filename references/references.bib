@@ -89,17 +89,15 @@
 
 @ARTICLE{Ambrose2022,
   title = {Housing Rents and Inflation Rates},
-  author = {Brent W. Ambrose and N. Edward Coulson and Jiro Yoshida}
+  author = {Brent W. Ambrose and N. Edward Coulson and Jiro Yoshida},
   year = {2022},
   journal = {Journal of Money, Credit and Banking},
   abstract = {
     This paper develops a quality-adjusted measure of marginal housing rents using a monthly statistic of landlord net rental income. The Marginal Rent Index (MRI) exhibits deflation during recessions and leads the official rent index by seven months. The modified inflation rate based on MRI suggests that the annual official inflation rate was overestimated by 1.7 to 4.1\% during the Great Recession but underestimated by 0.3 to 0.7\% during the subsequent expansionary period. 
-  }
+  },
   keywords={rent, rent index, inflation},
   annote = {
     This paper creates rent indexes.  The authors think that inflation is miscalculated because it isn't handling rent correctly.
-
-    
   }
 }
 
@@ -116,7 +114,7 @@
   }
 }
 
-@Article{Bettencourt2007
+@Article{Bettencourt2007,
   author = 	 {Lu\'i M. A. Bettencourt and Jos\'e Lobo and  Dirk Helbing and Christian K\:uhnert and Geoffrey B. West},
   title = 	 {Growth, innovation, scaling, and the pace of life in cities},
   journal = 	 {Proceedings of the National Academy of Sciences},
@@ -126,7 +124,7 @@
   number={7},
   keywords={power laws, scaling},
   annote = {
-    This is an innovative paper that showed a lot of statistics on cities follow a power-law distribution of the city's population.  An important statistic is GDP and, because the coefficient is greater than 1, it means that GDP grows super-linearly with the size of the city.  Or, equivalently, that GDP-per-capita grows with the size of a city.  But many other statistics follow the same pattern: new patents, R&D spending, bank deposits, crime, walking speed, gas stations, road surface, etc..  The coefficients are different for different statistics.  For roads and gas stations, the coefficient is below 1, so the larger the city is, the fewer gas-stations-per-capita.
+    This is an innovative paper that showed a lot of statistics on cities follow a power-law distribution of the city's population.  An important statistic is GDP and, because the coefficient is greater than 1, it means that GDP grows super-linearly with the size of the city.  Or, equivalently, that GDP-per-capita grows with the size of a city.  But many other statistics follow the same pattern: new patents, R\&D spending, bank deposits, crime, walking speed, gas stations, road surface, etc..  The coefficients are different for different statistics.  For roads and gas stations, the coefficient is below 1, so the larger the city is, the fewer gas-stations-per-capita.
 
 \par
     The authors go further and set up an differential equation for city growth based on a power law distribution.  I don't like this extrapolation.   It leads to infinite growth in a finite amount of time.  The authors get around this by saying that innovation must happen which reset the equation to initial conditions.  I don't like that fix.  It would be easier to add additional terms to the differential equation.  E.g., crime or disease grows with a different coefficient, restricting city size.
@@ -409,6 +407,48 @@
 }
 
 
+@comment RePEc:tor:tecipa:tecipa-370,
+@TechReport{Duranton2009,
+  author={Gilles Duranton and Matthew A. Turner},
+  title={{The Fundamental Law of Road Congestion: Evidence from US cities}},
+  year=2009,
+  month=Sep,
+  institution={University of Toronto, Department of Economics},
+  type={Working Papers},
+  url={https://ideas.repec.org/p/tor/tecipa/tecipa-370.html},
+  number={tecipa-370},
+  abstract={ We investigate the relationship between interstate highways and highway vehicle kilometers traveled (vkt) in us cities. We find that vkt increases proportionately to highways and identify three important sources for this extra vkt: an increase in driving by current residents; an increase in transportation intensive production activity; and an inflow of new residents. The provision of public transportation has no impact on vkt. We also estimate the aggregate city level demand for vkt and find it to be very elastic. We conclude that an increased provision of roads or public transit is unlikely to relieve congestion and that the current provision of roads exceeds the optimum given the absence of congestion pricing.},
+  keywords={highways; vehiclekilometers traveled; public transport; congestion.},
+  doi={},
+  annote={
+    An impressive paper.  This paper tries to determine if building roads or widening lanes is better for a city.  The title comes from a quote from Downs 1962, that the "fundamental law of highway congestion" is that, if you widen a congested highway, the traffic will increase until the congestion is just as bad as before construction.  The authors say that they verify the statement: "increased provision of interstate highways and major urban roads is unlikely to relieve congestion of these roads".  They also find "no evidence that the provision of public transportation affects" vehicle-kilometers-traveled (VKT).
+
+    They measure how VKT changes as more lane-kilometers of road are added to a city.  
+
+    They study 228 MSA (metro areas of cities), in 1983, 1993, and 2003.  Roads have 6 different classifications. They ignore local roads.  They study interstate highways separately.  The 4 other classes of non-local roads get grouped into "major urban roads".  I didn't find a description of "local roads" or how much of a city that makes up.  (Are Manhattan's streets "local roads"?)   For interstates, they separate them into the "urban" and "non-urban" parts, but I don't have a sense of how that division was made. 
+
+    Under plain OLS, for interstates in urban areas, the coefficient of between $ln(roads)$ and $ln(VKT)$ is very close to 1.  R-squares are .95 to .96, too.  The coefficients for "major urban roads" is .70 to .88.   For non-urban interstates, they're from 0.82 to 0.84.  
+
+    The coefficients for $ln(population)$ is "much less than 1 in all specification" ... but seems to be 1.01 in Table 3, regression \#3.  All others are in the range .5 to .3, which says population doesn't affect driving as much as building roads.
+
+    They realize that congested cities are more likely to get roads added to them, so they use instrumental variables to separate that causality.  But they only do this for all interstates.  Not "major urban roads" and they don't break interstates into "urban" and "non-urban" parts.  The instruments are old maps of the railroads, explorations, and the plans for the interstates in 1947.
+
+    For the IV regressions, they get coefficients around 1.  They say their preferred estimate is panel A, column 3, which has a value of 1.03.
+
+    They do another IV regression, but for how much buses (not trains) contribute to reducing VKT.   Their instruments are the highway plan, railroad plan, and the 1972 election.  They use an "ILML regression" rather than 2SLS "since our set of instruments is sometimes marginal weak".  The coefficient for buses is close to zero and, in some regressions, statistically indistinguishable from zero.
+
+    They do a regression that tries to show that there's a "natural level of traffic".  I didn't understand what they did here.  They got negative coefficients and claimed there was mean reversion.
+
+    They try do determine where the additional interstate VKT are coming from.  They look at commercial trucking, residents, population growth, and diversino from one set of roads to another.  They find commercial trucking increases with interstate lane-km.  As does residential driving, a little.  Population too.   But more interstate lane-km doesn't divert very much from other roads.
+
+    For a traffic increase, they conclude: trucking accounts for 19 to 29\%, population increase for 5 to 21\%, residential driving for 9 to 39\%, and diversion from other roads 0 to 10\%.  The true values would have to be at the upper end of those ranges to account for all the traffic.
+
+    The authors mention congestion, but the paper doesn't actually mention delay.  They show coefficients around 1 for urban interstates in almost every test.  Still, it seems those highways carry more cars if population increases.  Maybe not at rush-hour?  I would have liked to see the breakdown by "roads that have stoplights" and "roads that do not".  As for the expanded capacity, it is used by more by local residents and diverts capacity (thru-truckers and migrants) from other cities.  So it is productively being used, not just causing needless delays.
+
+    Maybe we need to expand interstates even more?   I'd definitely prefer congestion pricing, though.  
+  }
+}
+
 
 
 @TechReport{Erdmann2014,
@@ -599,6 +639,53 @@ commanded no special municipal privilege."  (pg. 17)
 }
 
 
+@misc{Gascon2018,
+  author = {Charles S. Gascon and Andrew Spewak},
+  title = {Warning: Don’t Infer Regional Inflation Differences from House Price Changes},
+  howpublished = {\url{https://research.stlouisfed.org/publications/economic-synopses/2018/03/23/warning-dont-infer-regional-inflation-differences-from-house-price-changes}},
+  year={2018},
+  note = {},
+  keywords={rent, inflation, regional indicators},
+  annote={
+    This is a piece of data I've been looking for!  It says that rent increases in an MSA explain about half of inflation in the MSA.  Prices depend on rent in a significant way.
+    
+    The article starts by saying home prices are \emph{not} a predictor of regional inflation.  And that makes sense to me.  If the price for a home is the sum of discounted future rents, it is dominated by the expectation of future rents and the discount factor (usually an interest rate).
+
+    The second half of the article focuses on rent as a predictor for regional inflation.  That does work.  Their linear prediction has an R-squared of 0.49.  The trend is clear, but I'm not sure how precise that R-squared value is.  In their plot, the changes don't look normally distributed and the higher values seem to have larger movements than smaller ones.
+
+    The coefficient they get in their regression is much lower than I expected.  Households spend about 32\% of the their income on rent, so I expected if rent increased by $X$, prices should increase by at least $.32 \cdot X$.  And, given local purchases, probably closer to $.50 \cdot X$.  It's true that only 1 in 3 households rent at market prices, but the usual interpretation is that homeowners are landlords that rent to themselves.  In fact, their rent metric includes owner-imputed rents!  The conclusion says the author's answer: "There still exists more variation in rents than in inflation, due in part to the fact that households will adjust how much housing they purchase when the price changes."
+
+    The authors use "regional price parities", which are an inflation measure for many metroareas.  The CPI is only available in 27 MSAs.
+  }  
+}
+
+
+@misc{Gascon2022,
+  author = {Charles S. Gascon and Jack Fuller},
+  title = {Variations in Inflation across U.S. Metro Areas},
+  howpublished = {\url{https://www.stlouisfed.org/publications/regional-economist/2022/dec/variations-inflation-us-metro-areas}},
+  year={2022},
+  note = {},
+  keywords={rent, inflation, regional indicators},
+  annote={
+    This page goes into details about regional inflation.  Basically, how inflation differs from one metro area to another.
+
+    Regional Price Parity (RPP) is the price of the same basket of goods in different metro areas.  So, it's rent for the same house.  Or the same basket of goods.  Or services.  The average of all RPPs in a given year equals 100.  (I looked up their definition and apparently they are intra-country PPPs!)
+
+    CPI measures inflation over time.  For regional CPIs, they are indexed to 100 back in 1982.  Regional inflation is also different because the baskets are different.  For example, heating is a larger expense in colder climates.
+
+    About half of the regional differences is due to housing.  It is persistant.
+
+    In tighter labor markets, employers pay higher wages \emph{and} charge more for their products.  This creates inflation.  So another regional difference is, when unemployment goes down, prices go up.  But it looks like housing markets are the cause of tighter labor markets!  When you adjust for housing costs, the difference (mostly) disappears.  That's fascinating!  
+  }  
+}
+
+
+
+
+
+
+
 @TechReport{Gray2019,
   author    = "M. Nolan Gray and Salim Furth",
   title     = "Do Minimum-Lot-Size Regulations Limit Housing Supply in Texas?",
@@ -747,7 +834,7 @@ Evidence from Administrative Data},
 @TechReport{Hodge2015,
   author    = "Timothy R. Hodge and Gary Sands and Mark Skidmore",
   title     = "The Land Value Gradient in a (Nearly) Collapsed Urban Real Estate Market",
-  url = "https://www.lincolninst.edu/sites/default/files/pubfiles/2532_1872_Hodges%20WP15TH1.pdf",
+  url = "https://www.lincolninst.edu/sites/default/files/pubfiles/2532_1872_Hodges\%20WP15TH1.pdf",
   institution="Lincoln Institute of Land Policy",
   year      = 2015,
   keywords={zoning; inclusionary zoning},
@@ -848,7 +935,7 @@ Evidence from Administrative Data},
 }
 
 
-@book{Jacobs1961,
+@book{Jacobs2000,
   author    = "Jane Jacobs",
   title     = "The Nature of Economies",
   publisher = "Random House",
@@ -934,6 +1021,72 @@ Evidence from Administrative Data},
 }
 
 
+@comment RePEc:eee:jhouse:v:58:y:2022:i:pa:s1051137722000432,
+@Article{Larson2022,
+  author={Larson, William D. and Shui, Jessica},
+  title={{Land valuation using public records and kriging: Implications for land versus property taxation in cities}},
+  journal={Journal of Housing Economics},
+  year=2022,
+  volume={58},
+  number={PA},
+  pages={},
+  month={},
+  keywords={Land prices; Price gradient; Land value taxation; Price dynamics; option value of land},
+  doi={10.1016/j.jhe.2022.101871},
+  abstract={We construct land values for each parcel in Maricopa County (Phoenix), Arizona, from 2000 through 2018 using a novel public dataset containing the universe of land sales and parcel records in the county. We then compare residential land values constructed using two classes of source data, vacant land sales and land under existing structures. Between 2012 and 2018, estimated land values for developed parcels are, on average, 14\% higher when estimated using vacant land due to plattage effects and other unobserved factors. Growth rates are similar, facilitating the use of vacant land price indices to trace valuations over time from an accurate base year valuation. Dynamics between prices of Maricopa County land and housing suggest hypothetical land value tax revenues are more pro-cyclical than property tax revenues, with elasticities of 3.3 and 2.3 with respect to national house prices, respectively. By 2018, houses had recovered 96\% of pre-crisis (2007) values, but land had only recovered 66\%. These findings demonstrate a source of risk of dependence on public revenues from land value taxes versus a base-period revenue-neutral property tax.},
+  url={https://www.sciencedirect.com/science/article/pii/S1051137722000432},
+  annote= {
+    This is a good paper.  It estimates the price of land around Phoenix, Arizona, using transactions on vacant land.  It compares those prices to a previous estimate of land under buildings.  The author's goal is to evaluate the use of these estimates for land-value taxes.  
+
+    The authors start with the prices of transactions on vacant land.  They use a technique called "kriging" to estimate the price of land that was not sold.  In kriging, the estimate of price-per-acre is a weighted average of the known price-per-acre for land transactions.  The weights are a function of distance to the land in the transactions.  The author tries many ways to calculate weights.  They find that weighting nearby land more and averaging many pieces of land work better.  Many techniques for weighting performed about the same.
+ 
+    There are adjustments for the size of the lot, zoning, and nearby amenities, like roads, lakes, golf courses, railroads, etc.
+
+    The authors compare their results to land-values assigned by the local property assessors.  They find "Both of these values track each other closely in the growth rate, but are different in the level due to differences in both observable and unobservable characteristics".   Another validation finds similar results.  
+
+    The authors compare these estimates, calculated using vacant land transactions, to estimates based on a previous paper\cite{Morris2021} by the authors (and some additional co-authors).  That paper used property prices minus the cost to replace the building to estimate land values.    "Between 2012 and 2018, vacant land transactions generate land values that are, on average, 14\% higher than land underneath structures."  Vacant land differs substantially from land under structures.  It is larger.  I spent 30 minutes trying to understanding the graphs and the author's descriptions here.  I didn't find them clear.  And I fear making any summary, since the author seem to give up at the end.  They say "the large level differences are not due to differences in the option value of redevelopment nor teardown costs"  "unobservable differences are not everywhere in the city" and "we infer that there are large, positive, unobserved factors that are positively correlated with the size of residential lots.".   It would have been nice to see where in the city those were. 
+
+    The authors discuss how these results would affect a land tax.  They say, "Because land is typically the more volatile component of a property, a tax exclusively on the value of land would therefore be more volatile in terms of revenue generated."  They show big swings where the revenue doubles or halfs within 6 years.  And those are in the only 18 years of 1 city covered by this dataset.
+
+    I find this paper very interesting, because land values are important and the prices of vacant lots are handy.  (I've estimated price in Austin, TX using the prices of vacant lots.)  I wish the comparison between the two techniques was better written.  The plots were impossible for me to comprehend quickly and the description was not enough to help.  (The paper is short; I wonder if page limits hurt the comprehension.) 
+
+    I like the technique of kriging.  It's simple and fits well in the economics toolbox.  It is an averaging and it doesn't capture trends, such as prices increasing as you get closer to downtown, so there's room for better techniques.    
+
+    I'm not surpised that vacant land is more valuable that under structures.  Vacant land is a very flexible option, because it can be subdivided and there's a large variety of buildings that can be built on it (with time delays).  The authors' other technique for valuing land was based on the price of the whole property minus the cost of reconstructing the same building.  That approach (minus the rent for the time to reconstruct the building) is a lower-bound for the price of land, because it is the profits from a single choice of a very flexible option.  And exercising that option (having residents move and destroying the building) had high friction costs.  Given the "land is an option" approach, its easy to see that swings in future demand cause big swings in land prices, because the option can go from "in the money" to "out of the money".  (Urban Economics needs a good framework for talking about future demand.)
+
+    It's a good paper.  Worth reading if you care about land prices and most Urban Economists do.
+  }
+}
+
+
+@comment RePEc:zbw:zewdip:21026
+@TechReport{Loffler2021,
+  author={Löffler, Max and Siegloch, Sebastian},
+  title={{Welfare effects of property taxation}},
+  year=2021,
+  month={},
+  institution={ZEW - Leibniz Centre for European Economic Research},
+  type={ZEW Discussion Papers},
+  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3805644},
+  number={21-026},
+  abstract={We analyze the welfare implications of property taxation. Using a sufficient statistics approach, we show that the tax incidence depends on how housing prices, labor and other types of incomes as well as public services respond to property tax changes. Empirically, we exploit the German institutional setting with 5,200 municipal tax reforms for identification. We find that higher taxes are fully passed on to rental prices after three years. The pass-through is lower when housing supply is inelastic. Combining reduced form estimates with our theoretical framework, we simulate the welfare effects of property taxes and show that they are regressive.},
+  keywords={property taxation; welfare; tax incidence; local labor markets; rental housing; property tax; tax incidence},
+  doi={},
+  annote = {
+    Skimmed.
+
+    Finds that 3 years after change in property taxes, rents increase to account for the tax change.  It is a rather dramatic step up in the 3rd year.  And error bounds are wide.  It's also strange that the averages in the past are also positive.   (Perhaps tax increases are passed in the worse year?)
+
+    The 3 year lag is strange.  Where it is significant, I assume it is a quantity effect.  It takes a while to take unprofitable housing off the market or to build new profitable housing.
+
+    Weird.  Assessed values for property never change.  So reassessment cannot be the cause of increases 3 years later.
+
+    The paper contains dramatic welfare graphs, but these come from a simulation.  The model shows that a tax increase of 1\% causes more than a 1\% drop in consumption utility for households in the bottom 15\% or so.  Households with higher consumption were less affected.
+  }
+}
+
+
+
 @Article{Marchetti1994,
   author="C. Marchetti",
   title="Anthropological Invariants in Travel Behavior",
@@ -967,6 +1120,26 @@ Evidence from Administrative Data},
 }
 
 
+@book{Marohn,
+  author    = "Charles L. Marohn, Jr.",
+  title     = "Strong Towns",
+  publisher = "John Wiley \& Sons",
+  address   = "Hoboken, NJ",
+  year      = 2020,
+  keywords={city finances},
+  annote    = {
+    This is a tedious book that has a really good core idea and stretches it out to 220 pages.  The core idea is that suburbs are expensive.  There is a high cost for the infrastructure to attach a suburban house to the road network, water network, sewage network, etc..  This is because suburban houses are far apart.  Cities often don't notice that those high costs often exceed the property tax that is collected from the house.  Thus, suburbs hurt city's finances.  The same applies to "big box" stores on the edge of a city.
+
+    It would have loved if this book had a good "aha" story, elaborated on the core idea, provided examples, and discussed solutions.  But that's not what this book does.  It talks about "complicated systems" vs. "complex systems".  It messes up finances.  (The author doesn't count suburban infrastructure as "assets", but calls them "liabilities".  What he should call them is "non-performing assets". )  He talks about pre-building infrastructure vs. waiting for demand.  He talks about "infinite baseball games" in one of the worst metaphors I've seen.  He gives bad investment advice.  And more.  This book is a mess.  The author is a professional engineer and doesn't include a detailed example with numbers.  WTF?!
+
+    The author does explain that the state and federal government helped cause the problem.  By subsidizing new infrastructure, especially road construction, its costs do not show up in the city's budget.  In fact, building more infrastructure can help solve temporary budget problems!  Only when growth has stopped and that infrastructure needs to be replaced do cities see the financial mess they are in.  
+
+    Because this book is disorganized, it doesn't say clearly how to measure the problem and how to fix it.  I believe the best way to measure the problem is to assign infrastructure costs to each address and then compare that against the taxes paid.  The solution, which the author stuck in corner, is for cities to prioritize the "profitable" parts of town, where revenues exceed costs.  If there's a surplus, the city should try to preserve the parts that don't lose the city too much money.  To avoid bankruptcy, cities will need to abandon the least profit parts of town.   And those least profitable ones are the fringe of suburbs and big box stores.
+
+    I do not recommend this book.  Its idea is very important.  You should know the idea.  But I think this summary explains the idea clearly and you will not gain any more insight about the idea by reading the 220 page book.
+  }
+}
+
 @TechReport{Meyer2022,
   author    = "Bruce Meyer and Angela Wyse and Kevin Corinth",
   title     = "The Size and Census Coverage of the U.S. Homeless Population",
@@ -989,6 +1162,71 @@ Evidence from Administrative Data},
 }
 
 
+@comment RePEc:eee:moneco:v:118:y:2021:i:c:p:413-431,
+@Article{Morris2021,
+  author={Davis, Morris A. and Larson, William D. and Oliner, Stephen D. and Shui, Jessica},
+  title={{The price of residential land for counties, ZIP codes, and census tracts in the United States}},
+  journal={Journal of Monetary Economics},
+  year=2021,
+  volume={118},
+  number={C},
+  pages={413-431},
+  month={},
+  keywords={Land prices; Land leverage; Price gradient; Standard urban model},
+  doi={10.1016/j.jmoneco.2020.12},
+  abstract={Data from millions of appraisals in 2012–2019 are used to estimate residential land prices, the share of house value attributable to land, and related statistics down to the census-tract level for areas that include the vast majority of U.S. population and single-family housing. The results confirm predictions about land prices from canonical urban models. Over 2012–2019, we show that land prices rose faster than house prices in large metro areas, boosting the land share of house value, while the land share fell in smaller metros. The data are available for download at https://www.fhfa.gov/papers/wp1901.aspx.},
+  url={https://www.sciencedirect.com/science/article/pii/S0304393220301379},
+  annote={
+    This paper tries to compute a land price for a large portion of America's cities.  It uses property appraisals, probably for mortgage applications, from the GSEs (Goverment Sponsored Enterprizes, like Ginnie Mae).  It puts those into a model to find land prices.  It interpolates those land prices to all land using an averaging technique called "kriging".
+
+    The model is pretty simple.  It says that, for land plus a structure, the value of the structure decreases over time.  The results of the model are two.  For recently build houses, the land is probably valued at the price of the whole property minus the replacement construction cost for the building.  For very old houses, the property is almost all land-value and not building-value.  I don't like this model --- there is an option-value not accounted for: to tear down a building and rebuild whatever is most valuable then.
+
+    They limit their data to homes where the "effective age" is less than 15 years old.  I guess these are well-maintained buildings.  They drop appraisals that they think are generated from tax appraisals (which they don't trust).  They only allow reconstruction costs from a handful of well-known sources.
+
+    They adjust for the size of the lot, etc..
+
+    Given those land prices, they interpolate the data to all lots using kriging.  That's an average of nearby known data points, weighted by distance.  They used the 20 closest points.  It looks like weights were determined for the closest 6.9 miles in 15 bins.  Its a good technique, but it does use averaging, so it doesn't follow trends to predict peaks or cusps.  
+
+    They generate prices for 960 counties, 7,742 ZIP codes, and 10,515 Census tracts.  
+
+    They show prices as a distance from the CBD for various city sizes.  They go down almost exponentially, as you get farther from the CBD.  Larger cities are more expensive than smaller ones.  Cities with more regulations have higher prices.  Cities with more natural barriers have higher prices.
+
+    In larger cities, the land makes up more of a share of the property price.  It is 40 to 45\% downtown in cities with over 2 million housing units.
+
+    Figure 6(a) shows how counties with more expensive land have more squarefootage of structures.  But the slope is smaller and the varience much higher than I expected.   Figure 6(b) shows that expensive land is usually associated with smaller lot sizes.  That has a high variance too.  Perhaps counties are too large and that's causing the high variances?
+
+    Figure 6(c) compares county land prices for housing and for argiculture.  The authors say it "shows a strong positive relationship", but the scatterplot looks odd.  And the scales are off completely.  The median argiculture price for a county is \$3,000 per acre, while the median single-family land price is around \$100,000 per acre!  I don't get it.
+
+    Figure 9(a) is interesting.  It breaks the counties into bins by the number of single-family units.  The counties with the most houses saw the largest price increases from 2012-2019.  Also the most increase in land value --- especially in the top bin.  That was enough to drag the national average to a 7\% annual increase, even though smaller counties averaged a 2 or 3\% increase.
+
+    I think this is a good paper, but it's mostly because I see it as an engineering project.  The model and some choices aren't ideal, but they got something that works for the whole country.  I'm interested to download the data and take a look at it.  
+  }
+}
+
+
+@TechReport{Moszkowski2023,
+  author    = "Erica Moszkowski and Daniel Stackman",
+  title     = "Option Value and Storefront Vacancy in New York City",
+  url       = "https://emoszkowski.github.io/ericamoszkowski.com/Moszkowski_JMP.pdf",
+  institution="Harvard",
+  year      = 2023,
+  keywords  ={vacancy},
+  annote    = {
+    Read abstract and skimmed introduction.
+
+\par
+    This paper studies places for stores in NYC.  Landlords sometimes keep the places vacant for over a year.
+
+\par
+    The abstract says "We find that tenant heterogeneity and move-in costs jointly explain long-run vacancy by generating dispersion in match surplus and therefore option value for landlords. In a counterfactual exercise, eliminating either feature results in vacancy rates of close to zero. Search frictions and aggregate uncertainty play much smaller roles."
+
+\par
+    They use their model to evaluate a vacancy tax.  "Proponents of the tax argue that landlords who hold storefronts vacant impose unnecessary costs on their neighborhoods by reducing local economic activity through underutilization of retail space, as well as posing a threat to neighborhood safety via a reduction in "eyes on the street" (Jacobs, 1961). They view the tax as a Pigouvian measure which would cause landlords to internalize the impacts of their vacancies on urban vibrancy."
+   
+\par
+    "We find that the proposed commercial vacancy tax would indeed encourage landlords to fill vacant spaces more quickly, reducing vacancy rates and retail rents. However, the tax would also distort the set of stores present, with lower-earnings stores arriving at opportune moments crowding out higher-earnings stores that might have arrived later. These lower-earnings stores are more likely to exit, increasing retail churn and reducing welfare." 
+  }
+}
 
 @TechReport{OFlaherty1992,
   author    = "Brendan O'Flaherty",
@@ -1244,6 +1482,29 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
 
 \par
      Brendan O'Flaherty mentioned this as one paper connecting homelessness to inequality.
+  }
+}
+
+
+
+@Article{Rolheiser2019,
+  author={Lyndsey A. Rolheiser},
+  title={{Commercial Property Tax Incidence: Evidence from Urban and Suburban Office Rental Markets}},
+  journal={Journal of Housing Economics},
+  year=2019,
+  volume={},
+  number={},
+  pages={},
+  month={},
+  abstract={Do commercial property owners internalize increases in tax payments or pass these increases onto the renters of commercial space? To address this question, I develop a nonlinear mixed effect multilevel model that exploits cross-sectional and longitudinal variation in a panel of office rent and tax rate data for 1,300 office buildings across 93 Eastern Massachusetts municipalities over a 27 year period. Findings for the full set of buildings indicate a full-pass-through of a dollar increase in the tax payment to the renter of space. However, incidence for less centrally located buildings (outside a 5km radius from the Boston central business district) ranges from $0.52 to $0.67 for a dollar increase in the tax payment; incidence for more central buildings (within 5km from the Boston central business district) ranges from $1.06 to $1.39. An incidence greater than one is in line with theoretical hypotheses regarding general tax incidence within imperfectly competitive markets. Further, these findings indicate that elasticity of demand for office space relative to elasticity of supply may be larger in more decentralized locations.},
+  url={https://deliverypdf.ssrn.com/delivery.php?ID=219001114087076078082010091028100120037055014079020004006016104081084096109103008120048037019016019029045027027031094087107026010085044017083101024121099094024108103039021051088077109011096100112015124001092114071066093009089090096124024126087094067089&EXT=pdf&INDEX=TRUE},
+  keywords={property tax, tax incidence},
+  annote    = {
+    Did not read.
+
+    Abstract claims full pass through, especially near downtown.
+
+    Page 5 says "When focusing specifically on buildings outside a 5km radius from the Boston central business district (CBD), the pass-through decreases to a range of $0.52 to $0.67. For buildings within a 5km of the CBD, rent increases by $1.06 to $1.39 indicating this market may be imperfectly competitive with capital owners exercising market power over tenants."
   }
 }
 

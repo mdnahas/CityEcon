@@ -8,6 +8,18 @@
 
 <h2>HOWTOS:</h2>
 
+<h3>Get started</h3>
+
+<p>Install QGIS.</p>
+
+<p>Start QGIS.</p>
+
+<p>Add Layer.  Select "Vector".  Select "polygons.json.zip".</p>
+
+<p>Add Layer.  Select "Delimited Text".  Select "parcels<em>with</em>zoning<em>and</em>appraisals.csv".   Under "Geometry Definition" choose "No geometry (attribute only table)".</p>
+
+<p>Join Layers based on "PROP<em>ID".  <strong>This takes many minutes</strong>  (Maybe change Layer's Attributes Form to "unique" for "PROP</em>ID"?)</p>
+
 <h3>HOWTO: Add layer</h3>
 
 <p>In toolbar, click on icon with 3 squares on top of each other with a "plus sign".  (Tooltip says "Data Source Manager".)   </p>
@@ -17,6 +29,18 @@
 <p>For files with the "geojson" extension: Select "Vector" on the left side.  At the top, "Source Type" should be "file".  Under "Source", at the extreme right click on "...".  Select the file.  Click the "Add" button (at the bottom).   </p>
 
 <!-- How to create a small dataset to work with? -->
+
+<h3>HOWTO: Join Layers</h3>
+
+<p>Right click on the polygon layer.  Select "Properties".</p>
+
+<p>In the new "Layer Properties" window, select "Joins".</p>
+
+<p>Click "+" in the lower left.</p>
+
+<p>For "join layer" select the data layer.  For "join field" select the field, such as "PROP<em>ID".  For the Target field, select the appropriate value, such as "PROP</em>ID".  </p>
+
+<p>Click "Ok".</p>
 
 <h3>HOWTO: Add Plugin</h3>
 

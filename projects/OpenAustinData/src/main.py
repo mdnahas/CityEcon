@@ -7,6 +7,7 @@
 import sys
 import os.path
 #import zipfile
+import shutil
 import subprocess
 import gc
 
@@ -50,12 +51,22 @@ def ignore_fields(filename):
     with open('src/which_columns.csv') as csvfile:
         csvreader = csv.DictReader(csvfile)
         for row in csvreader:
-            if row["File"] == filename and row["Ignore"].strip() != "":
+            if row["File"] == filename and row["OutputField"].strip() == "":
                 result.append(row["Field"])
+            if row["OutputField"].strip() != "" and row["Field"].strip() != row["OutputField"].strip():
+                print("Warning: code does not (yet) support renaming output field from " + row["Field"].strip() + " to " + row["OutputField"].strip())
 
     return result
-        
-        
+
+
+def pandas_read_csv_ignore_cols(filename, ignore_cols):
+    cols = list(pd.read_csv(filename, nrows =1))
+
+    not_ignored_cols = list( set(cols) - set(ignore_cols) )
+    
+    return pd.read_csv(filename, usecols = not_ignored_cols)
+
+
 #
 # The program!
 # Downloads files (if necessary), processes them, and generates output files
@@ -123,7 +134,25 @@ def main():
                     convert_fixedwidth_to_CSV(filename, full_filename_fw, full_filename_csv)
                 
     #
-    # Join parcels with zoning file and appraisal file
+    # Write polygons to their own file
+    #
+    print("Writing pure polygons file.")
+    polygon_filename = "outputs/polygons.geojson.zip"    
+    if not os.path.isfile(polygon_filename):
+        print("  reading parcels")
+        parcels = gpd.read_file(parcels_local_file)
+
+        # just geometry and prop_id
+        print("Writing out file with just polygons")
+        pure_geo = gpd.GeoDataFrame(parcels[["geometry", "PROP_ID"]])
+        pure_geo.to_file("outputs/polygons.geojson", driver='GeoJSON')
+        shutil.make_archive("outputs/polygons.geojson", "zip", "outputs", "polygons.geojson")
+
+    # free memory
+    gc.collect()
+        
+    #
+    # Join parcels with zoning file 
     #
     print("Merging parcel file with zoning file.")
 
@@ -144,6 +173,7 @@ def main():
         parcels['polygons'] = parcels.geometry
 
         # set geometry to centroids
+        print("KNOWN WARNING: This program generates a warning regarding \"centroid\".  We should fix it, but I think it is okay for now.")
         parcels['centroid'] = parcels.geometry.centroid   
         parcels = parcels.set_geometry('centroid')
 
@@ -151,33 +181,68 @@ def main():
         print("  joining parcels with zoning")
         parcels_with_zoning = gpd.sjoin(parcels, zoning, how="left", predicate="intersects")
 
-        # restore geometry and remove added columns
+        # Remove created columns
+        parcels_with_zoning = parcels_with_zoning[[column for column in parcels_with_zoning.columns if column not in ('OBJECTID_left','OBJECTID_right')]]     
+
+        # restore geometry and remove columns added for sjoin
         parcels_with_zoning = parcels_with_zoning.set_geometry('polygons')
         parcels_with_zoning = parcels_with_zoning[[column for column in parcels_with_zoning.columns if column not in ('centroid','polygons')]]     
 
-        pd.DataFrame(parcels_with_zoning).to_csv(pz_filename)
+        print("Writing parcels&zoning file")
+        without_geo = pd.DataFrame(parcels_with_zoning).drop(columns=["geometry"])
+        without_geo.to_csv(pz_filename)
 
-        
     # free memory
     gc.collect()
-        
+       
 
-        
-    sys.exit(1)
+    #
+    # Merge in data from appraisal 
+    # 
+    print("Merging appraisal files with parcels&zoning file.")
 
-    print("reading appraisals")
-    appraisals_old = gpd.read_file("tmp/appraisal_CSV/PROP.csv", ignore_fields=ignore_fields("PROP.TXT"))
+    pza_filename = "outputs/parcels_with_zoning_and_appraisals.csv"    
+    if not os.path.isfile(pza_filename):
+        print("  reading parcels&zoning file")
+        merged_pza = pd.read_csv(pz_filename)
 
-    # Make sure prop_id is an int.  I had trouble with this.
-    appraisals_old["prop_id"] = appraisals_old["prop_id"].astype(int)
+        for year_str in appraisals:
+            if not os.path.isfile(appraisals[year_str]["local_file"]):
+                print("  No appraisal file for " + year_str + ".  Skipping.")
+                continue
+    
+            print("reading appraisals for " + year_str)
+            appraisals_prop = pandas_read_csv_ignore_cols("tmp/appraisal_CSV_" + year_str + "/PROP.csv", ignore_fields("PROP.TXT"))
+            
+            # Make sure prop_id is an int.  I had trouble with this.
+            appraisals_prop["prop_id"] = appraisals_prop["prop_id"].astype(int)
 
-### RIGHT JOIN???
-    print("joining parcels&zoning with appraisals")    
-    parcels_with_zoning_and_appraisals = pd.merge(parcels_with_zoning, appraisals_old, how="left", left_on="PROP_ID", right_on="prop_id")
+            # The code below does a LEFT JOIN.
+            # It keeps 1 record per parcel.
+            # Some properties have multiple owners and have multiple
+            # rows in the appraisal file.  This join just takes one
+            # from the appraisal file.  Any one.  The following is
+            # just some info to make sure we stay aware of this.
 
-    print("outputing")
-    # Has columns "geometry" and "centroid"
-    pd.DataFrame(parcels_with_zoning_and_appraisals).to_csv("outputs/parcels_with_zoning_and_appraisals.csv")
+            # I ran the following code for 2022.
+            # Only 83 out of 470534 were partial owners.
+            # appraisals_prop["ownership_pct"] = appraisals_prop["ownership_pct"].astype(float)
+            # num_multiple_owners = (appraisals_prop["ownership_pct"] != 100.0).sum()
+            # print("  " + str(num_multiple_owners) + " out of " + str(len(appraisals_prop)) + " appraisal records have multiple owners.  Picking one.")
+
+            # rename fields to add year of appraisal
+            rename_dict = dict()
+            for col in appraisals_prop.columns:
+                if col != "prop_id":
+                    rename_dict[col] = year_str + "_" + col
+            appraisals_prop = appraisals_prop.rename(rename_dict, axis=1, errors="raise") 
+
+            print("  joining parcels&zoning with appraisals from " + year_str)    
+            merged_pza = pd.merge(merged_pza, appraisals_prop, how="left", left_on="PROP_ID", right_on="prop_id")
+
+        print("outputing")
+        # Has columns "geometry" and "centroid"
+        pd.DataFrame(merged_pza).to_csv(pza_filename)
 
     
 if __name__ == "__main__":

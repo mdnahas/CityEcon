@@ -11,7 +11,6 @@ import shutil
 import os.path
 import json
 import requests
-import shutil
 import logging
 
 # I didn't take the time to figure out Python's module system.

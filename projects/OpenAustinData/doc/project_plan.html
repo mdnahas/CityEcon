@@ -6,26 +6,36 @@
 
 <p>Austin and Travis County have a lot of data on housing.  But it is in different places and different formats.  This project would collect the data interesting to housing researchers and advocates in a single place and in an easy-to-use format.</p>
 
-<p>For every property in Travis County, we want:</p>
+<p>For every property in Travis County, we currently have:</p>
 
 <ul>
-<li>The shape of each property's boundary</li>
-<li>What's on the property: squarefootage and height of buildings, etc.</li>
-<li>The owner of the property</li>
-<li>When the property was last sold</li>
-<li>Tax data, especially the appraised value and assessed value</li>
-<li>If we can, does the owner live there?  (Does it get the "homestead exemption"?)</li>
+<li>Address </li>
+<li>Latitude &amp; Longitude</li>
+<li>The shape of each property's boundary ("GIS polygon")</li>
 <li>If inside the City of Austin, its zoning.  E.g., "SF-3".</li>
-<li>If inside the City of Austin, its Council Member district</li>
-<li><em>optional</em> Its tax districts, which includes school district, ACC, etc.</li>
-<li><em>optional</em> The curb length of the property</li>
-<li><em>optional</em> How long it takes to drive to downtown (6th and Congress Ave.)</li>
-<li><em>optional</em> Create files with the same data but for different years.</li>
-<li><em>future</em> Links to zoning cases and subdivision cases about this property</li>
-<li><em>future</em> Links to construction permits, business permits, ...</li>
-<li><em>future</em> Data on 911 calls at (or near) this property</li>
-<li><em>future</em> Closest park, library, police station, fire station, etc.</li>
-<li><em>future</em> Anything interesting from <a href="https://data.austintexas.gov/browse">data.austintexas.gov</a></li>
+<li>The current owner of the property</li>
+<li>Tax data for multiple years, including appraised value and assessed value</li>
+<li>If it is owner-occupied or a rental property</li>
+<li>If it is owner-occupied, the year it qualified for the homestead exemption</li>
+</ul>
+
+<p>We hope to add:</p>
+
+<ul>
+<li><em>near future</em> City of Austin Zoning in the format most people expect (e.g., "SF-3")</li>
+<li><em>near future</em> What's on the property: building height, squarefootage, mobile homes, etc.</li>
+<li><em>near future</em> Its tax entities, which includes city, school district, ACC, etc.</li>
+<li><em>near future</em> How much tax was paid to each entity</li>
+<li><em>near future</em> If inside the City of Austin, its Council Member district</li>
+<li><em>near future</em> The curb length of the property</li>
+<li><em>far future</em> How long it takes to drive to downtown (6th and Congress Ave.)</li>
+<li><em>far future</em> Links to zoning cases and subdivision cases about this property</li>
+<li><em>far future</em> Links to construction permits, business permits, ...</li>
+<li><em>far future</em> Data on 911 calls at (or near) this property</li>
+<li><em>far future</em> Closest park, library, police station, fire station, etc.</li>
+<li><em>far future</em> When the property was last sold</li>
+<li><em>far future</em> Include data from Williamson and Hays Counties?</li>
+<li><em>far future</em> Anything interesting from <a href="https://data.austintexas.gov/browse">data.austintexas.gov</a></li>
 </ul>
 
 <h2>Uses</h2>
@@ -44,31 +54,31 @@
 
 <p>This project will use python3 for code.  The GeoPandas library will be used for manipulating polygons.  </p>
 
-<p>For most data, this project will use CSV files following the <a href="https://datatracker.ietf.org/doc/html/rfc4180.html">RFC 4180 format</a>.  They may be compressed.  </p>
+<p>For most data, this project will use CSV files following the <a href="https://datatracker.ietf.org/doc/html/rfc4180.html">RFC 4180 format</a>.  These files may be compressed using Zip.</p>
 
-<p>For the polygons describing the shape of properties, zones, districts, etc., Mark Isley recommends the GeoPackage format, which has the extension ".gpkg".  There is also a <a href="https://geojson.org/">"GeoJSON" format</a>, which we should consider.</p>
+<p>For the polygons describing the shape of properties, zones, districts, etc., this project will use the <a href="https://geojson.org/">"GeoJSON" format</a>.  These files may be compressed using Zip.  (NOTE: Mark Isley recommended the GeoPackage format, which has the extension ".gpkg".  We might want to revisit this decision at some point in the future.)</p>
 
 <p>The GIS software <a href="https://www.qgis.org">QGIS</a> will be used to test files. </p>
 
 <h2>About GIS</h2>
 
-<p>GIS stands for "geographic information systems".  It is a mix of software and data for working with land boundaries and data about land.  It is used by city planners, geologist, mapmakers, archiologist, and others.  They make maps and display data on maps.  Maps with data are called "<a href="https://en.wikipedia.org/wiki/Choropleth_map">choropleth maps</a>", which is the most awkward word I've ever heard.</p>
+<p>GIS stands for "geographic information systems".  It is a collection of software for working with data on land and land boundaries.  It is used by city planners, geologist, mapmakers, archiologist, and others.  They make maps and display data on maps.  Maps with data are called "<a href="https://en.wikipedia.org/wiki/Choropleth_map">choropleth maps</a>", which is the most awkward word I've ever heard.</p>
 
-<p>GIS data can be thought of as a database, where some of the pieces of data are polygons.  A row of data can include a polygon that marks the boundary of the property.  With that polygon in the row is other data, such as the property's owner, buildings on the property, etc..</p>
+<p>GIS data can be thought of as a database, where some of the pieces of data are polygons.  For example, one piece of data in a row might be the polygon that marks the boundary of the property.  Other data in the same row might be the property's owner, descriptions of the buildings on the property, etc..</p>
 
 <p>GIS software is basically a map viewer with a lot of database operations built in.  <a href="https://www.qgis.org">QGIS</a> is the open-source GIS software that we'll be using.  It can load files that contain data.  It can generate choropleth maps.  It can manipulate the data, such as intersect polygons or do a database join of two files.</p>
 
 <p>GIS files can be huge.  Travis County's parcel file is 187M.  There are web-based protocols for sending parts of files.  GIS software can download just the part that the user is viewing or working on.  It's pretty cool.</p>
 
-<p>Every GIS file has a CRS, which stands for the Coordinate Reference System.  The GIS files use 2D polygons to encode boundaries.  But the earth is not flat and, thanks to plate tectonics, things move around.  So, each file with polygons specifies how points on the physical earth are mapped onto a plane.  The mathematical function for doing that is the CRS.</p>
+<p>Every GIS file has a CRS, which stands for the Coordinate Reference System.  GIS files use 2D polygons to encode boundaries.  But the earth is not flat and, thanks to plate tectonics, things move around.  So, each file with polygons specifies how points on the physical earth are mapped onto a plane.  The mathematical function for doing that is the CRS.</p>
 
-<p>Different GIS files often have different CRS.  The CRS always introduces some distortion.  Each file's creator will choose the CRS that works best with their data.  We will need to pick a single CRS for our data and translate the polygons from other CRSes to our chosen CRS.  The likely choice of CRS is GeoJSON's default CRS, where points are identified by latitude and longitude and mapped on to an elipsoid known as "WGS84".  (It is an elipsoid, not a sphere, because the earth is not perfectly round.)  This CRS is known as "EPSG:4326".</p>
+<p>Different GIS files often have different CRS.  The CRS always introduces some distortion.  Each file's creator will choose the CRS that works best with their data.  We have chosen a single CRS for our data.  We translate the polygons from other CRSes to our chosen CRS.  Our chosen CRS is GeoJSON's default CRS, which is known as "EPSG:4326".  In it, points are identified by latitude and longitude and they are mapped on to an elipsoid known as "WGS84".  (It is an elipsoid, not a sphere, because the earth is not perfectly round.)  </p>
 
-<p>Other CRSes we should look at (and occasionally use):</p>
+<p>Other CRSes we will occasionally encounter are:</p>
 
 <ul>
 <li><p>UTM, which has various zones.  Central Texas is in UTM zone 14 North.   UTM is measured in meters.  "EPSG:32614" is WGS84 with UTM zone 14N.   <a href="https://tpwd.texas.gov/publications/pwdpubs/media/pwd_mp_e0100_1070af_24.pdf">This map</a> has the UTM zones for Texas.</p></li>
-<li><p>A state plane CRS.  Texas has 5 state-planes and we're in "State Plane Zone 3".  It is measured in feet.  (Is this "EPSG:2277"?  <a href="https://epsg.io/2277">This page</a> calls it "Texas Central" and it uses "NAD83" elipsoid.")  <a href="https://tpwd.texas.gov/publications/pwdpubs/media/pwd_mp_e0100_1070af_24.pdf">This map</a> has the Texas state-planes.  </p></li>
+<li><p>A state plane CRS.  Texas has 5 state-planes and Austin is in "State Plane Zone 3".  It is measured in feet.  (Is this "EPSG:2277"?  <a href="https://epsg.io/2277">This page</a> calls it "Texas Central" and it uses "NAD83" elipsoid.")  <a href="https://tpwd.texas.gov/publications/pwdpubs/media/pwd_mp_e0100_1070af_24.pdf">This map</a> has the Texas state-planes.  </p></li>
 <li><p><a href="https://en.wikipedia.org/wiki/Web_Mercator_projection">Web Mercator</a>.  This is the projection used by most online mapping tools, such as Google Maps.   Coordinates are in the range 0 to 256, with (0,0) in the upper-left near Alaska and (256,256) in the lower-right near Australia.  It is known officially as "EPSG:3857".  (It also appears as "EPSG:3785" and "EPSG:900913".)</p></li>
 </ul>
 

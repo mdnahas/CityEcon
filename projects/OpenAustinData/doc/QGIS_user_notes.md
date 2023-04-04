@@ -6,8 +6,25 @@ GeoPackage --- a database format for storing GIS and other data
 
 Leaflet --- javascript library for displaying maps on the web.  You need to make "tiles" first.  Leaflet will display the tiles.
 
-
 ## HOWTOS:
+
+### Get started
+
+Install QGIS.
+
+Start QGIS.
+
+Add Layer.  Select "Vector".  Select "polygons.json.zip".
+
+Add Layer.  Select "Delimited Text".  Select "parcels_with_zoning_and_appraisals.csv".   Under "Geometry Definition" choose "No geometry (attribute only table)".
+
+Join Layers based on "PROP_ID".  **This takes many minutes**  (Maybe change Layer's Attributes Form to "unique" for "PROP_ID"?)
+
+
+
+
+
+
 
 ### HOWTO: Add layer
 
@@ -18,6 +35,20 @@ For files with the "gpkg" extension: Select "GeoPackage" on the left side.  Clic
 For files with the "geojson" extension: Select "Vector" on the left side.  At the top, "Source Type" should be "file".  Under "Source", at the extreme right click on "...".  Select the file.  Click the "Add" button (at the bottom).   
 
 <!-- How to create a small dataset to work with? -->
+
+
+### HOWTO: Join Layers
+
+Right click on the polygon layer.  Select "Properties".
+
+In the new "Layer Properties" window, select "Joins".
+
+Click "+" in the lower left.
+
+For "join layer" select the data layer.  For "join field" select the field, such as "PROP_ID".  For the Target field, select the appropriate value, such as "PROP_ID".  
+
+Click "Ok".
+
 
 ### HOWTO: Add Plugin
 
