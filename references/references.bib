@@ -15,7 +15,7 @@
     The paper compares the rent component of the CPI to two other rent indexes, Zillow's ZORI and the Marginal Rent Index.  The other indexes jumped up quickly and the CPI didn't and that scared BLS.
 
 \par
-    The paper's answer is that CPI measures the rent being paid now and the other indexes measure the rent on a newly signed contract.  The contract, obviously, last 1 or 2 years so "the rent paid now" in the middle of the contract doesn't match the rent on newly signed contracts.  Thus, ZORI leads the CPI's rent component.
+    The paper's answer is that CPI measures the rent being paid now and the other indexes measure the rent on a newly signed contract.  The contract, obviously, last 1 or 2 years so ``the rent paid now" in the middle of the contract doesn't match the rent on newly signed contracts.  Thus, ZORI leads the CPI's rent component.
   }
 }
 
@@ -57,7 +57,7 @@
     Estimated the value of land under American cities using 68,756 land transactions.  The paper gets pretty mathy at points and I didn't understand what they were doing.  But, at its core, it is a hedonic regression.  It has choices that I wouldn't make.  They do cross-validate their results.  I wish they reported error bounds on their numbers --- the price-per-acre in the center of the city is exponentially higher than average, so errors are magnified dramatically.  They don't look at the time series, to see if a change in any factor (like center-city prices) indicates a future change (like residential prices).  
 
 \par
-    Separated samples by MSA, or primary MSA.   Defined the "city center" to be City Hall or Mayor's office.  (That's a problem in NYC!  I would have chosen the tallest building.)  Some MSAs have multiple city centers (like Minneapolis-St.Paul).  Land is associated with the closest center.  (That's bad when a larger one dominates.)  I don't like that they don't search for the center of the city and don't try to discover more "centers".  
+    Separated samples by MSA, or primary MSA.   Defined the ``city center" to be City Hall or Mayor's office.  (That's a problem in NYC!  I would have chosen the tallest building.)  Some MSAs have multiple city centers (like Minneapolis-St.Paul).  Land is associated with the closest center.  (That's bad when a larger one dominates.)  I don't like that they don't search for the center of the city and don't try to discover more ``centers".  
 
 \par
     It uses hedonic regression.  Log(land price) is a linear function based on distance from the city center and other factors.  Distance is the natural log of 1 + the Euclidean distance in miles.   The distance constant varies by city.  The intercept varies by city and year.  The linear function is also adjusted for lot size and proposed used, which can vary by time.  Figure 1 shows a plot from Houston and the linear model seems like a good fit.  When they allow multiple powers of their distance function in the linear regression, there is a higher peak downtown and a flattening of the rest of the graph.  
@@ -72,17 +72,79 @@
     They find that larger cities have a higher intercept (central land value).  Larger cities have a steeper slope.  There is much variation here, but the trend is for large cities to have downtown values that are 7 times those 10 miles away.  For smaller cities, the value is 1, meaning no change in land value from downtown to 10 miles away.  The average land value for cities is pretty flat.
 
 \par
-    As for intended use, "Retail, apartment, mixed use, and medical proposed uses have substantially higher values, while commercial, industrial, and multifamily uses have lower values." I'm not sure how "multifamily" is different from "apartment".  It doesn't list single-family, but the appendix says it is near zero.
+    As for intended use, ``Retail, apartment, mixed use, and medical proposed uses have substantially higher values, while commercial, industrial, and multifamily uses have lower values." I'm not sure how ``multifamily" is different from ``apartment".  It doesn't list single-family, but the appendix says it is near zero.
     
 \par
     The highest central land values are NY, Chicago, D.C., San Francisco, and Los Angeles-Long Beach.  The steepest price slope goes to Chicago and then Washington D.C..  The flattest expensive cities are San Jose and Orange County, CA.  The higher average land values tend to be on the coast.  (Why?)
 
 \par
-    Total land value is NYC at \$2.5T, LA at \$2.3T, then SF, D.C., and Chicago.  They account for 48\% of all urban land value.   The total value for the USA in 2010 was \$19.1T.  An alternate way of measuring, "Flow of Funds", put it at \$6.2T.  It only measures private land and covers the whole country; this paper's method covers all of cities, including roads, parks, etc..    
+    Total land value is NYC at \$2.5T, LA at \$2.3T, then SF, D.C., and Chicago.  They account for 48\% of all urban land value.   The total value for the USA in 2010 was \$19.1T.  An alternate way of measuring, ``Flow of Funds", put it at \$6.2T.  It only measures private land and covers the whole country; this paper's method covers all of cities, including roads, parks, etc..    
     
 \par
     Over time, the land value drops 40\% after the Financial Crisis.  The Case-Shiller index drops 19\%.  Their values don't line up with the stock market's movements at the time.
     
+  }
+}
+
+
+@book{Altshuler1993,
+  author    = "Alan A. Altshuler and Jos\'e A. G\'omez-Ib\'a\~nez",
+  title     = "Regulation for Revenue",
+  publisher = "The Brookings Institution and The Lincoln Institute of Land Policy",
+  address   = "Washington, DC and Cambridge, MA",
+  year      = 1993,
+  keywords={infrastructure, exactions, property tax},
+  annote    = {
+    I have read half of this book.  It was recommended for a reading group.
+
+    This is a great book.  It is well written and it is hard to summarize, given how much information is in it.  Not just on ``exactions" but on every aspect of housing and land development.
+
+    The book's central topic is ``exactions".  Exactions are charges or costly requirements for building/property when connecting to city infrastructure, in order to pay for the infrastructure.  This may be a charge for roads, water, or sewage.  There are borderline may-be-exactions such as ``inclusive zoning", which requires builders of apartments include some low-rent apartments.
+
+\par
+    The way cities pay for local infrastructure, like roads and sewage, has changed over time.  Initially, developers just built houses and let the city put in after the homes were built.  But developers didn't take the cost of infrastructure into account and either, it was costly to cities or it didn't get built.
+
+\par
+   Cities then mandated infrastructure as part of new developments.  But that was expensive.
+
+\par
+   Then, came special assessment bonds.  These bonds paid for the infrastructure, paid for by a property tax (or lien?) on the homes there.  But, during an economic downtown, bonds defaulted and there were ``widespread foreclosures against individual homeowners".  
+
+\par
+   It sounds like after that period, infrastructure was paid by property tax.  But that is often not enough to pay for our expensive infrastructure.  Especially after anti-tax ``revolts", like Prop 13 in California.  Cities started charging fees or requiring land/buildings when new houses are connected to the infrastructure.  Cities have expanded these include ``social regulation", such as including low-cost housing.  But, in Berkeley, there are charges for child care, public art, local hiring, etc..  These non-monetary exactions are hard for economists to measure. (NOTE: Exactions have a long history; exaction of land for roads has existed since early American cities.)  
+
+\par
+   The book goes into the political structure of cities.  Often there is a ``progrowth coalition" made of: landowners, developers, construction companies, law firms, real estate brokerages, other businesses, and organized labor.  The businesses expect more customers and more profits.  Organized labor expects more jobs.
+
+\par
+   In the 1970s, there started to be anti-growth coalitions.  These were made of neighborhood associations, environmental groups, and anti-tax groups.  Good government groups, like the League of Women Voters, have fought for transparency and community input, which have been used by anti-growth coalitions.
+
+\par
+   The authors comment that developers are actually very weak in city politics.  They want permits and zoning changes and, therefore, cower to local politicians.  They may organize at the state level.  
+
+\par
+   Often, exactions are good city politics.  They are charged only to new comers.  The authors mention that state governments care about new comers and see their role as local oversight.  
+
+\par
+   Cities will example how much a developer can afford.  This sounds like extortion to me.  Some cities limit growth and start a bidding war of ``voluntary" exactions from developers.  
+
+\par
+   The book talks about the legality of exactions.  Exactions are part of land use regulations, and regulatory authority is limited.  Land use regulations fall under ``the police power", which allows states to regulate for public health, safety, and welfare.  This means exactions are fees, which can only pay for the cost of the service.  (They are not taxes, which can pay for anything.)  Therefore, cities have built complex ``linkages" where new business buildings pay for many things, including the low-cost housing their employees will require.  (In Massachusetts, the state government made exactions into taxes, to avoid a legal challenge.)  
+
+\par 
+    State courts have ruled that subdivision of land is a privilege, not a right, so conditions can be required for it.  
+
+\par
+    Developers encouraged court rulings to be put into state laws.  This got rid of uncertainty.  And, developers hoped that cities wouldn't ask for more.
+
+\par
+    While early city laws set out the rules for building, the decisions have become more and more at the discretion of the city government.  Courts accept this.(Even though we no longer have the rule of law!)   Developers, in strong markets, are induced give ``voluntary" exactions at multiple points in the approval process.  Justice Scalia pointed out in Nollan that local governments could tighten regulations just to improve their negotiating position.  Officially, ``selling"  permission is illegal, but many politicians think it is okay to squeeze developers for their constituents.  Despite this power, corruption scandals have been rare.  
+
+\par
+   Developers can always walk away.  They can also appeal to the state government.  And they can negotiate.  Against smaller and medium-sized cities, the authors think that developers are often the better negotiators.  Aurora, Colorado is an example of a harsh negotiating city.  It has water rights in an arid region.  The city uses special assessment districts to collect taxes for each annexation.
+
+\par
+   I stopped after Chapter 4.  
   }
 }
 
@@ -102,6 +164,24 @@
 }
 
 
+
+@misc{BEA2018,
+  author = {Bureau of Economic Analysis},
+  title = {Survey of Current Business},
+  howpublished = {\url{https://apps.bea.gov/scb/issues/2018/06-june/0618-regional-quarterly-report.htm}},
+  year={2018},
+  note = {},
+  keywords={regional price parities, inflation},
+  annote={
+    I found a chart on this page very valuable.
+
+    Regional Price Parities are like Purchasing Price Parties, but for regions of the US.  They compare the cost of the same goods in different states or cities.  They're good for measuring regional price differences across space.  You need an inflation measure, like the PCE, to measure price differences across time.
+
+    Chart 1 on this page compares how the RPP index ("all items") changes based on a change in one of its components: rent, goods, or non-rent services.  We see that, even though rent is a small part of the index (I think 16\% or 22\%), a change in rent causes a larger change in the index, like 34\%.  This indicates that the prices of goods and other services are also affected by rent.
+  }
+} 
+
+
 @TechReport{Bergeson2018,
   author    = "Adam Bergeson",
   title     = "Hedging the Housing Crisis",
@@ -110,7 +190,7 @@
   year      = 2018,
   keywords={hedging},
   annote    = {
-    The author suggests metro-area GDP-linked bonds.  He calls them "GDI" or Gross Domestic Income bonds.  The author claims that renters would want to buy these, since they hedge the cost of housing.  Likewise, homeowners would want to sell them, to hedge their ownership.  
+    The author suggests metro-area GDP-linked bonds.  He calls them ``GDI" or Gross Domestic Income bonds.  The author claims that renters would want to buy these, since they hedge the cost of housing.  Likewise, homeowners would want to sell them, to hedge their ownership.  
   }
 }
 
@@ -136,7 +216,7 @@
 
 
 
-@Article{Bryne2021,
+@Article{Byrne2021,
   author = 	 {Thomas H. Byrne and Benjamin F. Henwood and Anthony W. Orlando},
   title = 	 {A Rising Tide Drowns Unstable Boats: How Inequality Creates Homelessness},
   journal = 	 {The ANNALS of the American Academy of Political and Social Science},
@@ -180,13 +260,13 @@
     Home equity insurance was legalized in California in 1935, but then made a felony in 1939.  No explanation is known.
 
 \par
-    Oak Park in Illinois, a women's group wanted to integrate the neighborhood.  They feared "white flight" and dropping home values if Black families moved in.  They created an insurance scheme  For a one-time fee of \$175, homes were covered for 80\% of losses \emph{after} 5 years.  The program was paid for by a tax on all homeowners in the neighborhood.
+    Oak Park in Illinois, a women's group wanted to integrate the neighborhood.  They feared ``white flight" and dropping home values if Black families moved in.  They created an insurance scheme  For a one-time fee of \$175, homes were covered for 80\% of losses \emph{after} 5 years.  The program was paid for by a tax on all homeowners in the neighborhood.
 
 \par
     99 houses bought insurance in the first 4 months.  This number rose to 1500.  But it had fallen to around 150 by the year 2000.  Insurance was not popular because it insured only the neighborhood, not movement in city or nation-wide home prices.  Also, doing a proper sale to claim the payout was onerous.  
 
 \par
-    At the time, insurance inspired confidence that a "bank run" like exit would not happen.  Later, it inspired fear, because its existance implied that insurance was needed!  The program was ended.  
+    At the time, insurance inspired confidence that a ``bank run" like exit would not happen.  Later, it inspired fear, because its existence implied that insurance was needed!  The program was ended.  
 
 \par
     The Illinois state government in 1988 allowed new taxing districts to be created for insurance purposes.  
@@ -225,7 +305,7 @@
     Used data from HUD's Section 8 voucher renters.  They matched results of renter surveys with Census data on tract.  (Tracts have 1,200 to 8,000 people.)  Calculated results for 331 metro areas and non-metro areas of 49 states. 
 
 \par
-    "one-bedroom apartments rent for about 19 percent more than efficiencies, two-bedroom apartments for 35 percent more than efficiencies, three-bedroom apartments for 53 percent more, and each additional bedroom adds about 10 percent to rent. Living in a census tract where the mean travel time to work is 30 minutes longer reduces rent by about 10 percent. Households with an additional person per bedroom plus one pay about 14 percent more for an identical unit."
+    ``one-bedroom apartments rent for about 19 percent more than efficiencies, two-bedroom apartments for 35 percent more than efficiencies, three-bedroom apartments for 53 percent more, and each additional bedroom adds about 10 percent to rent. Living in a census tract where the mean travel time to work is 30 minutes longer reduces rent by about 10 percent. Households with an additional person per bedroom plus one pay about 14 percent more for an identical unit."
 
 \par
     Other price indices (ACCRA's cost of living index, median rent, HUD's Fair Market Rent, and indices derived from PUMS and AHS) all diverge from their price index.
@@ -234,7 +314,7 @@
     Distance to city center was done as the average commute of the census tract.  I'm pretty sure I disagree with that in general.
 
 \par
-    If the other price indices diverge from this one, how do they know which is "real"? 
+    If the other price indices diverge from this one, how do they know which is ``real"? 
   }
 }
 
@@ -284,13 +364,13 @@
   year      = 2022,
   keywords={homelessness; housing price},
   annote    = {
-    The authors felt that the press, public, and even policy makers had a mistaken view of the causes of homelessness.  They wanted to present simple plots of data showing that many commonly discussed "causes" are not the cause.  And that the price of housing was.
+    The authors felt that the press, public, and even policy makers had a mistaken view of the causes of homelessness.  They wanted to present simple plots of data showing that many commonly discussed ``causes" are not the cause.  And that the price of housing was.
 
 \par
     Page 13 and 14 have a great metaphor: musical chairs.  A person with a cast doesn't get a seat, but it isn't because he cannot get to a chair.  It is because there is 1 fewer chairs than people.  Such is homelessness --- we see a lot of individual factors (mental health, addiction, race, etc.) that affect who doesn't gets a home, but we need to look at citywide factors that cause a home shortage.
 
 \par
-     The data is strange.  They want to use the 35 largest cities by metro area.  (Why 35??)  They drop 6 because HUD's Continuity of Care (CoC) region covers "too large a geographic area".  The dropped cities are Houston, Riverside (CA), Denver, Orlando, Pittsburgh, and Kansas City (MO).  The rest are split into two groups, where the CoC matches the city (20 of them) or the county (10 of them).  Chicago appears in both groups.  They cover years 2007 to 2019, but admit that the PIT Count (their measure of homelessness) is iffy in some cities and especially in the early few years.
+     The data is strange.  They want to use the 35 largest cities by metro area.  (Why 35??)  They drop 6 because HUD's Continuity of Care (CoC) region covers ``too large a geographic area".  The dropped cities are Houston, Riverside (CA), Denver, Orlando, Pittsburgh, and Kansas City (MO).  The rest are split into two groups, where the CoC matches the city (20 of them) or the county (10 of them).  Chicago appears in both groups.  They cover years 2007 to 2019, but admit that the PIT Count (their measure of homelessness) is iffy in some cities and especially in the early few years.
 
 \par
      Over time, homelessness has dropped on average.  But the variance has increased.
@@ -315,7 +395,7 @@
     Race is negatively correlated with homelessness.   Black people are more likely to be homeless, but cities with more Black residents have a lower rate of homelessness!
 
 \par
-    Temperature is handled badly.  They use the average temperature for the month of January ... even though the PIT Count was on a specific day?  The county data shows no correlation of warmer winters with homelessness, but the city data does.  They fight that result by combining the data using "indexed homelessness" (described on pages 20 to 22) which is, let's say, not a well-known technique.  The annedotal evidence --- that cold NYC has more homeless than warm southern cities --- is much stronger than their data.
+    Temperature is handled badly.  They use the average temperature for the month of January ... even though the PIT Count was on a specific day?  The county data shows no correlation of warmer winters with homelessness, but the city data does.  They fight that result by combining the data using ``indexed homelessness" (described on pages 20 to 22) which is, let's say, not a well-known technique.  The anecdotal evidence --- that cold NYC has more homeless than warm southern cities --- is much stronger than their data.
 
 \par
     They admit that temperature is correlated with unsheltered homeless.  They explain that this may be because cold cities spend more on shelter than warmer cities, which may spend on outdoor services.
@@ -324,16 +404,16 @@
     Generous social services is also done differently.  It measures the state's maximum TANF ("Welfare") benefit against family homelessness rate.  It uses families, because individuals rarely qualify for TANF.  This does not seem like a good measure.
 
 \par
-    The show that low-income migration is negatively correlated with homelessness.  They try to say this shows the cities with high homelessness are not "welfare magnets".  To me, that data means other things.
+    The show that low-income migration is negatively correlated with homelessness.  They try to say this shows the cities with high homelessness are not ``welfare magnets".  To me, that data means other things.
 
 \par
-    They handle political party annecdotally, citing that Chicago, Detroit, and Cleveland are highly Democratic cities with low homelessness.  The authors inveigh against harsh police treatment of the homeless and say there is no evidence that it does more than hide the problem.
+    They handle political party anecdotally, citing that Chicago, Detroit, and Cleveland are highly Democratic cities with low homelessness.  The authors inveigh against harsh police treatment of the homeless and say there is no evidence that it does more than hide the problem.
 
 \par
-    They do a strange interlude to look at cost-burden-ness as a cause of homelessness.  They find when the median person spend more on housing, homelessness goes down in cities.  But not in counties.  And the result doesn't hold when looking at the "first-quartile housing cost burden".
+    They do a strange interlude to look at cost-burden-ness as a cause of homelessness.  They find when the median person spend more on housing, homelessness goes down in cities.  But not in counties.  And the result doesn't hold when looking at the ``first-quartile housing cost burden".
 
 \par
-    What should be the finale is the comparison of median rent, vacancy, first-quartile rent, and "first-quartile vacancy" (vacancy in lowest 1/4 rent apartments).  Rent and vacancy are inversely correlated and both predict homelessness.  The strongest is median rent which has an R-squared of 55\% for cities and first-quartile rent which has an R-squared of 28\% for counties.  (For vacancy, they regress against log(vacancy), which is a strange choice since both homeless rate and vacancy are on a scale of 0 to 100\%.  They don't apply log to rent, where it would be more natural.  And they don't do log(vacancy) when showing it correlates with rent.  These are inconsistent strange choices.)
+    What should be the finale is the comparison of median rent, vacancy, first-quartile rent, and ``first-quartile vacancy" (vacancy in lowest 1/4 rent apartments).  Rent and vacancy are inversely correlated and both predict homelessness.  The strongest is median rent which has an R-squared of 55\% for cities and first-quartile rent which has an R-squared of 28\% for counties.  (For vacancy, they regress against log(vacancy), which is a strange choice since both homeless rate and vacancy are on a scale of 0 to 100\%.  They don't apply log to rent, where it would be more natural.  And they don't do log(vacancy) when showing it correlates with rent.  These are inconsistent strange choices.)
 
 \par
     Page 134 says that they did a full model with fixed-city effects ... but don't show its results.  Not even in an appendix.  WTF.  
@@ -342,10 +422,10 @@
     The rest of the book doesn't follow their thesis.  They see if growth is correlated with homelessness and find it isn't.  They mention a study shows that inequality is causal ... but say it isn't in their data (without any plots).
 
 \par
-   They eventually say that economics believe supply is limited by geography (oceans, mountains, etc.) and by regulation.  They then group cities by elasticity (a measure of supply limitations) and growth.  (So, now, they're saying growth \emph{does} matter.)  And the worst cities have high growth and low elasticity.  I expected the book to end here saying "we need to fix the regulation in high-growth cities".
+   They eventually say that economics believe supply is limited by geography (oceans, mountains, etc.) and by regulation.  They then group cities by elasticity (a measure of supply limitations) and growth.  (So, now, they're saying growth \emph{does} matter.)  And the worst cities have high growth and low elasticity.  I expected the book to end here saying ``we need to fix the regulation in high-growth cities".
 
 \par
-    But, no.  We get 38 pages of their vague plan to fix homelessness.  After a data-driven book focused on proving one point, it is huge jumble of opinion at the finish.  They dismiss filtering without a citation on page 134.  They put together a mushy argument against markets on pages 171 to 173.  They say private markets won't create houses for people with no income, but ignore the idea of giving money to those people.  After citing economists ealier, they say "housing must be de-commodified".  They mention that building houses has not come down in price like building iPhones, but don't mention that most cities ban manufactured homes on most land.  It goes on: public perception, funding, and more.  Way too much for a single chapter.  
+    But, no.  We get 38 pages of their vague plan to fix homelessness.  After a data-driven book focused on proving one point, it is huge jumble of opinion at the finish.  They dismiss filtering without a citation on page 134.  They put together a mushy argument against markets on pages 171 to 173.  They say private markets won't create houses for people with no income, but ignore the idea of giving money to those people.  After citing economists earlier, they say ``housing must be de-commodified".  They mention that building houses has not come down in price like building iPhones, but don't mention that most cities ban manufactured homes on most land.  It goes on: public perception, funding, and more.  Way too much for a single chapter.  
 
 \par
     The book's data is passable --- it is clear enough to make most of their thesis's points --- but I think it needs a much stronger analysis in an appendix.  The book never really addressed how to handle correlations in data samples from the same city in different years.   The writing began well but it totally flubbed the landing.  The last chapter should have been cut and become the basis for the author's next book.  But it did well enough to make its point and that's an accomplishment.
@@ -361,20 +441,27 @@
   url = 	 {https://www.theatlantic.com/newsletters/archive/2022/12/homeownership-real-estate-investment-renting/672511/},
   keywords={incentivizing homeownership},
   annote = 	 {
-    This is a very good article.  I dislike the author's conclusion, but the article identifies a problem and marshalls a lot of data to demonstrate it.
+    This is a very good article.  I dislike the author's conclusion, but the article identifies a problem and marshals a lot of data to demonstrate it.
  
-    The author attacks the idea that goverment should protect housing as an investvestment.
+\par
+    The author attacks the idea that government should protect housing as an investment.
 
-    Making money on housing is mostly about luck.  "price appreciation accounts for roughly 86 percent of the wealth associated with owning a home."
+\par
+    Making money on housing is mostly about luck.  ``price appreciation accounts for roughly 86 percent of the wealth associated with owning a home."
 
-    Government housing policy is "built on a contradiction".  Politicians announce higher house prices as a good thing, but it is obviously hurting people trying to find housing.
+\par
+    Government housing policy is ``built on a contradiction".  Politicians announce higher house prices as a good thing, but it is obviously hurting people trying to find housing.
 
+\par
     Investing in a single risky asset is a bad investment strategy.  The lower your wealth, the more you are likely not to have other assets.
 
+\par
     Inequality is inevitable.  She mentions that housing has not been a good investment for Black families, which experience racism and depressed home prices.
 
-    The author's solution is: "Policy makers should completely abandon trying to preserve or improve property values and instead make their focus a housing market abundant with cheap and diverse housing types able to satisfy the needs of people at every income level and stage of life."
+\par
+    The author's solution is: ``Policy makers should completely abandon trying to preserve or improve property values and instead make their focus a housing market abundant with cheap and diverse housing types able to satisfy the needs of people at every income level and stage of life."
 
+\par
     I don't like the solution.  It ignores all the good things about homeownership.  It recommends government mistreat an investment good, and one that represents \emph{half} of all investment! 
   }
 }
@@ -393,7 +480,7 @@
     This is a great paper which covers traffic congestion in cities.  The show that cities with more commuters have more traffic congestion and that the congestion follows a power law.  But then they look at individual cities and its different!
 
 \par
-    Some cities follow a power law, but with a different exponent.  Other cities' plots of population vs. delay have two regimes: a power law where delay rose quickly until a certain amount and, then, a flatter portion following another power law.  The authors believe a capacity or behaviorial limit was hit.  E.g., in Birmingham, the distance driven per driver was increasing until 1998, at which it started to decrease and the delay-per-driver flattened.
+    Some cities follow a power law, but with a different exponent.  Other cities' plots of population vs. delay have two regimes: a power law where delay rose quickly until a certain amount and, then, a flatter portion following another power law.  The authors believe a capacity or behavioral limit was hit.  E.g., in Birmingham, the distance driven per driver was increasing until 1998, at which it started to decrease and the delay-per-driver flattened.
 
 \par
     The delay is on a log scale, so fast growing cities really hit a wall in congestion.   So, Cincinnati started on the steep portion of the plot with 10 hours of delay per year.  A decade later, it hit 25 or 30 hours of delay per year and then started to flat-line.  Three decades later, the delay was still under 40 hours per year.  
@@ -421,33 +508,65 @@
   keywords={highways; vehiclekilometers traveled; public transport; congestion.},
   doi={},
   annote={
-    An impressive paper.  This paper tries to determine if building roads or widening lanes is better for a city.  The title comes from a quote from Downs 1962, that the "fundamental law of highway congestion" is that, if you widen a congested highway, the traffic will increase until the congestion is just as bad as before construction.  The authors say that they verify the statement: "increased provision of interstate highways and major urban roads is unlikely to relieve congestion of these roads".  They also find "no evidence that the provision of public transportation affects" vehicle-kilometers-traveled (VKT).
+    An impressive paper.  This paper tries to determine if building roads or widening lanes is better for a city.  The title comes from a quote from Downs 1962, that the ``fundamental law of highway congestion" is that, if you widen a congested highway, the traffic will increase until the congestion is just as bad as before construction.  The authors say that they verify the statement: ``increased provision of interstate highways and major urban roads is unlikely to relieve congestion of these roads".  They also find ``no evidence that the provision of public transportation affects" vehicle-kilometers-traveled (VKT).
 
+\par
     They measure how VKT changes as more lane-kilometers of road are added to a city.  
 
-    They study 228 MSA (metro areas of cities), in 1983, 1993, and 2003.  Roads have 6 different classifications. They ignore local roads.  They study interstate highways separately.  The 4 other classes of non-local roads get grouped into "major urban roads".  I didn't find a description of "local roads" or how much of a city that makes up.  (Are Manhattan's streets "local roads"?)   For interstates, they separate them into the "urban" and "non-urban" parts, but I don't have a sense of how that division was made. 
+\par
+    They study 228 MSA (metro areas of cities), in 1983, 1993, and 2003.  Roads have 6 different classifications. They ignore local roads.  They study interstate highways separately.  The 4 other classes of non-local roads get grouped into ``major urban roads".  I didn't find a description of ``local roads" or how much of a city that makes up.  (Are Manhattan's streets ``local roads"?)   For interstates, they separate them into the ``urban" and ``non-urban" parts, but I don't have a sense of how that division was made. 
 
-    Under plain OLS, for interstates in urban areas, the coefficient of between $ln(roads)$ and $ln(VKT)$ is very close to 1.  R-squares are .95 to .96, too.  The coefficients for "major urban roads" is .70 to .88.   For non-urban interstates, they're from 0.82 to 0.84.  
+\par
+    Under plain OLS, for interstates in urban areas, the coefficient of between $ln(roads)$ and $ln(VKT)$ is very close to 1.  R-squares are .95 to .96, too.  The coefficients for ``major urban roads" is .70 to .88.   For non-urban interstates, they're from 0.82 to 0.84.  
 
-    The coefficients for $ln(population)$ is "much less than 1 in all specification" ... but seems to be 1.01 in Table 3, regression \#3.  All others are in the range .5 to .3, which says population doesn't affect driving as much as building roads.
+\par
+    The coefficients for $ln(population)$ is ``much less than 1 in all specification" ... but seems to be 1.01 in Table 3, regression \#3.  All others are in the range .5 to .3, which says population doesn't affect driving as much as building roads.
 
-    They realize that congested cities are more likely to get roads added to them, so they use instrumental variables to separate that causality.  But they only do this for all interstates.  Not "major urban roads" and they don't break interstates into "urban" and "non-urban" parts.  The instruments are old maps of the railroads, explorations, and the plans for the interstates in 1947.
+\par
+    They realize that congested cities are more likely to get roads added to them, so they use instrumental variables to separate that causality.  But they only do this for all interstates.  Not ``major urban roads" and they don't break interstates into ``urban" and ``non-urban" parts.  The instruments are old maps of the railroads, explorations, and the plans for the interstates in 1947.
 
+\par
     For the IV regressions, they get coefficients around 1.  They say their preferred estimate is panel A, column 3, which has a value of 1.03.
 
-    They do another IV regression, but for how much buses (not trains) contribute to reducing VKT.   Their instruments are the highway plan, railroad plan, and the 1972 election.  They use an "ILML regression" rather than 2SLS "since our set of instruments is sometimes marginal weak".  The coefficient for buses is close to zero and, in some regressions, statistically indistinguishable from zero.
+\par
+    They do another IV regression, but for how much buses (not trains) contribute to reducing VKT.   Their instruments are the highway plan, railroad plan, and the 1972 election.  They use an ``ILML regression" rather than 2SLS ``since our set of instruments is sometimes marginal weak".  The coefficient for buses is close to zero and, in some regressions, statistically indistinguishable from zero.
 
-    They do a regression that tries to show that there's a "natural level of traffic".  I didn't understand what they did here.  They got negative coefficients and claimed there was mean reversion.
+\par
+    They do a regression that tries to show that there's a ``natural level of traffic".  I didn't understand what they did here.  They got negative coefficients and claimed there was mean reversion.
 
-    They try do determine where the additional interstate VKT are coming from.  They look at commercial trucking, residents, population growth, and diversino from one set of roads to another.  They find commercial trucking increases with interstate lane-km.  As does residential driving, a little.  Population too.   But more interstate lane-km doesn't divert very much from other roads.
+\par
+    They try do determine where the additional interstate VKT are coming from.  They look at commercial trucking, residents, population growth, and diversion from one set of roads to another.  They find commercial trucking increases with interstate lane-km.  As does residential driving, a little.  Population too.   But more interstate lane-km doesn't divert very much from other roads.
 
+\par
     For a traffic increase, they conclude: trucking accounts for 19 to 29\%, population increase for 5 to 21\%, residential driving for 9 to 39\%, and diversion from other roads 0 to 10\%.  The true values would have to be at the upper end of those ranges to account for all the traffic.
 
-    The authors mention congestion, but the paper doesn't actually mention delay.  They show coefficients around 1 for urban interstates in almost every test.  Still, it seems those highways carry more cars if population increases.  Maybe not at rush-hour?  I would have liked to see the breakdown by "roads that have stoplights" and "roads that do not".  As for the expanded capacity, it is used by more by local residents and diverts capacity (thru-truckers and migrants) from other cities.  So it is productively being used, not just causing needless delays.
+\par
+    The authors mention congestion, but the paper doesn't actually mention delay.  They show coefficients around 1 for urban interstates in almost every test.  Still, it seems those highways carry more cars if population increases.  Maybe not at rush-hour?  I would have liked to see the breakdown by ``roads that have stoplights" and ``roads that do not".  As for the expanded capacity, it is used by more by local residents and diverts capacity (thru-truckers and migrants) from other cities.  So it is productively being used, not just causing needless delays.
 
+\par
     Maybe we need to expand interstates even more?   I'd definitely prefer congestion pricing, though.  
   }
 }
+
+
+@Article{Ellickson1973,
+  author={Robert C. Ellickson},
+  title={Alternatives to Zoning: Covenants, Nuisance Rules, and Fines as Land Use Controls},
+  journal={The University of Chicago Law Review},
+  year=1973,
+  volume={40},
+  number={4},
+  pages={},
+  month={},
+  doi={},
+  abstract={The difficulty of assembling sites large enough to redevelop at higher density can impede regeneration in city centers and accelerate suburban sprawl onto large sites already in single ownership. One promising new planning strategy to encourage voluntary land assembly is graduated density zoning, which allows higher density on larger sites. This strategy can increase the incentive for owners to cooperate in a land assembly that creates higher land values. Graduated density zoning will not eliminate the incentive to hold out, but it can create a new fear of being left out. Holdouts who are left with sites that cannot be combined with enough contiguous properties to trigger higher density lose a valuable economic opportunity. This article examines the difficulty of assembling land for infill development, and explains graduated density zoning as a way to encourage voluntary land assembly. Finally, it presents the results of graduated density zoning in practice.},
+  url={https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=3777&context=uclrev},
+  keywords={zoning, deed restrictions, nuisance laws},
+  annote = {
+    Did not read.  It got suggested on a reading list and sounds interesting.
+  }
+}
+
 
 
 
@@ -509,7 +628,7 @@
     For low-income housing, renters are more credit constrained and less able to be owners.  They are also higher risk.  Yields earned by landlords are especially high.
 
 \par
-    The author makes a very interesting comment that ursary rates should be determined, not as fixed value, but relative to the rental payment.  This would allow ownership anywhere the mortgage payment (even at a high interest rate) was less than rent.  That would open up ownership to more people.
+    The author makes a very interesting comment that usury rates should be determined, not as fixed value, but relative to the rental payment.  This would allow ownership anywhere the mortgage payment (even at a high interest rate) was less than rent.  That would open up ownership to more people.
 
 \par
     The author doesn't say much about customization of the property.  Nor further investment in the property.  
@@ -530,7 +649,7 @@
   url = {https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=466bcf58b74d714670ef1fabf77e2cb5a6885b89},
   keywords={NIMBY motivations},
   annote = {
-    This paper explores the motivations of NIMBY's, who oppose new construction in their neighborhood.  He says, "It's the variance, dummy!".  Homeowners have sunk all their money into a single risky asset and they fear its crash.  When evaluating any change to a neighborhood, they look at the potential downside.
+    This paper explores the motivations of NIMBY's, who oppose new construction in their neighborhood.  He says, ``It's the variance, dummy!".  Homeowners have sunk all their money into a single risky asset and they fear its crash.  When evaluating any change to a neighborhood, they look at the potential downside.
 
 \par
     He points out that you rarely find NIMBYs among either apartment owners or apartment dwellers.  Occasionally, you find business owners, but they are usually trying to prevent competition.  He believe apartment owners face the same effects as homeowners, but are more diversified.
@@ -548,7 +667,7 @@
     He mentions that house-price insurance is not a panacea.  If homeowners are insured against losses, they don't do what's best for the neighborhood!  We need \emph{some} NIMBYism.  So, he doesn't advocate becoming a renter-majority society.
 
 \par
-He says, "it is worth wrestling with the problems of homeowner insurance contracts as a solution to the NIMBY problem".  He says other solutions are possible.  One is Caplin et al. 1991, where homeowners enter partnerships.  Another is Case-Shiller home-value insurance using a city-wide index.  Any diversification helps.  "It may be that the NIMBY problem will fade as a result of more efficient financial markets rather than political reforms.".
+He says, ``it is worth wrestling with the problems of homeowner insurance contracts as a solution to the NIMBY problem".  He says other solutions are possible.  One is Caplin et al. 1991, where homeowners enter partnerships.  Another is Case-Shiller home-value insurance using a city-wide index.  Any diversification helps.  ``It may be that the NIMBY problem will fade as a result of more efficient financial markets rather than political reforms.".
   }
 }
 
@@ -570,7 +689,7 @@ He says, "it is worth wrestling with the problems of homeowner insurance contrac
     The paper claims that zoning took off in the 1910's because of large gas-powered vehicles.  The bus and truck allowed apartments and industry to operate on land in the suburbs.  Previously, hauling goods was expensive and most people moved by train (street car).
 
 \par
-    With the large vehicle's ability to go on any road, it was necessary by law to protect the neighborhoods.  Developers used convenants for a time, but didn't protect the edge of the neighborhood.  Then they pushed for legislation.  
+    With the large vehicle's ability to go on any road, it was necessary by law to protect the neighborhoods.  Developers used covenants for a time, but didn't protect the edge of the neighborhood.  Then they pushed for legislation.  
 
 \par
     The author says that other excuses for zoning were present at other times.  But zoning took off all over the USA in the 1910s.  It was enacted to preserve home prices in an era of technological change.  
@@ -582,7 +701,7 @@ He says, "it is worth wrestling with the problems of homeowner insurance contrac
     Regional government entities were proposed, but killed.  Local control stayed.
 
 \par
-    A great quote: "That the detached, owner-occupied home is at the top of the zoning pyramid is evident in nearly all zoning laws.  ... The primacy of homeownership remains so widespread that we hardly think of it as something requiring explanation. Yet there is no theoretical reason why other uses of land should be regarded as less
+    A great quote: ``That the detached, owner-occupied home is at the top of the zoning pyramid is evident in nearly all zoning laws.  ... The primacy of homeownership remains so widespread that we hardly think of it as something requiring explanation. Yet there is no theoretical reason why other uses of land should be regarded as less
 important. Apartment dwellers are as much citizens as home dwellers; owning has long
 commanded no special municipal privilege."  (pg. 17)
 
@@ -590,16 +709,16 @@ commanded no special municipal privilege."  (pg. 17)
     He says that homeowners invest in a single large un-diversifiable asset and form political entities to protect its value.
 
 \par
-    The author says that people only started to notice zoning's affect on housing prices around 1970.  He's not sure why it showed up then.  One theory is that "industrial parks" showed up and suburbs got some jobs.  This drew poor and Blacks (freed by civil rights lawsuits) to move nearby.  Suburbs forced high land prices to keep them out.   The author believes that exclusion is far more income-based than racial.
+    The author says that people only started to notice zoning's affect on housing prices around 1970.  He's not sure why it showed up then.  One theory is that ``industrial parks" showed up and suburbs got some jobs.  This drew poor and Blacks (freed by civil rights lawsuits) to move nearby.  Suburbs forced high land prices to keep them out.   The author believes that exclusion is far more income-based than racial.
 
 \par
-    To validate the new exclusion, suburbs used environmental and "growth management" language.  The rules advocated for larger lots and open space zoning.  (Open space zoning used large lots and banned development in large areas under the term "conservation".)
+    To validate the new exclusion, suburbs used environmental and ``growth management" language.  The rules advocated for larger lots and open space zoning.  (Open space zoning used large lots and banned development in large areas under the term ``conservation".)
 
 \par
-    Also in the 1970s era, Regional government entities were set up.  This was called "The Quiet Revolution" by Bosselman and Callies (1971).  The regional entities used "double veto": things could be vetoed at either the local or regional level.
+    Also in the 1970s era, Regional government entities were set up.  This was called ``The Quiet Revolution" by Bosselman and Callies (1971).  The regional entities used ``double veto": things could be vetoed at either the local or regional level.
 
 \par
-    As for solutions, the author suggests taxing the imputed rent of owner-occupied houses.  This would lower home ownership.  Switzerland does this and has 30\% home ownership.  He admits that this is an "unlikely policy".
+    As for solutions, the author suggests taxing the imputed rent of owner-occupied houses.  This would lower home ownership.  Switzerland does this and has 30\% home ownership.  He admits that this is an ``unlikely policy".
 
 \par
     The other solution is home equity insurance.  The author cites many sources for a few programs on page 30.  He wants to insure the price of a \emph{neighborhood}, not the whole city.  He realizes there is moral hazard.  And it would be hard to calculate.  And hard to get off the ground.  
@@ -622,19 +741,19 @@ commanded no special municipal privilege."  (pg. 17)
     A very good paper.  Simple, informative idea.  Clearly expressed.
 
 \par
-    The idea is that rent burden can be broken into pieces.  The rent burden for household $i$ is $rent_i/income_i$, but it is also the multiplication of four factors:  The "rent gap" is $rent_i$ divided by the median rent for a unit of that size.   The "excess size cost" is the median rent for a unit of the size divided by the median rent of households of that size.  The "demographic baseline" is the median rent of households of that size divided by the median income of households of that size.  And, lastly, the "income gap" is the median income of households of that size divided by that particular household's income.
+    The idea is that rent burden can be broken into pieces.  The rent burden for household $i$ is $rent_i/income_i$, but it is also the multiplication of four factors:  The ``rent gap" is $rent_i$ divided by the median rent for a unit of that size.   The ``excess size cost" is the median rent for a unit of the size divided by the median rent of households of that size.  The ``demographic baseline" is the median rent of households of that size divided by the median income of households of that size.  And, lastly, the ``income gap" is the median income of households of that size divided by that particular household's income.
 
 \par
     Multiplying those 4 factors together gives you the rent burden.  Now, Furth looks at each factor.  He separates households where the rent burden is greater than 30\% and where it is less than and compares the values of the factors.
 
 \par
-    3 of the factors are roughly the same between the two groups.  The biggest difference is in the "income gap".  The poor are rent burdened.  
+    3 of the factors are roughly the same between the two groups.  The biggest difference is in the ``income gap".  The poor are rent burdened.  
 
 \par
-    He does a more localized breakdown for New England.  In Southwest Connecticut and Massachusets Bay, the "rent gap" has a larger effect there, almost equal to the "income gap".
+    He does a more localized breakdown for New England.  In Southwest Connecticut and Massachusetts Bay, the ``rent gap" has a larger effect there, almost equal to the ``income gap".
 
 \par
-    A very good paper.  My hypothesis is that families at all income levels spend about 57\% of their consumption on housing and transportation.  Thus, a higher rent burden is where transportation is cheap.  That is, public transit is common.  That the "rent gap" is largest in the densest parts of the state, seems to support that idea.
+    A very good paper.  My hypothesis is that families at all income levels spend about 57\% of their consumption on housing and transportation.  Thus, a higher rent burden is where transportation is cheap.  That is, public transit is common.  That the ``rent gap" is largest in the densest parts of the state, seems to support that idea.
   }
 }
 
@@ -649,13 +768,17 @@ commanded no special municipal privilege."  (pg. 17)
   annote={
     This is a piece of data I've been looking for!  It says that rent increases in an MSA explain about half of inflation in the MSA.  Prices depend on rent in a significant way.
     
+\par
     The article starts by saying home prices are \emph{not} a predictor of regional inflation.  And that makes sense to me.  If the price for a home is the sum of discounted future rents, it is dominated by the expectation of future rents and the discount factor (usually an interest rate).
 
+\par
     The second half of the article focuses on rent as a predictor for regional inflation.  That does work.  Their linear prediction has an R-squared of 0.49.  The trend is clear, but I'm not sure how precise that R-squared value is.  In their plot, the changes don't look normally distributed and the higher values seem to have larger movements than smaller ones.
 
-    The coefficient they get in their regression is much lower than I expected.  Households spend about 32\% of the their income on rent, so I expected if rent increased by $X$, prices should increase by at least $.32 \cdot X$.  And, given local purchases, probably closer to $.50 \cdot X$.  It's true that only 1 in 3 households rent at market prices, but the usual interpretation is that homeowners are landlords that rent to themselves.  In fact, their rent metric includes owner-imputed rents!  The conclusion says the author's answer: "There still exists more variation in rents than in inflation, due in part to the fact that households will adjust how much housing they purchase when the price changes."
+\par
+    The coefficient they get in their regression is much lower than I expected.  Households spend about 32\% of the their income on rent, so I expected if rent increased by $X$, prices should increase by at least $.32 \cdot X$.  And, given local purchases, probably closer to $.50 \cdot X$.  It's true that only 1 in 3 households rent at market prices, but the usual interpretation is that homeowners are landlords that rent to themselves.  In fact, their rent metric includes owner-imputed rents!  The conclusion says the author's answer: ``There still exists more variation in rents than in inflation, due in part to the fact that households will adjust how much housing they purchase when the price changes."
 
-    The authors use "regional price parities", which are an inflation measure for many metroareas.  The CPI is only available in 27 MSAs.
+\par
+    The authors use ``regional price parities", which are an inflation measure for many metroareas.  The CPI is only available in 27 MSAs.
   }  
 }
 
@@ -670,19 +793,61 @@ commanded no special municipal privilege."  (pg. 17)
   annote={
     This page goes into details about regional inflation.  Basically, how inflation differs from one metro area to another.
 
+\par
     Regional Price Parity (RPP) is the price of the same basket of goods in different metro areas.  So, it's rent for the same house.  Or the same basket of goods.  Or services.  The average of all RPPs in a given year equals 100.  (I looked up their definition and apparently they are intra-country PPPs!)
 
+\par
     CPI measures inflation over time.  For regional CPIs, they are indexed to 100 back in 1982.  Regional inflation is also different because the baskets are different.  For example, heating is a larger expense in colder climates.
 
-    About half of the regional differences is due to housing.  It is persistant.
+\par
+    About half of the regional differences is due to housing.  It is persistent.
 
+\par
     In tighter labor markets, employers pay higher wages \emph{and} charge more for their products.  This creates inflation.  So another regional difference is, when unemployment goes down, prices go up.  But it looks like housing markets are the cause of tighter labor markets!  When you adjust for housing costs, the difference (mostly) disappears.  That's fascinating!  
   }  
 }
 
 
 
+@book{George,
+  author    = "Henry George",
+  title     = "Progress and Poverty",
+  publisher = "D. Appleton and Company",
+  address   = "New York, NY",
+  year      = 1879,
+  keywords={homelessness; housing price},
+  annote    = {
+    I skimmed this book.
 
+\par
+    This is a classic book, famous for proposing to tax land.  It was very popular in its day.  The land tax is often called ``Georgism'' in the author's honor.  It is an emotional and pop-sci book --- it doesn't have equations or math.  It is long and goes into detail.
+
+\par
+    The author focuses on the farm economy, but says his ideas also apply to cities.  He says that production is caused by 3 things: labor, capital (tools and machines), and land.  Income from them has their own names: wages, interest, and rent.  A lot of income goes to renting land, because of monopoly and speculation.  The remedy is: ``We must make land common property.".   He says that taxes on wages, sales, and interest harm the economy because less labor is done and less capital put to use.  Thus, he suggests to tax land, to its full value, and to abolish all other taxes.
+
+\par
+   For a simple idea, I expected a small treatise.  This is a 400 page book.  The author is a clear and impassioned writer.  I could recite the book's introduction at a housing conference today and I'm sure it would raise a cheer.   It seems to be an entertaining book, but full of one man's speculations and there have been more than 100 years of economics written since then.  I'll spend my own time on more recent works.
+  }
+}
+
+
+@book{Glaeser2011,
+  author    = "Edward Glaeser",
+  title     = "Triumph of the City",
+  publisher = "Penguin Books",
+  address   = "New York, NY",
+  year      = 2011,
+  keywords={everything},
+  annote    = {
+    This book is a broad summary of Urban Economics research, packaged in a well-written mass-market book.  It is about 300 pages and I would guess has 600 items in its bibliography.  But it doesn't read like an academic paper.  It's a flowing conversations about cities.  It just happens that every other paragraph includes a number or a chosen morsel from a paper.
+
+\par
+    I normally try to summarize the important concepts in a book or paper, but this book is full of them.  The other thing this book conveys is its mood.  Cities are where things happen and are full of possibilities.  They are beneficial to society and improving.  We don't know everything about cities, but what we do know should inform local, state, and federal policies.  
+
+\par
+    I cannot recommend this book enough.  If you want to get started in Urban Economics, this should be your first read.  You'll not only be informed about the field, you'll be inspired about its potential.  
+  }
+}
 
 
 
@@ -693,7 +858,7 @@ commanded no special municipal privilege."  (pg. 17)
   institution="Mercatus Center",
   year      = 2019,
   abstract={
-  Minimum lot sizes regulate the density of housing in almost all American municipalities. Our findings suggest that even moderate lot size minimums in rapidly growing Texas suburbs constrain density. Market outcomes are consistent with strong demand for single-family detached housing units built on lots of 5,000 to 7,000 square feet, a lot size rarely allowed by local zoning laws. The four suburban cities we examine depart frequently from their written zoning codes in order to offer such lots, approving noncompliant subdivisions and making extensive use of customized regulation for planned unit developments. Scholars agree that large-lot zoning as practiced in exclusionary coastal jurisdictions is a binding constraint on density. We go further: even modest minimum lot sizes in automobile-oriented suburbs are less dense than Americans want.
+  Minimum lot sizes regulate the density of housing in almost all American municipalities. Our findings suggest that even moderate lot size minimums in rapidly growing Texas suburbs constrain density. Market outcomes are consistent with strong demand for single-family detached housing units built on lots of 5,000 to 7,000 square feet, a lot size rarely allowed by local zoning laws. The four suburban cities we examine depart frequently from their written zoning codes in order to offer such lots, approving non-compliant subdivisions and making extensive use of customized regulation for planned unit developments. Scholars agree that large-lot zoning as practiced in exclusionary coastal jurisdictions is a binding constraint on density. We go further: even modest minimum lot sizes in automobile-oriented suburbs are less dense than Americans want.
   },
   keywords={minimum lot size},
   annote    = {
@@ -709,7 +874,7 @@ commanded no special municipal privilege."  (pg. 17)
     The Pfluggerville distribution has huge spike at the minimum lot size of 9,000 sqft.
 
 \par
-    I love this paper, because it has data that isn't available elsewhere.  I really would have loved if they had plotted the lot sizes on a logrithmic axis and tried to fit a log-normal distribution to the tail above the minimum lot size.  If that is the natural distribution for demand, we can use it to measure the short fall (not enough supply) and the distortion (people who buy a larger lot than they want).  
+    I love this paper, because it has data that isn't available elsewhere.  I really would have loved if they had plotted the lot sizes on a logarithmic axis and tried to fit a log-normal distribution to the tail above the minimum lot size.  If that is the natural distribution for demand, we can use it to measure the short fall (not enough supply) and the distortion (people who buy a larger lot than they want).  
   }
 }
 
@@ -724,13 +889,13 @@ commanded no special municipal privilege."  (pg. 17)
   year      = 2022,
   keywords={planning; zoning},
   annote    = {
-  A very readable book that argues that zoning is unnecessary.  It describes what zoning does (restricts use, restricts size) and what it does not do (mandate construction, protect health and safety, protect the environment, plan for the future).  Zoning doesn't even "solve" the problem of externalities like noise, smell, shade, etc..  
+  A very readable book that argues that zoning is unnecessary.  It describes what zoning does (restricts use, restricts size) and what it does not do (mandate construction, protect health and safety, protect the environment, plan for the future).  Zoning doesn't even ``solve" the problem of externalities like noise, smell, shade, etc..  
 
 \par
    In NYC, zoning was instituted to restrict building size.  The Equitable Building was so large that the price of office space plummeted.  Zoning limited building volume so that didn't happen again. 
 
 \par
-   Berkeley implmented an early zoning plan for other reasons.  "Residential areas" kept apartments of poor (including "negroes and Orientals") out of the suburbs.  Banning businesses kept Chinese-laundry (and the Chinese) out of the suburbs.  Berkeley's zoning was non-heirarchical --- it kept residential out of industrial areas.  This was used by business interests to force housing out of downtown areas and attract more businesses (with jobs and tax revenue).  
+   Berkeley implemented an early zoning plan for other reasons.  ``Residential areas" kept apartments of poor (including ``negroes and Orientals") out of the suburbs.  Banning businesses kept Chinese-laundry (and the Chinese) out of the suburbs.  Berkeley's zoning was non-hierarchical --- it kept residential out of industrial areas.  This was used by business interests to force housing out of downtown areas and attract more businesses (with jobs and tax revenue).  
 
 \par
    Zoning drives up prices.  Single-room occupancies (SROs) are banned.  Parking required.  Heights limited.  Empty land mandated.  The approval process delays housing.  Etc.  It makes cities worse and America poorer.
@@ -742,7 +907,7 @@ commanded no special municipal privilege."  (pg. 17)
    Fixing the problems requires loosening zoning, but the author considers abolishing it all together.  Zoning doesn't accomplish its goals.  It doesn't address most externalities and, those it does, it does roughly.  It isn't the best mechanism for planning growth.  
 
 \par
-   Houston is the example of a city without zoning.  Most of its residents' desire for zoning is fulfilled by deed restrictions, which are enforced by the city government.  Some of zoning's aspects show up elsewhere (don't build in a floodplain, optional parking minimums, some business banned everywhere in the city).  Houston is still segregated by use, but that is driven by the market.   I wish the author had gone into more detail on this important aspect of the solution: "As Siegan observes, it's not uncommon for homeowners' associations to simply pay off owners of abutting properties to avoid more offensive uses, such as gas stations or car dealerships".  (Page 155) 
+   Houston is the example of a city without zoning.  Most of its residents' desire for zoning is fulfilled by deed restrictions, which are enforced by the city government.  Some of zoning's aspects show up elsewhere (don't build in a floodplain, optional parking minimums, some business banned everywhere in the city).  Houston is still segregated by use, but that is driven by the market.   I wish the author had gone into more detail on this important aspect of the solution: ``As Siegan observes, it's not uncommon for homeowners' associations to simply pay off owners of abutting properties to avoid more offensive uses, such as gas stations or car dealerships".  (Page 155) 
 
 \par
    The author says that if zoning is abolished, planning needs to change.  Laws need to focus on externalities directly, like noise and smell.  Planner's duties can be replaced by mediators.
@@ -765,11 +930,12 @@ Evidence from Administrative Data},
   keywords={voting, homeowner voting},
   annote = 	 {
     I skimmed this paper.
-    
+     
+\par
     Looks at data from Ohio and North Carolina to see if homeownership affects voting in local elections.  They do differences-in-differences.
 
-    The effect varies from 3\% to 8\%, depending on the regression.  Richer are more likely to vote.  When zoning is on the ballot, it is higher.
-    
+\par
+    The effect varies from 3\% to 8\%, depending on the regression.  Richer are more likely to vote.  When zoning is on the ballot, it is higher.    
   }
 }
 
@@ -783,7 +949,7 @@ Evidence from Administrative Data},
   institution="Mercatus Center",
   year      = 2021,
   keywords={zoning; inclusionary zoning},
-  annote    = {This is an executive summary of inclusive zoning.  It describes it and its effects.  It has a summary of 6 different studies of inclusionary zoning.  "... four find that inclusionary zoning increases prices."  The author points out that all these studies assume the cities' restrictive zoning policy is "a given".  In the conclusion she states: "No studies of its effects indicate that it increases housing supply or contributes to broadly lower prices. It benefits a small portion of low and moderate-income households rather than targeting aid at the households that need it most."
+  annote    = {This is an executive summary of inclusive zoning.  It describes it and its effects.  It has a summary of 6 different studies of inclusionary zoning.  ``... four find that inclusionary zoning increases prices."  The author points out that all these studies assume the cities' restrictive zoning policy is ``a given".  In the conclusion she states: ``No studies of its effects indicate that it increases housing supply or contributes to broadly lower prices. It benefits a small portion of low and moderate-income households rather than targeting aid at the households that need it most."
   }
 }
 
@@ -794,13 +960,13 @@ Evidence from Administrative Data},
   institution="Mercatus Center",
   year      = 2018,
   keywords={walkability},
-  annote    = { This research evaluates walkability's effect on home prices on a zipcode basis.  I don't trust this paper's results at all.  
+  annote    = { This research evaluates walkability's effect on home prices on a zip code basis.  I don't trust this paper's results at all.  
 
 \par
-     The paper's literature review says that Walk Score sometimes didn't line up with real walkability on small scales.  Hence, it would be odd to see its effect at larger scales, like zipcode.
+     The paper's literature review says that Walk Score sometimes didn't line up with real walkability on small scales.  Hence, it would be odd to see its effect at larger scales, like zip code.
 
 \par
-     The Walk Score for a zipcode was taken at its centroid.  The other variables were average rooms, average housing age, average commute time, average distance to CBD, income, vacancy, and density.  They controlled for county-level fixed effects.  (The hope this adjusts for crime and public amenities.)  They regress log(price-per-sqft) with linear effects.  It isn't clear if that is a sqft of land or interior space.   They use linear average income, not log(average income), which is strange.  In the results, they say "The coefficients on distance from the CBD, average commute... are insignficant".  That's a bad sign.
+     The Walk Score for a zip code was taken at its centroid.  The other variables were average rooms, average housing age, average commute time, average distance to CBD, income, vacancy, and density.  They controlled for county-level fixed effects.  (The hope this adjusts for crime and public amenities.)  They regress log(price-per-sqft) with linear effects.  It isn't clear if that is a sqft of land or interior space.   They use linear average income, not log(average income), which is strange.  In the results, they say ``The coefficients on distance from the CBD, average commute... are insignificant".  That's a bad sign.
 
 \par
      They attempt to validate the model with rental rates, which I would think would be the primary way to measure the effects.
@@ -820,13 +986,13 @@ Evidence from Administrative Data},
   url = 	 {https://www.vox.com/2016/3/8/11173304/homeless-in-america},
   keywords={homelessness, homeless experience},
   annote = 	 {
-    A touching and enlightening article.  The author explains how she delt with poverty by occasionally living in her car.
+    A touching and enlightening article.  The author explains how she dealt with poverty by occasionally living in her car.
 
 \par
     It covers a lot of the practical issues of being homeless.  Low pay and expensive housing cause homelessness.  Landlords have requirements (deposit, proof of income, etc.) and discriminate against homeless (let alone incarcerated, etc.).  Roommates are problematic: propositions for sex, mental health, lack of privacy, etc..  When you live in your car, you need to find a place to park at night.  
 
 \par
-    The most important section is the first: "Homelessness is expensive".  It opened my eyes to how costs \emph{increase} as you go down the ladder.  Without a stove, you must buy pre-cooked food and cannot buy in bulk.  Without storage, you must buy a new winter coat each year.  Without a shower, you need to buy a gym membership to get clean.  With all those higher costs, trying to "climb up the ladder" is harder the lower you are.
+    The most important section is the first: ``Homelessness is expensive".  It opened my eyes to how costs \emph{increase} as you go down the ladder.  Without a stove, you must buy pre-cooked food and cannot buy in bulk.  Without storage, you must buy a new winter coat each year.  Without a shower, you need to buy a gym membership to get clean.  With all those higher costs, trying to ``climb up the ladder" is harder the lower you are.
   }
 }
 
@@ -857,31 +1023,31 @@ Evidence from Administrative Data},
     This is the kindest, wholehearted, literate attack I've ever read.  It is dense with ideas and feelings and examples.
 
 \par
-    The first sentence is "This book is an attack on current city planning and rebuilding."  The victims of the attack are architects and planners who think that the best cities have tall buildings in park-like environments.  (These go by brand names "City Beautiful", "Garden City" and "Radiant City".)  She also attacks governments who subsidize suburbs and who essentailly "clear the slums and rebuild". 
+    The first sentence is ``This book is an attack on current city planning and rebuilding."  The victims of the attack are architects and planners who think that the best cities have tall buildings in park-like environments.  (These go by brand names ``City Beautiful", ``Garden City" and ``Radiant City".)  She also attacks governments who subsidize suburbs and who essentially ``clear the slums and rebuild". 
 
 \par
-    Her first chapter is on Safety.  She defines a city as a place with a lot of strangers and the residents of a city block (people living there and business owners) need to defend themselves from strangers.  There are 2 ways to do this.  One way is to demark "Turfs" which are patrolled by gangs (in poor areas) or private security guards (in rich ones).  The alternative is an organic defense: the dangerous person is detected, the alarm communicated to fellow residents, and enough residents mass in the street to fend off the danger.  This organic defense only comes through visibility of danger, stability of residents, communication, building of trust through voluntary interactions, and fast response. 
+    Her first chapter is on Safety.  She defines a city as a place with a lot of strangers and the residents of a city block (people living there and business owners) need to defend themselves from strangers.  There are 2 ways to do this.  One way is to demark ``Turfs" which are patrolled by gangs (in poor areas) or private security guards (in rich ones).  The alternative is an organic defense: the dangerous person is detected, the alarm communicated to fellow residents, and enough residents mass in the street to fend off the danger.  This organic defense only comes through visibility of danger, stability of residents, communication, building of trust through voluntary interactions, and fast response. 
 
 \par
-    The organic defense is encouraged by fostering interaction of residents on sidewalks using mixed-use, short blocks, high traffic at all hours, recreation in public rather than private, etc.  You also need big windows looking over street, no blind spots, etc..  Parks are bad --- plenty of blind spots, far from windows, usually low-traffic.  It's where gangs fight, where boys sneak off to do bad things, and where the homeless gather.  A few parks, which are small and have traffic at all hours with various crowds at different times, are successes.  Activity-based amenties, like swimming pools (and libraries?), can be good.  In addition to parks, other borders between streets, like highways, railroads and rivers, also cut the organic fabric.  
+    The organic defense is encouraged by fostering interaction of residents on sidewalks using mixed-use, short blocks, high traffic at all hours, recreation in public rather than private, etc.  You also need big windows looking over street, no blind spots, etc..  Parks are bad --- plenty of blind spots, far from windows, usually low-traffic.  It's where gangs fight, where boys sneak off to do bad things, and where the homeless gather.  A few parks, which are small and have traffic at all hours with various crowds at different times, are successes.  Activity-based amenities, like swimming pools (and libraries?), can be good.  In addition to parks, other borders between streets, like highways, railroads and rivers, also cut the organic fabric.  
 
 \par
-   Chapter 6's title says "neighborhoods" but means "governing".  The author doesn't see a boundary for a neighborhood --- the city is a continuous piece of overlapping relationships: friends, customers of business, schools, etc..  In her mind, there is your block and your city and nothing in between.  She says there is a political role to be played by districts of size about 100,000.  Basically, no citywide politician cares about your block.  You need a district size to be where someone on your block can gather enough voices from nearby blocks to get the attention of an assemblyman at the city level and that the assemblyman has enough power to get stuff done with the police, the traffic planners, etc..  She comments that many cities are not very democratic because of their structure and hoops that residents must try to run through.
+   Chapter 6's title says ``neighborhoods" but means ``governing".  The author doesn't see a boundary for a neighborhood --- the city is a continuous piece of overlapping relationships: friends, customers of business, schools, etc..  In her mind, there is your block and your city and nothing in between.  She says there is a political role to be played by districts of size about 100,000.  Basically, no citywide politician cares about your block.  You need a district size to be where someone on your block can gather enough voices from nearby blocks to get the attention of an assemblyman at the city level and that the assemblyman has enough power to get stuff done with the police, the traffic planners, etc..  She comments that many cities are not very democratic because of their structure and hoops that residents must try to run through.
 
 \par
-    Quote from pg. 181, "Here is a seeming paradox: To maintain in a neighborhood sufficient people who stay put, a city must have the very fluidity and mobility of use ..."
+    Quote from pg. 181, ``Here is a seeming paradox: To maintain in a neighborhood sufficient people who stay put, a city must have the very fluidity and mobility of use ..."
 
 \par
     I have not read Chapters 7 through 15 yet.
 
 \par
-    Chapter 15 is about money.  There is real damage done to neighborhoods that could not get loans because banks blacklisted them after planners designated them as "slums" or bad.  Existing buildings are not improved; bad buildings are not torn down and replaced.  Her early example of Boston's North End is brought up.  It was only sustained and improved by people paying cash and by construction people living there.  When money does flood into a slum, it often displaces residents and destroys the social fabric.
+    Chapter 15 is about money.  There is real damage done to neighborhoods that could not get loans because banks blacklisted them after planners designated them as ``slums" or bad.  Existing buildings are not improved; bad buildings are not torn down and replaced.  Her early example of Boston's North End is brought up.  It was only sustained and improved by people paying cash and by construction people living there.  When money does flood into a slum, it often displaces residents and destroys the social fabric.
 
 \par
     Tax law also drove people to be slumlords.  Owners did not invest so that profits came as capital gains rather than income.  
 
 \par
-    The author mentions that eminant domain hurts because it pays only for the land/building and not everything the owner had invested betting on a stable future.  Some cities have "quick-take" laws that grab the land immediately and settle the price later, so that profiteers cannot buy property that will be later eminantly domained.
+    The author mentions that eminent domain hurts because it pays only for the land/building and not everything the owner had invested betting on a stable future.  Some cities have ``quick-take" laws that grab the land immediately and settle the price later, so that profiteers cannot buy property that will be later eminently domained.
 
 \par
     Chapter 16 is about subsidized housing.  The author has sharp comments about lack of housing is about lack of money.  She recommends subsidizing rent and guaranteed loans to building owners who provide it.  She would let owners choose their residents.  
@@ -890,7 +1056,7 @@ Evidence from Administrative Data},
     I did not read Chapters 17 through the end.
 
 \par
-    I didn't have time to read all of this book but I want to!  It is an engaging and eye-opening.  The author has new ideas with lots of examples.  The author never uses the words "organic fabric", but that's what she means.  It's a difficult concept for planning --- improving may require a local "gardener" rather than a distance mathematical bureaucrat.  Even the first question that I'd want to ask, "how do you measure it?", is a quandry.  Page 174-179 talks about the social network in a neighborhood and mentions the number of connections between any two people.  It's a kind of "six-degrees" but within the neighborhood.  Perhaps that's a way to measure it.  But the next question, "what do planners do to make a neighborhood better connected?" gets even more complex.  Even if there's complexity, the author has redirected everyone's gaze at it.
+    I didn't have time to read all of this book but I want to!  It is an engaging and eye-opening.  The author has new ideas with lots of examples.  The author never uses the words ``organic fabric", but that's what she means.  It's a difficult concept for planning --- improving may require a local ``gardener" rather than a distance mathematical bureaucrat.  Even the first question that I'd want to ask, ``how do you measure it?", is a quandary.  Page 174-179 talks about the social network in a neighborhood and mentions the number of connections between any two people.  It's a kind of ``six-degrees" but within the neighborhood.  Perhaps that's a way to measure it.  But the next question, ``what do planners do to make a neighborhood better connected?" gets even more complex.  Even if there's complexity, the author has redirected everyone's gaze at it.
   }
 }
 
@@ -903,16 +1069,16 @@ Evidence from Administrative Data},
   year      = 1969,
   keywords={urban economics, economic growth},
   annote    = {
-    This is a big-thought book about the economic development of humanity, like "Guns, Germs, and Steel", by Jane Jacobs.  She wrote "The Death and Life of Great American Cities" which is a classic book that upset the world of urban planning.  This book is facinating, dense with ideas backed by anecdotes from cities.  It tries to show that cities are vital to economics and a particular process in cities drives economic growth.  My major problem with it is that it doesn't use math.  While this book is fertile for ideas, its main argument should have use the precision and rigor of mathematics to prove its point.
+    This is a big-thought book about the economic development of humanity, like ``Guns, Germs, and Steel", by Jane Jacobs.  She wrote ``The Death and Life of Great American Cities" which is a classic book that upset the world of urban planning.  This book is fascinating, dense with ideas backed by anecdotes from cities.  It tries to show that cities are vital to economics and a particular process in cities drives economic growth.  My major problem with it is that it doesn't use math.  While this book is fertile for ideas, its main argument should have use the precision and rigor of mathematics to prove its point.
 
 \par
-    Her big idea is that economic growth is driven by "import substitution" in cities.  In her model of a city, it has exports, imports, export-producing industry, and (self-)consumption-producing industry.  The exports pay for the city's imports.  Growth happens rapidly when a city starts producing goods that it used to import.  E.g., Tokyo used to import bicycles, but now makes them locally.  This new industry increases the local economy but also has another effect.  The city's exports pay for the imports and now the city can buy even more of other imports.  These can help the city produce more goods that it used to import, causing growth and the cycle to happen again.  It is that cyclic feedback that Jacobs believes drives rapid growth in cities (and economies).   
+    Her big idea is that economic growth is driven by ``import substitution" in cities.  In her model of a city, it has exports, imports, export-producing industry, and (self-)consumption-producing industry.  The exports pay for the city's imports.  Growth happens rapidly when a city starts producing goods that it used to import.  E.g., Tokyo used to import bicycles, but now makes them locally.  This new industry increases the local economy but also has another effect.  The city's exports pay for the imports and now the city can buy even more of other imports.  These can help the city produce more goods that it used to import, causing growth and the cycle to happen again.  It is that cyclic feedback that Jacobs believes drives rapid growth in cities (and economies).   
 
 \par
-    The book is about more than that idea.  She believes economics is about cities.  (She points out that industry is not evenly spread across the land, but concentrated in cities.)  That cities pre-date agriculture.  (She speculates about a city in Turkey trading obsidian before argiculture.)  That the conventional story if "argiculture blooms and then cities develop" is wrong.  She says cities produce tools that help farmers be more productive.  
+    The book is about more than that idea.  She believes economics is about cities.  (She points out that industry is not evenly spread across the land, but concentrated in cities.)  That cities pre-date agriculture.  (She speculates about a city in Turkey trading obsidian before agriculture.)  That the conventional story if ``agriculture blooms and then cities develop" is wrong.  She says cities produce tools that help farmers be more productive.  
 
 \par
-    She has an organic view of cities.  She says cities that focus on mass production in a single industry do not grow and develop.  She thinks the best cities have an mix of small companies which grow and innovate.  The book contains many stories about new products being developed, such as 3M changing from being a mining company to making a wide varies adhesives.  She mentioned how Japan learned to make bicycles slowly: first repairing bikes, then making their own parts to repair bikes, and then, eventually, making the whole bike.  She tells the story of a factory being set up in a small town and it failing, but it succeeded quickly when relocated into a city.  She tells many stories of employees "breaking away" to start a new business.  She has a great metaphor about organic development on pg. 129: biologists once thought a fertilized egg was a tiny baby, only needing to grow larger.  We now know the egg is a single cell and the fetus develops by cells splitting and specializing.  
+    She has an organic view of cities.  She says cities that focus on mass production in a single industry do not grow and develop.  She thinks the best cities have an mix of small companies which grow and innovate.  The book contains many stories about new products being developed, such as 3M changing from being a mining company to making a wide varies adhesives.  She mentioned how Japan learned to make bicycles slowly: first repairing bikes, then making their own parts to repair bikes, and then, eventually, making the whole bike.  She tells the story of a factory being set up in a small town and it failing, but it succeeded quickly when relocated into a city.  She tells many stories of employees ``breaking away" to start a new business.  She has a great metaphor about organic development on pg. 129: biologists once thought a fertilized egg was a tiny baby, only needing to grow larger.  We now know the egg is a single cell and the fetus develops by cells splitting and specializing.  
 
 \par
     She has a great set of examples about how geography is not destiny.  There were other settlements near New York and London with better harbors.  Those settlements should have had the advantage in growth.  But they didn't.  Something else drove growth and development.
@@ -921,13 +1087,13 @@ Evidence from Administrative Data},
     I will say that two of her strongest stories did not move me.  They were about the growth in Japan and Los Angeles after WWII.  Both were far away from where they imported goods from (USA, East Coast).  So, the standard economic motivations to move production locally make sense --- transportation costs were high (at that time).  It would be interesting to compare where expensive transportation drives local growth and where it does not.  In the 1600 to 1900's, colonies were far away but only some grew.  Jacob's view is that colonies were either focused on single-product mass production or the colonizers prevented locals from making imports locally.  
     
 \par
-    She has distain for Adam Smith's view that specialization leads to more production.  Smith's classic example is the 10 specialists doing different jobs will make 4,800 pins per day per person, and 1 generalist struggles to make a handful.  Jacobs says "Division of labor is a device for achieving operating efficiency, nothing more." (pg. 82).  She considers the idea of creating the pin in the first place to be the important part.  Innovation eventually lead to a pin-making machine that put all the specialists out of business!  She does value the division of labor because a 10-step process has 10 (or even 45) places where innovation can occur, if allowed.  
+    She has disdain for Adam Smith's view that specialization leads to more production.  Smith's classic example is the 10 specialists doing different jobs will make 4,800 pins per day per person, and 1 generalist struggles to make a handful.  Jacobs says ``Division of labor is a device for achieving operating efficiency, nothing more." (pg. 82).  She considers the idea of creating the pin in the first place to be the important part.  Innovation eventually lead to a pin-making machine that put all the specialists out of business!  She does value the division of labor because a 10-step process has 10 (or even 45) places where innovation can occur, if allowed.  
 
 \par
     For a book from 1969, it feels very predictive of the last 50 years.  She mentions recycling.  Investing in startups.  That services will differentiate and grow faster than manufacturing.
 
 \par
-    This is an amazing book because it has lots of stories and will get you thinking in new directions.  I don't accept its story of "import substitution", because it is too reductionist.  It may explain a city's growth but not the economy's.  Doesn't import substituion mean that manufacturing has moved from the exporting city to the importing one, not new manufacturing has been created?  It might grow the economy if local resources are used, but then it is those resources that are causing growth, not the movement of the manufacturing. 
+    This is an amazing book because it has lots of stories and will get you thinking in new directions.  I don't accept its story of ``import substitution", because it is too reductionist.  It may explain a city's growth but not the economy's.  Doesn't import substitution mean that manufacturing has moved from the exporting city to the importing one, not new manufacturing has been created?  It might grow the economy if local resources are used, but then it is those resources that are causing growth, not the movement of the manufacturing. 
 
 \par
     I do like her view of cities as organic.  If we view a city as a network of processes, where each takes input goods and produces output goods, then the network can only change by little steps.  A process can grow.  A process can mutate to produce a slightly different product.  A process can move from outside the city to inside it.  A process can split or a new process can replicate an existing process.  Innovation can create a brand new process, but it still has to connect it into the network.  It helps where there are lots of places to connect it to.  That may be why cities succeed: not just lots of products for customers but lots of places in a network where innovation can find a place. 
@@ -943,37 +1109,37 @@ Evidence from Administrative Data},
   year      = 2000,
   keywords  = {agglomeration, cities},
   annote    = {
-    This is a weird book that contains an interesting idea.  The author, Jane Jacobs, is a seasoned observer of cities and wrote \emph{the} book in Urban Planning, "The Death and Life of Great American Cities".  In this book, she tries to explain the agglomerations effects of cities by exploring the metaphor of ecology.  That is, that businesses succeed in a vibrant city in similar ways to species succeeding in a verdant environment.  It is an interesting idea.  But she doesn't explain the idea directly.  The book written as a sequence of conversations by a handful of characters.  That's weird.
+    This is a weird book that contains an interesting idea.  The author, Jane Jacobs, is a seasoned observer of cities and wrote \emph{the} book in Urban Planning, ``The Death and Life of Great American Cities".  In this book, she tries to explain the agglomerations effects of cities by exploring the metaphor of ecology.  That is, that businesses succeed in a vibrant city in similar ways to species succeeding in a verdant environment.  It is an interesting idea.  But she doesn't explain the idea directly.  The book written as a sequence of conversations by a handful of characters.  That's weird.
 
 \par
-   Explaining science using dialog has a long history.  The Socratic dialogs date to around 400 B.C..  Galileo's "A Dialog Concerning the Two Chief World Systems", which convinced people that the Earth goes around the Sun, was published in 1632.  It can be an interesting informal format, where questions and answers go back an forth between an expert and a skeptic.  Eventually, the skeptic is won over and so is the reader.  But, sadly, this book is not in that format.  It's a handful of not-very-well-defined characters talking.  It's just weird.
+   Explaining science using dialog has a long history.  The Socratic dialogs date to around 400 B.C..  Galileo's ``A Dialog Concerning the Two Chief World Systems", which convinced people that the Earth goes around the Sun, was published in 1632.  It can be an interesting informal format, where questions and answers go back an forth between an expert and a skeptic.  Eventually, the skeptic is won over and so is the reader.  But, sadly, this book is not in that format.  It's a handful of not-very-well-defined characters talking.  It's just weird.
 
 \par
    But the idea deserves our consideration.  Silicon Valley has seen amazing productivity and growth since 1957.  Startups have thrived there and changed the world.  But there's nothing special about the land there.  An Internet-based startup could be started anywhere.  But that place seems to be different.  Jane Jacobs thinks it is the ecology of businesses there.
 
 \par
-   Jane Jacobs believes that growth comes through innovation.  Focussing on efficiency can help growth, but a single-company city or a single-industry city is like a monocrop.  A monocrop doesn't change and A single predator or disease can wipe it out.  A single-company or single-industry city can collapse.  Rochester, NY was tied to Kodak's rise and fall.  Detroit to America's car industry.
+   Jane Jacobs believes that growth comes through innovation.  Focusing on efficiency can help growth, but a single-company city or a single-industry city is like a mono-crop.  A mono-crop doesn't change and A single predator or disease can wipe it out.  A single-company or single-industry city can collapse.  Rochester, NY was tied to Kodak's rise and fall.  Detroit to America's car industry.
 
 \par
-   Jane Jacobs sees innovations happening when a process mutates into a new process, just as a species mutates into a new species.  An entrepreur might first learn to bake bread as an employee at a bread shop.  Then, spends his savings to rent his own bakery.  The process of the new baker at the new bakery will be slightly different: new products, new ways to deliver products, etc.  If the new bakery is successful, it will grow and hire its own employees, who might go on to start their own bakeries.
+   Jane Jacobs sees innovations happening when a process mutates into a new process, just as a species mutates into a new species.  An entrepreneur might first learn to bake bread as an employee at a bread shop.  Then, spends his savings to rent his own bakery.  The process of the new baker at the new bakery will be slightly different: new products, new ways to deliver products, etc.  If the new bakery is successful, it will grow and hire its own employees, who might go on to start their own bakeries.
 
 \par
    But starting a business requires a lot more things than know-how and starting capital.  A new business needs to find suppliers and customers.  It needs banks to give mortgages or landlords who rent buildings.  It needs lawyers to draw up founding documents and contracts.   This means that new processes don't arrive in a city, sprung from the forehead of an entrepreneur.  They usually come by small changes to the existing processes in the city.  It is far easier for that new baker to get started if his previous employer is an ally, introducing him to suppliers, advertisers, lawyers, etc..  The new bakery would look separate, but it has a lot in common with the old bakery.  
 
 \par
-   Some of the small changes are:  Replacing a supplier.  Adding a new customer.  A slightly different product, tunes to specific customers.  Growing the process.  Making the process more efficient.  Outsourcing part of the process.  Opening a new location or moving to a more advantagous location.  Turning waste into a product.  (E.g., kitchen oil became "bio diesel", waste rags from making clothes became stuffing for teddy bears, manure became fuel or fertilizer.)  A new delivery mechanism.
+   Some of the small changes are:  Replacing a supplier.  Adding a new customer.  A slightly different product, tunes to specific customers.  Growing the process.  Making the process more efficient.  Outsourcing part of the process.  Opening a new location or moving to a more advantageous location.  Turning waste into a product.  (E.g., kitchen oil became ``bio diesel", waste rags from making clothes became stuffing for teddy bears, manure became fuel or fertilizer.)  A new delivery mechanism.
 
 \par
-   A common story of innovation is adding some new customers, discovering that they're using the product in a new way, making a slightly different product for that group of customers, which draws in even more customers who want to use the product that way, etc..  After a little while, there's a completely different product available with a completely separate group of customers.  Jacobs calls this splitting a "bifurcation".  
+   A common story of innovation is adding some new customers, discovering that they're using the product in a new way, making a slightly different product for that group of customers, which draws in even more customers who want to use the product that way, etc..  After a little while, there's a completely different product available with a completely separate group of customers.  Jacobs calls this splitting a ``bifurcation".  
 
 \par
    But part of the process is brand new companies.  Every new business needs startup capital.  In an ecology, we can think of this as the energy stored in eggs and seeds.
 
 \par
-   The book has an interesting discussion of energy.  Life on earth is powered by sunlight.  A desert has sunlight.  So does a tropical forest.  But only the forest has lots of life.  Why?  It seems the forest has lots of small steps between sunlight being captured and it is used.  Plants grow, become food for herbivores, which become food for carnivores, which die and become food for mushrooms.  It wasn't clear to me what "energy" was in the metaphor of business.  Maybe it is "demand"?
+   The book has an interesting discussion of energy.  Life on earth is powered by sunlight.  A desert has sunlight.  So does a tropical forest.  But only the forest has lots of life.  Why?  It seems the forest has lots of small steps between sunlight being captured and it is used.  Plants grow, become food for herbivores, which become food for carnivores, which die and become food for mushrooms.  It wasn't clear to me what ``energy" was in the metaphor of business.  Maybe it is ``demand"?
 
 \par
-   The book talks for some time about feedback cycles.  An interesting point was that subsidies can cause unintended feedback cycles.  Cod was overfished, partially because Canada subsidized fisheries.  When fewer fish should have meant fewer profits and fewer fisherman, the subsidy kept them fishing. 
+   The book talks for some time about feedback cycles.  An interesting point was that subsidies can cause unintended feedback cycles.  Cod was over-fished, partially because Canada subsidized fisheries.  When fewer fish should have meant fewer profits and fewer fisherman, the subsidy kept them fishing. 
 
 \par
    Again, this is a weird book.  It was hard to summarize the content, because it's written as dialog.  And it is hard to read --- I never did understand who the characters were.  But I do like the idea that businesses are processes and cities grow by lots of little changes to those processes.  It might explain why innovation is so localized.  
@@ -1016,7 +1182,7 @@ Evidence from Administrative Data},
      This blog post covers a topic that I intended to write about.  That being poor is expensive: buying pre-cooked food, not being able to store winter clothes, fewer transportation options, etc..  The author's writing is clunky, but they cover a lot of topics.
 
 \par
-     The jist is that working your way out of poverty is hard.  The walls get steeper the farther you go down.
+     The gist is that working your way out of poverty is hard.  The walls get steeper the farther you go down.
   }
 }
 
@@ -1038,22 +1204,31 @@ Evidence from Administrative Data},
   annote= {
     This is a good paper.  It estimates the price of land around Phoenix, Arizona, using transactions on vacant land.  It compares those prices to a previous estimate of land under buildings.  The author's goal is to evaluate the use of these estimates for land-value taxes.  
 
-    The authors start with the prices of transactions on vacant land.  They use a technique called "kriging" to estimate the price of land that was not sold.  In kriging, the estimate of price-per-acre is a weighted average of the known price-per-acre for land transactions.  The weights are a function of distance to the land in the transactions.  The author tries many ways to calculate weights.  They find that weighting nearby land more and averaging many pieces of land work better.  Many techniques for weighting performed about the same.
+\par
+    The authors start with the prices of transactions on vacant land.  They use a technique called ``kriging" to estimate the price of land that was not sold.  In kriging, the estimate of price-per-acre is a weighted average of the known price-per-acre for land transactions.  The weights are a function of distance to the land in the transactions.  The author tries many ways to calculate weights.  They find that weighting nearby land more and averaging many pieces of land work better.  Many techniques for weighting performed about the same.
  
+\par
     There are adjustments for the size of the lot, zoning, and nearby amenities, like roads, lakes, golf courses, railroads, etc.
 
-    The authors compare their results to land-values assigned by the local property assessors.  They find "Both of these values track each other closely in the growth rate, but are different in the level due to differences in both observable and unobservable characteristics".   Another validation finds similar results.  
+\par
+    The authors compare their results to land-values assigned by the local property assessors.  They find ``Both of these values track each other closely in the growth rate, but are different in the level due to differences in both observable and unobservable characteristics".   Another validation finds similar results.  
 
-    The authors compare these estimates, calculated using vacant land transactions, to estimates based on a previous paper\cite{Morris2021} by the authors (and some additional co-authors).  That paper used property prices minus the cost to replace the building to estimate land values.    "Between 2012 and 2018, vacant land transactions generate land values that are, on average, 14\% higher than land underneath structures."  Vacant land differs substantially from land under structures.  It is larger.  I spent 30 minutes trying to understanding the graphs and the author's descriptions here.  I didn't find them clear.  And I fear making any summary, since the author seem to give up at the end.  They say "the large level differences are not due to differences in the option value of redevelopment nor teardown costs"  "unobservable differences are not everywhere in the city" and "we infer that there are large, positive, unobserved factors that are positively correlated with the size of residential lots.".   It would have been nice to see where in the city those were. 
+\par
+    The authors compare these estimates, calculated using vacant land transactions, to estimates based on a previous paper\cite{Morris2021} by the authors (and some additional co-authors).  That paper used property prices minus the cost to replace the building to estimate land values.    ``Between 2012 and 2018, vacant land transactions generate land values that are, on average, 14\% higher than land underneath structures."  Vacant land differs substantially from land under structures.  It is larger.  I spent 30 minutes trying to understanding the graphs and the author's descriptions here.  I didn't find them clear.  And I fear making any summary, since the author seem to give up at the end.  They say ``the large level differences are not due to differences in the option value of redevelopment nor teardown costs"  ``unobservable differences are not everywhere in the city" and ``we infer that there are large, positive, unobserved factors that are positively correlated with the size of residential lots.".   It would have been nice to see where in the city those were. 
 
-    The authors discuss how these results would affect a land tax.  They say, "Because land is typically the more volatile component of a property, a tax exclusively on the value of land would therefore be more volatile in terms of revenue generated."  They show big swings where the revenue doubles or halfs within 6 years.  And those are in the only 18 years of 1 city covered by this dataset.
+\par
+    The authors discuss how these results would affect a land tax.  They say, ``Because land is typically the more volatile component of a property, a tax exclusively on the value of land would therefore be more volatile in terms of revenue generated."  They show big swings where the revenue doubles or halves within 6 years.  And those are in the only 18 years of 1 city covered by this dataset.
 
+\par
     I find this paper very interesting, because land values are important and the prices of vacant lots are handy.  (I've estimated price in Austin, TX using the prices of vacant lots.)  I wish the comparison between the two techniques was better written.  The plots were impossible for me to comprehend quickly and the description was not enough to help.  (The paper is short; I wonder if page limits hurt the comprehension.) 
 
+\par
     I like the technique of kriging.  It's simple and fits well in the economics toolbox.  It is an averaging and it doesn't capture trends, such as prices increasing as you get closer to downtown, so there's room for better techniques.    
 
-    I'm not surpised that vacant land is more valuable that under structures.  Vacant land is a very flexible option, because it can be subdivided and there's a large variety of buildings that can be built on it (with time delays).  The authors' other technique for valuing land was based on the price of the whole property minus the cost of reconstructing the same building.  That approach (minus the rent for the time to reconstruct the building) is a lower-bound for the price of land, because it is the profits from a single choice of a very flexible option.  And exercising that option (having residents move and destroying the building) had high friction costs.  Given the "land is an option" approach, its easy to see that swings in future demand cause big swings in land prices, because the option can go from "in the money" to "out of the money".  (Urban Economics needs a good framework for talking about future demand.)
+\par
+    I'm not surprised that vacant land is more valuable that under structures.  Vacant land is a very flexible option, because it can be subdivided and there's a large variety of buildings that can be built on it (with time delays).  The authors' other technique for valuing land was based on the price of the whole property minus the cost of reconstructing the same building.  That approach (minus the rent for the time to reconstruct the building) is a lower-bound for the price of land, because it is the profits from a single choice of a very flexible option.  And exercising that option (having residents move and destroying the building) had high friction costs.  Given the ``land is an option" approach, its easy to see that swings in future demand cause big swings in land prices, because the option can go from ``in the money" to ``out of the money".  (Urban Economics needs a good framework for talking about future demand.)
 
+\par
     It's a good paper.  Worth reading if you care about land prices and most Urban Economists do.
   }
 }
@@ -1075,12 +1250,16 @@ Evidence from Administrative Data},
   annote = {
     Skimmed.
 
+\par
     Finds that 3 years after change in property taxes, rents increase to account for the tax change.  It is a rather dramatic step up in the 3rd year.  And error bounds are wide.  It's also strange that the averages in the past are also positive.   (Perhaps tax increases are passed in the worse year?)
 
+\par
     The 3 year lag is strange.  Where it is significant, I assume it is a quantity effect.  It takes a while to take unprofitable housing off the market or to build new profitable housing.
 
+\par
     Weird.  Assessed values for property never change.  So reassessment cannot be the cause of increases 3 years later.
 
+\par
     The paper contains dramatic welfare graphs, but these come from a simulation.  The model shows that a tax increase of 1\% causes more than a 1\% drop in consumption utility for households in the bottom 15\% or so.  Households with higher consumption were less affected.
   }
 }
@@ -1107,10 +1286,10 @@ Evidence from Administrative Data},
     In ancient Greece, villages have a mean territory of 22 square km.  The radius is about 2.5 km and, at a walking speed of 5 km/hr, travel is about 1 hour round trip. The author claims that cities got larger due to changes in the speed of transportation technology, with similar-timed commutes.
 
 \par
-    Car travel averages about .9 hours per day, at most income levels.  Very low income people travel about .7 hours per day.  The miles driven per year in the USA is stable at 9,400.  (NOTE: This seems too stable and the value now is 13,400, so it is not stable.)   Travel consumption is stable around 13\%.  Death rates per year is also freekishly stable around 22,000 per year.  (NOTE: This doesn't match data on Wikipedia.  The number there has much more variability, but is stable around 35,000 per year.)
+    Car travel averages about .9 hours per day, at most income levels.  Very low income people travel about .7 hours per day.  The miles driven per year in the USA is stable at 9,400.  (NOTE: This seems too stable and the value now is 13,400, so it is not stable.)   Travel consumption is stable around 13\%.  Death rates per year is also freakishly stable around 22,000 per year.  (NOTE: This doesn't match data on Wikipedia.  The number there has much more variability, but is stable around 35,000 per year.)
 
 \par
-    The paper goes on to look at communication vs. travel, with technology.  The number of messages or calls has increased exponentially, as have trips.  The number of messages/calls follows a graviational law, proportional to the populations of two cities divided by the distance apart.
+    The paper goes on to look at communication vs. travel, with technology.  The number of messages or calls has increased exponentially, as have trips.  The number of messages/calls follows a gravitational law, proportional to the populations of two cities divided by the distance apart.
 
 \par
     City population in 1920 followed a Zipf distribution, linear in log(population) and log(rank by size).  The author claims that, if you use the 30 minute commute and include planes and high-speed trains, it still holds because of areas like the Boston-to-DC corridor.
@@ -1128,14 +1307,18 @@ Evidence from Administrative Data},
   year      = 2020,
   keywords={city finances},
   annote    = {
-    This is a tedious book that has a really good core idea and stretches it out to 220 pages.  The core idea is that suburbs are expensive.  There is a high cost for the infrastructure to attach a suburban house to the road network, water network, sewage network, etc..  This is because suburban houses are far apart.  Cities often don't notice that those high costs often exceed the property tax that is collected from the house.  Thus, suburbs hurt city's finances.  The same applies to "big box" stores on the edge of a city.
+    This is a tedious book that has a really good core idea and stretches it out to 220 pages.  The core idea is that suburbs are expensive.  There is a high cost for the infrastructure to attach a suburban house to the road network, water network, sewage network, etc..  This is because suburban houses are far apart.  Cities often don't notice that those high costs often exceed the property tax that is collected from the house.  Thus, suburbs hurt city's finances.  The same applies to ``big box" stores on the edge of a city.
 
-    It would have loved if this book had a good "aha" story, elaborated on the core idea, provided examples, and discussed solutions.  But that's not what this book does.  It talks about "complicated systems" vs. "complex systems".  It messes up finances.  (The author doesn't count suburban infrastructure as "assets", but calls them "liabilities".  What he should call them is "non-performing assets". )  He talks about pre-building infrastructure vs. waiting for demand.  He talks about "infinite baseball games" in one of the worst metaphors I've seen.  He gives bad investment advice.  And more.  This book is a mess.  The author is a professional engineer and doesn't include a detailed example with numbers.  WTF?!
+\par
+    It would have loved if this book had a good ``aha" story, elaborated on the core idea, provided examples, and discussed solutions.  But that's not what this book does.  It talks about ``complicated systems" vs. ``complex systems".  It messes up finances.  (The author doesn't count suburban infrastructure as ``assets", but calls them ``liabilities".  What he should call them is ``non-performing assets". )  He talks about pre-building infrastructure vs. waiting for demand.  He talks about ``infinite baseball games" in one of the worst metaphors I've seen.  He gives bad investment advice.  And more.  This book is a mess.  The author is a professional engineer and doesn't include a detailed example with numbers.  WTF?!
 
+\par
     The author does explain that the state and federal government helped cause the problem.  By subsidizing new infrastructure, especially road construction, its costs do not show up in the city's budget.  In fact, building more infrastructure can help solve temporary budget problems!  Only when growth has stopped and that infrastructure needs to be replaced do cities see the financial mess they are in.  
 
-    Because this book is disorganized, it doesn't say clearly how to measure the problem and how to fix it.  I believe the best way to measure the problem is to assign infrastructure costs to each address and then compare that against the taxes paid.  The solution, which the author stuck in corner, is for cities to prioritize the "profitable" parts of town, where revenues exceed costs.  If there's a surplus, the city should try to preserve the parts that don't lose the city too much money.  To avoid bankruptcy, cities will need to abandon the least profit parts of town.   And those least profitable ones are the fringe of suburbs and big box stores.
+\par
+    Because this book is disorganized, it doesn't say clearly how to measure the problem and how to fix it.  I believe the best way to measure the problem is to assign infrastructure costs to each address and then compare that against the taxes paid.  The solution, which the author stuck in corner, is for cities to prioritize the ``profitable" parts of town, where revenues exceed costs.  If there's a surplus, the city should try to preserve the parts that don't lose the city too much money.  To avoid bankruptcy, cities will need to abandon the least profit parts of town.   And those least profitable ones are the fringe of suburbs and big box stores.
 
+\par
     I do not recommend this book.  Its idea is very important.  You should know the idea.  But I think this summary explains the idea clearly and you will not gain any more insight about the idea by reading the 220 page book.
   }
 }
@@ -1154,7 +1337,7 @@ Evidence from Administrative Data},
     I only skimmed this paper.
 
 \par
-    Each data source uses different definitions and they are applied inconsitently.  Double counting happened for 10 to 15\% of people in shelters in the 2010 Census in LA and Houston.  The population is very mobile.  
+    Each data source uses different definitions and they are applied inconsistently.  Double counting happened for 10 to 15\% of people in shelters in the 2010 Census in LA and Houston.  The population is very mobile.  
 
 \par
     The authors conclude that the data is consistent with each other, assuming difference in definitions.  They assume the data sources are accurate.  
@@ -1177,35 +1360,46 @@ Evidence from Administrative Data},
   abstract={Data from millions of appraisals in 2012–2019 are used to estimate residential land prices, the share of house value attributable to land, and related statistics down to the census-tract level for areas that include the vast majority of U.S. population and single-family housing. The results confirm predictions about land prices from canonical urban models. Over 2012–2019, we show that land prices rose faster than house prices in large metro areas, boosting the land share of house value, while the land share fell in smaller metros. The data are available for download at https://www.fhfa.gov/papers/wp1901.aspx.},
   url={https://www.sciencedirect.com/science/article/pii/S0304393220301379},
   annote={
-    This paper tries to compute a land price for a large portion of America's cities.  It uses property appraisals, probably for mortgage applications, from the GSEs (Goverment Sponsored Enterprizes, like Ginnie Mae).  It puts those into a model to find land prices.  It interpolates those land prices to all land using an averaging technique called "kriging".
-
+    This paper tries to compute a land price for a large portion of America's cities.  It uses property appraisals, probably for mortgage applications, from the GSEs (Government Sponsored Enterprises, like Ginnie Mae).  It puts those into a model to find land prices.  It interpolates those land prices to all land using an averaging technique called ``kriging".
+ 
+\par
     The model is pretty simple.  It says that, for land plus a structure, the value of the structure decreases over time.  The results of the model are two.  For recently build houses, the land is probably valued at the price of the whole property minus the replacement construction cost for the building.  For very old houses, the property is almost all land-value and not building-value.  I don't like this model --- there is an option-value not accounted for: to tear down a building and rebuild whatever is most valuable then.
 
-    They limit their data to homes where the "effective age" is less than 15 years old.  I guess these are well-maintained buildings.  They drop appraisals that they think are generated from tax appraisals (which they don't trust).  They only allow reconstruction costs from a handful of well-known sources.
+\par 
+    They limit their data to homes where the ``effective age" is less than 15 years old.  I guess these are well-maintained buildings.  They drop appraisals that they think are generated from tax appraisals (which they don't trust).  They only allow reconstruction costs from a handful of well-known sources.
 
+\par
     They adjust for the size of the lot, etc..
 
+\par
     Given those land prices, they interpolate the data to all lots using kriging.  That's an average of nearby known data points, weighted by distance.  They used the 20 closest points.  It looks like weights were determined for the closest 6.9 miles in 15 bins.  Its a good technique, but it does use averaging, so it doesn't follow trends to predict peaks or cusps.  
 
+\par
     They generate prices for 960 counties, 7,742 ZIP codes, and 10,515 Census tracts.  
 
+\par
     They show prices as a distance from the CBD for various city sizes.  They go down almost exponentially, as you get farther from the CBD.  Larger cities are more expensive than smaller ones.  Cities with more regulations have higher prices.  Cities with more natural barriers have higher prices.
 
+\par
     In larger cities, the land makes up more of a share of the property price.  It is 40 to 45\% downtown in cities with over 2 million housing units.
 
-    Figure 6(a) shows how counties with more expensive land have more squarefootage of structures.  But the slope is smaller and the varience much higher than I expected.   Figure 6(b) shows that expensive land is usually associated with smaller lot sizes.  That has a high variance too.  Perhaps counties are too large and that's causing the high variances?
+\par
+    Figure 6(a) shows how counties with more expensive land have more square-footage of structures.  But the slope is smaller and the variance much higher than I expected.   Figure 6(b) shows that expensive land is usually associated with smaller lot sizes.  That has a high variance too.  Perhaps counties are too large and that's causing the high variances?
 
-    Figure 6(c) compares county land prices for housing and for argiculture.  The authors say it "shows a strong positive relationship", but the scatterplot looks odd.  And the scales are off completely.  The median argiculture price for a county is \$3,000 per acre, while the median single-family land price is around \$100,000 per acre!  I don't get it.
+\par
+    Figure 6(c) compares county land prices for housing and for agriculture.  The authors say it ``shows a strong positive relationship", but the scatter-plot looks odd.  And the scales are off completely.  The median agriculture price for a county is \$3,000 per acre, while the median single-family land price is around \$100,000 per acre!  I don't get it.
 
+\par
     Figure 9(a) is interesting.  It breaks the counties into bins by the number of single-family units.  The counties with the most houses saw the largest price increases from 2012-2019.  Also the most increase in land value --- especially in the top bin.  That was enough to drag the national average to a 7\% annual increase, even though smaller counties averaged a 2 or 3\% increase.
 
+\par
     I think this is a good paper, but it's mostly because I see it as an engineering project.  The model and some choices aren't ideal, but they got something that works for the whole country.  I'm interested to download the data and take a look at it.  
   }
 }
 
 
-@TechReport{Moszkowski2023,
-  author    = "Erica Moszkowski and Daniel Stackman",
+@TechReport{Moscow's2023,
+  author    = "Erica Moscow's and Daniel Stackman",
   title     = "Option Value and Storefront Vacancy in New York City",
   url       = "https://emoszkowski.github.io/ericamoszkowski.com/Moszkowski_JMP.pdf",
   institution="Harvard",
@@ -1218,13 +1412,13 @@ Evidence from Administrative Data},
     This paper studies places for stores in NYC.  Landlords sometimes keep the places vacant for over a year.
 
 \par
-    The abstract says "We find that tenant heterogeneity and move-in costs jointly explain long-run vacancy by generating dispersion in match surplus and therefore option value for landlords. In a counterfactual exercise, eliminating either feature results in vacancy rates of close to zero. Search frictions and aggregate uncertainty play much smaller roles."
+    The abstract says ``We find that tenant heterogeneity and move-in costs jointly explain long-run vacancy by generating dispersion in match surplus and therefore option value for landlords. In a counterfactual exercise, eliminating either feature results in vacancy rates of close to zero. Search frictions and aggregate uncertainty play much smaller roles."
 
 \par
-    They use their model to evaluate a vacancy tax.  "Proponents of the tax argue that landlords who hold storefronts vacant impose unnecessary costs on their neighborhoods by reducing local economic activity through underutilization of retail space, as well as posing a threat to neighborhood safety via a reduction in "eyes on the street" (Jacobs, 1961). They view the tax as a Pigouvian measure which would cause landlords to internalize the impacts of their vacancies on urban vibrancy."
+    They use their model to evaluate a vacancy tax.  ``Proponents of the tax argue that landlords who hold storefronts vacant impose unnecessary costs on their neighborhoods by reducing local economic activity through underutilization of retail space, as well as posing a threat to neighborhood safety via a reduction in ``eyes on the street" (Jacobs, 1961). They view the tax as a Pigouvian measure which would cause landlords to internalize the impacts of their vacancies on urban vibrancy."
    
 \par
-    "We find that the proposed commercial vacancy tax would indeed encourage landlords to fill vacant spaces more quickly, reducing vacancy rates and retail rents. However, the tax would also distort the set of stores present, with lower-earnings stores arriving at opportune moments crowding out higher-earnings stores that might have arrived later. These lower-earnings stores are more likely to exit, increasing retail churn and reducing welfare." 
+    ``We find that the proposed commercial vacancy tax would indeed encourage landlords to fill vacant spaces more quickly, reducing vacancy rates and retail rents. However, the tax would also distort the set of stores present, with lower-earnings stores arriving at opportune moments crowding out higher-earnings stores that might have arrived later. These lower-earnings stores are more likely to exit, increasing retail churn and reducing welfare." 
   }
 }
 
@@ -1248,7 +1442,7 @@ Evidence from Administrative Data},
     SKIMMED.
 
 \par
-    On page 49, the author looks at "compartive dynamics".  That is, how changes in income distribution, interest rates, and other factors affect the housing market.  I didn't read all the details.
+    On page 49, the author looks at ``comparative dynamics".  That is, how changes in income distribution, interest rates, and other factors affect the housing market.  I didn't read all the details.
 
 \par
     Other aspects of housing are considered: rent collection costs, public housing, shelters, building codes, and tastes.
@@ -1266,67 +1460,67 @@ Evidence from Administrative Data},
   year      = 1996,
   keywords={homelessness},
   annote    = {
-    The book starts pretty boring.  Chapter 2 is a discussion of the various definitions of "homeless".  For example, are people in a shelter "homeless"?   Chapter 3 is an undramatic discussion of why homelessness is bad for other people.  Strangely, for an economist, it doesn't try to put it in financial terms.  Chapter 4 is a history of homelessness and data for it.  Which is pretty awful, up to 1996.
+    The book starts pretty boring.  Chapter 2 is a discussion of the various definitions of ``homeless".  For example, are people in a shelter ``homeless"?   Chapter 3 is an undramatic discussion of why homelessness is bad for other people.  Strangely, for an economist, it doesn't try to put it in financial terms.  Chapter 4 is a history of homelessness and data for it.  Which is pretty awful, up to 1996.
 
 \par
-    Chapter 5 is interesting: it compares the homeless, who sleep outdoors or in shelters, to what most people call "homeless", the people that beg, collect cans, and wash windshields.  He refers to those as "colloquially homeless" or "daytime streetpeople" or simply "streetpeople".  There is overlap.  The author's study in New York said about 3/4 of streetpeople are homeless, but 1/4 live with someone or have their own place.  Most have slept in a shelter but do not like them.   The streetpeople earn a variable income that is below minimum wage.  Those that reported hours worked around 7 hours a day.  2/3 work 7 days a week; the rest are evenly split between 1 and 6 days a week.   3/4 say they would take a low-wage job.  About 1/2 get public assistance, which might go away with a job.  If given extra money, about 1/3 said they would spend it on alcohol or drugs.  2/3 said they didn't have a way to save money!  
+    Chapter 5 is interesting: it compares the homeless, who sleep outdoors or in shelters, to what most people call ``homeless", the people that beg, collect cans, and wash windshields.  He refers to those as ``colloquially homeless" or ``daytime streetpeople" or simply ``streetpeople".  There is overlap.  The author's study in New York said about 3/4 of streetpeople are homeless, but 1/4 live with someone or have their own place.  Most have slept in a shelter but do not like them.   The streetpeople earn a variable income that is below minimum wage.  Those that reported hours worked around 7 hours a day.  2/3 work 7 days a week; the rest are evenly split between 1 and 6 days a week.   3/4 say they would take a low-wage job.  About 1/2 get public assistance, which might go away with a job.  If given extra money, about 1/3 said they would spend it on alcohol or drugs.  2/3 said they didn't have a way to save money!  
 
 \par
-    Chapter 6 describes an economic model of housing and homelessness, without any equations.  But it uses phrases like "price-quality schedule", so good luck understanding the chapter without an advanced econ degree.  I have one and, for me, it might have been easier with some equations.  The model has a high-end market, where houses are built and maintained, a low-end market, where houses are not maintained and deteriorate in quality, and, finally, homelessness.  The interesting part is the low-end market, where changes in costs ripple down determine who is homeless.  It is a model of a market at equilbrium and the author walks through various scenarios that will change the equilibrium.  They're summarized in Table 6-1 at the end of the chapter.  It is a well-constructed model but I'm not sure how well it represents reality.  Buildings take decades to age, so are cities actually near equilibrium?  Also, the
+    Chapter 6 describes an economic model of housing and homelessness, without any equations.  But it uses phrases like ``price-quality schedule", so good luck understanding the chapter without an advanced econ degree.  I have one and, for me, it might have been easier with some equations.  The model has a high-end market, where houses are built and maintained, a low-end market, where houses are not maintained and deteriorate in quality, and, finally, homelessness.  The interesting part is the low-end market, where changes in costs ripple down determine who is homeless.  It is a model of a market at equilibrium and the author walks through various scenarios that will change the equilibrium.  They're summarized in Table 6-1 at the end of the chapter.  It is a well-constructed model but I'm not sure how well it represents reality.  Buildings take decades to age, so are cities actually near equilibrium?  Also, the
 
 \par
-    Chapter 7 looks at the effect of income inequality.  The author uses an unusual metric: the slope of a line fitted to the lower-half of an income histogram.  Yeah.  Very unusual.  He leaves out a lot of details.  He claims that it explains homelessness very well, "allowing for lags" (pg. 132).  But what is an appropriate amount of "lag"?   Increases in the price of low-rent housing predicts homelessness.  On page 142 he starts a history of very low-rent housing.  Every place has a different name and regulation for them: flop houses, SROs, cubicle hotels, etc.  Many closed due to profitability in the early 80's.  Some had high vacancies.  It's not clear why that explains anything.  He uses fire reports and demolition records but I don't find the data and/or story compelling.
+    Chapter 7 looks at the effect of income inequality.  The author uses an unusual metric: the slope of a line fitted to the lower-half of an income histogram.  Yeah.  Very unusual.  He leaves out a lot of details.  He claims that it explains homelessness very well, ``allowing for lags" (pg. 132).  But what is an appropriate amount of ``lag"?   Increases in the price of low-rent housing predicts homelessness.  On page 142 he starts a history of very low-rent housing.  Every place has a different name and regulation for them: flop houses, SROs, cubicle hotels, etc.  Many closed due to profitability in the early 80's.  Some had high vacancies.  It's not clear why that explains anything.  He uses fire reports and demolition records but I don't find the data and/or story compelling.
 
 \par
-    Chapter 8 looks at financial influences on housing.  Interest rates and inflation are too small to affect operating costs in his model.  The opportunity cost of land (which he calls "gentrification").  This didn't explain homelessness in the 80's, but it might now in Austin and San Francisco.
+    Chapter 8 looks at financial influences on housing.  Interest rates and inflation are too small to affect operating costs in his model.  The opportunity cost of land (which he calls ``gentrification").  This didn't explain homelessness in the 80's, but it might now in Austin and San Francisco.
 
 \par
-    Chapter 9 examines other studies that compare multiple cities against each other.  It includes Tucker 1987, Tucker 1987b, Quigley 1990, Elliot and Krivo 1991, Burt 1992, and Honig and Filer 1993.  He doesn't like their data!  There are different definition of metro-area: Census Bureau and Rand-McNally.  Pg. 167 has some insights: "wealthier cites should provide more shelter, since charity is a normal good, and so should cities with more valuable real estate, since removing homeless people from such real estate yields a higher return".  
+    Chapter 9 examines other studies that compare multiple cities against each other.  It includes Tucker 1987, Tucker 1987b, Quigley 1990, Elliot and Krivo 1991, Burt 1992, and Honig and Filer 1993.  He doesn't like their data!  There are different definition of metro-area: Census Bureau and Rand-McNally.  Pg. 167 has some insights: ``wealthier cites should provide more shelter, since charity is a normal good, and so should cities with more valuable real estate, since removing homeless people from such real estate yields a higher return".  
 
 \par
-    Chapter 10 covers government.  "New York has not prevented the construction of shanties, but has confined their construction to the most primitive technology."  And, now, Austin has confined people to tents.  He mentioned that health regulations may include window size, ventilation, and minimum floor area to limit the spread of TB.  He says that regulations may be needed to keep buildings maintained: the owner going bankrupt will not profit from maintenance (the bank will) and may not maintain the building.  He notes a distinction between "grandfathered" regulation, where the existing uncompliant are legalized, and "retrofit" regulations, which requires owners to invest to meet the standard.  Owners of grandfathered buildings have "something valuable --- an exemption from regulation".  NYC banned SROs, but the author doesn't think it affected homelessness.  One argument is high vacancy rates.  One cost is parking spaces, even if the law only requires 1 for every 6 rooms.  Low-cost landlords suffer from caparicious enforcement of rules.  Rent control means owners do not invest in maintenance and that owners discriminate on residents (rather than price), which may mean the unhoused are "lemons" that the landlords don't want.  Making evictions harder hurts low-cost landlords, because more tenants are disruptive and fewer can pay (or have seizable assets) to make up for the eviction costs.  "A former SRO owner in Newark, for instances, gave as his main reason for leaving the business the hassle and liability that had become part of it; he thought that the only perons who would buy a cheap hotel now was the 'thickest-skinned SOB in the world'.".  O'Flaherty thinks tenants rights contributed high vacancy and, a small amount, to homelessness.  He believes "public housing for the middle class increases homelessness; ... for the very poor, reduces it.".  1/3 of homeless women in a shelter said they would't live in Chicago public housing due to the lack of safety.
+    Chapter 10 covers government.  ``New York has not prevented the construction of shanties, but has confined their construction to the most primitive technology."  And, now, Austin has confined people to tents.  He mentioned that health regulations may include window size, ventilation, and minimum floor area to limit the spread of TB.  He says that regulations may be needed to keep buildings maintained: the owner going bankrupt will not profit from maintenance (the bank will) and may not maintain the building.  He notes a distinction between ``grandfathered" regulation, where the existing uncompliant are legalized, and ``retrofit" regulations, which requires owners to invest to meet the standard.  Owners of grandfathered buildings have ``something valuable --- an exemption from regulation".  NYC banned SROs, but the author doesn't think it affected homelessness.  One argument is high vacancy rates.  One cost is parking spaces, even if the law only requires 1 for every 6 rooms.  Low-cost landlords suffer from capricious enforcement of rules.  Rent control means owners do not invest in maintenance and that owners discriminate on residents (rather than price), which may mean the unhoused are ``lemons" that the landlords don't want.  Making evictions harder hurts low-cost landlords, because more tenants are disruptive and fewer can pay (or have seizable assets) to make up for the eviction costs.  ``A former SRO owner in Newark, for instances, gave as his main reason for leaving the business the hassle and liability that had become part of it; he thought that the only persons who would buy a cheap hotel now was the 'thickest-skinned SOB in the world'.".  O'Flaherty thinks tenants rights contributed high vacancy and, a small amount, to homelessness.  He believes ``public housing for the middle class increases homelessness; ... for the very poor, reduces it.".  1/3 of homeless women in a shelter said they wouldn't live in Chicago public housing due to the lack of safety.
 
 \par
-He says Section 8 has a certificate, which pays the difference between actual rent and 30\% of income, and a voucher, which pays the difference between "fair market rent" and 30\% of income.  Those with voucher still need their residence checked by the housing authority!  Why?!   Food stamp funds increase with rent, so it's a rental assistance program!  WTF?!
+He says Section 8 has a certificate, which pays the difference between actual rent and 30\% of income, and a voucher, which pays the difference between ``fair market rent" and 30\% of income.  Those with voucher still need their residence checked by the housing authority!  Why?!   Food stamp funds increase with rent, so it's a rental assistance program!  WTF?!
 
 \par
-Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is complicated.  Pairing a landlord with a tenant is a two-sided process.  Landlords decide the rent and also how much to advertise and any renter requirements.  Tenants decide their price limits, where to search, how much to search, and how much effort to meet landlords' requirements.  Vacancy around 7\% or 9\% is "natural".  O'Flaherty doesn't think vacancy explain homelessness.
+Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is complicated.  Pairing a landlord with a tenant is a two-sided process.  Landlords decide the rent and also how much to advertise and any renter requirements.  Tenants decide their price limits, where to search, how much to search, and how much effort to meet landlords' requirements.  Vacancy around 7\% or 9\% is ``natural".  O'Flaherty doesn't think vacancy explain homelessness.
 
 \par
-   Chapter 11 is about welfare ("income maintenance") in wealthy countries.  New York's General Assistance encouraged living on the street:  Unsheltered receive \$305; those in a shelter get \$149.   Bureaucracy in the USA makes it hard to sign up \emph{and} hard to stay on the list.  "one chance in eight of opening a case and maintaining it for a year."  System is complex and time-consuming.  Making and keeping appointments is difficult for homeless.   Many homeless seek independence and avoid hassle.  Mental health and disability determinations are hard and bureaucratic.  (They're medical decisions in Canada.)  Programs incentivize black-market work, like begging and cleaning windshields, because official job income reduces their income from SSI or other programs.  The "tax" is 100\% for New York's general assistance.
+   Chapter 11 is about welfare ("income maintenance") in wealthy countries.  New York's General Assistance encouraged living on the street:  Unsheltered receive \$305; those in a shelter get \$149.   Bureaucracy in the USA makes it hard to sign up \emph{and} hard to stay on the list.  ``one chance in eight of opening a case and maintaining it for a year."  System is complex and time-consuming.  Making and keeping appointments is difficult for homeless.   Many homeless seek independence and avoid hassle.  Mental health and disability determinations are hard and bureaucratic.  (They're medical decisions in Canada.)  Programs incentivize black-market work, like begging and cleaning windshields, because official job income reduces their income from SSI or other programs.  The ``tax" is 100\% for New York's general assistance.
    
 \par
-   Under sharing housing, the author says social security (SSI) and foot stamps have "strong disincentives for sharing housing".  SSI reduces by 1/3.  Foodstamps give more for 2 people living apart than living together.  This programs were growing rapidly in the 1970s, before homelessness took off in the 1980s!
+   Under sharing housing, the author says social security (SSI) and foot stamps have ``strong disincentives for sharing housing".  SSI reduces by 1/3.  Foodstamps give more for 2 people living apart than living together.  This programs were growing rapidly in the 1970s, before homelessness took off in the 1980s!
 
 \par
-   Chapter 12 is about mental health.  The chapter looks at the release of people from mental hospitals in the 1960s and says that was unlikely to be a cause of homelessness later.  Some women make themselves dirty and act crazy to scare off attackers.  For low-cost housing where people shared rooms, a few people with mental health problems has a large effect.  Also, repair costs and liability go up.  Many have "innkeeper liability", which means the law blames them for bad guests causing problems to other guests!  There may be a tipping point, where enough mentally ill poison all low-cost housing, but the author finds little evidence for it.
+   Chapter 12 is about mental health.  The chapter looks at the release of people from mental hospitals in the 1960s and says that was unlikely to be a cause of homelessness later.  Some women make themselves dirty and act crazy to scare off attackers.  For low-cost housing where people shared rooms, a few people with mental health problems has a large effect.  Also, repair costs and liability go up.  Many have ``innkeeper liability", which means the law blames them for bad guests causing problems to other guests!  There may be a tipping point, where enough mentally ill poison all low-cost housing, but the author finds little evidence for it.
 
 \par
-   Chapter 13 is about drugs.  Taking drugs is a choice and the author sweetly says, "Volition means economics."  He says crack became popular because it is cheap.  (Powdered cocaine was sold by gram; crack by 1/20th of a gram.)  Different drugs are substitutes and crack displaced powdered cocaine and amphetamines.  Maybe alcohol too.  But crack is not a substitute for housing!  Cheaper highs mean that more money is left for housing.  Housing demand should have increased!
+   Chapter 13 is about drugs.  Taking drugs is a choice and the author sweetly says, ``Volition means economics."  He says crack became popular because it is cheap.  (Powdered cocaine was sold by gram; crack by 1/20th of a gram.)  Different drugs are substitutes and crack displaced powdered cocaine and amphetamines.  Maybe alcohol too.  But crack is not a substitute for housing!  Cheaper highs mean that more money is left for housing.  Housing demand should have increased!
 
 \par
-   But that analysis skips a lot, such as the lost productive hours of someone who gets high and the instability of highs and lows (which causes people to lose jobs).  And maybe other changes?   Drugs and alcohol are common amoung shelter residents.  Half took cocaine in one study.  Cocaine use did spike in the 1980s.  Cirrhosis deaths spiked in the 1970s ... why?   The timing of homelessness doesn't really line up with emergency room visits.  The author concludes that "at least as good an argument can be made that crack reduced homelessness as that it increased homelessness.". 
+   But that analysis skips a lot, such as the lost productive hours of someone who gets high and the instability of highs and lows (which causes people to lose jobs).  And maybe other changes?   Drugs and alcohol are common among shelter residents.  Half took cocaine in one study.  Cocaine use did spike in the 1980s.  Cirrhosis deaths spiked in the 1970s ... why?   The timing of homelessness doesn't really line up with emergency room visits.  The author concludes that ``at least as good an argument can be made that crack reduced homelessness as that it increased homelessness.". 
 
 \par
    Chapter 14 is about cops and prisons.  Many homeless have been in jail (31\%) or prison (18\%).  Homelessness doesn't cause people to go to prison, but releases of prisoners increases homelessness.  They have a hard time getting work, may have a harder time finding a place to rent, and have fewer social connections to help.  Prisoner releases didn't cause the problems in the 1980's, but maybe contribute today?  Common laws used against homeless are: loitering (unconstitutional), vagrancy (unconstitutional), obstructing sidewalks, begging, public drinking or drunkenness, and commitment to mental institutions.  Police are usually sympathetic to the homeless: they have to deal with them regularly, there's little benefit in conflict, and the police like support from other institutions who might react negatively if they abuse the homeless.  Police just displace the homeless, not fix things.  Homeless might prefer jail, with warmth and food.  We don't have much data on Black homelessness during the 1950's and 1960's, but it increased in 1970's.  Why?   The author mentions less racism, but doesn't mention migration, which happened then.
 
 \par
-   Chapter 15 is the author's diagnosis and prescription.  He thinks homelessness in NYC in the 1980's was caused by the "middle class shrinking" (income distribution changes) in the 1970's.  His model predicts that less low-cost housing was provided.  Also contributing were zoning regulations, strict housing-maintenance laws, difficulty evicting tenants, more ex-prisoners, and more generous shelters.  Low priced crack may have helped end homelessness.  Newark's story is similar.  Chicago didn't see a shift in the income distribution and didn't see homelessness.  He waves his hands with Toronto.  He dodges with London and Hamburg.  In fact, he goes so far as to say "perhaps maintenance is cheap relative to construction so that the models of Chapter 6 don't apply."!!!  This is my biggest problem with his model: how does he know it works at all?
+   Chapter 15 is the author's diagnosis and prescription.  He thinks homelessness in NYC in the 1980's was caused by the ``middle class shrinking" (income distribution changes) in the 1970's.  His model predicts that less low-cost housing was provided.  Also contributing were zoning regulations, strict housing-maintenance laws, difficulty evicting tenants, more ex-prisoners, and more generous shelters.  Low priced crack may have helped end homelessness.  Newark's story is similar.  Chicago didn't see a shift in the income distribution and didn't see homelessness.  He waves his hands with Toronto.  He dodges with London and Hamburg.  In fact, he goes so far as to say ``perhaps maintenance is cheap relative to construction so that the models of Chapter 6 don't apply."!!!  This is my biggest problem with his model: how does he know it works at all?
 
 \par
-    His policy recommendations are: Do not discriminate against or in favor of the homeless.  E.g., different welfare payments, access to services, etc..   The police should focus on crime, not anti-social behavior.  This includes prosecuting crimes against the homeless and crimes by the homeless.  He says police should do "aggressive but nonpunitive referral" but I'm not sure what that means.  Right after, he talks about the Port Authority bus terminal and Grand Central terminal being clear of homeless.  He says that the homeless should \emph{not} be allowed to build shanties, because they're unsafe and violate the law.
+    His policy recommendations are: Do not discriminate against or in favor of the homeless.  E.g., different welfare payments, access to services, etc..   The police should focus on crime, not anti-social behavior.  This includes prosecuting crimes against the homeless and crimes by the homeless.  He says police should do ``aggressive but non-punitive referral" but I'm not sure what that means.  Right after, he talks about the Port Authority bus terminal and Grand Central terminal being clear of homeless.  He says that the homeless should \emph{not} be allowed to build shanties, because they're unsafe and violate the law.
 
 \par
-    Cities should not run shelters; they should hand out an allowance and let private companies run shelters.  Shelters will then compete to be the preferred place and improve services to the homeless. (Cities may run shelters for natural disasters, etc.)  Private shelters should be allowed to offer better rooms for cash on top of the allowance, creating a working market for low-cost housing.  (NOTE: In Austin, there is probably a huge discontinuity between a free bed in a shelter and \$700 for an apartment!)  The author prefers entitlements, because they provide predictability for everyone.  For disruptive homeless people, which private shelters will not house for the allowance, he recommends selectively increasing the allowance.  "This scheme won't work perfectly ... but I can think of no scheme that would work better."  (NOTE: Let charities deal with them?)  Later, on page 289, he says "A commitment to zero homelessness is unworkable".
+    Cities should not run shelters; they should hand out an allowance and let private companies run shelters.  Shelters will then compete to be the preferred place and improve services to the homeless. (Cities may run shelters for natural disasters, etc.)  Private shelters should be allowed to offer better rooms for cash on top of the allowance, creating a working market for low-cost housing.  (NOTE: In Austin, there is probably a huge discontinuity between a free bed in a shelter and \$700 for an apartment!)  The author prefers entitlements, because they provide predictability for everyone.  For disruptive homeless people, which private shelters will not house for the allowance, he recommends selectively increasing the allowance.  ``This scheme won't work perfectly ... but I can think of no scheme that would work better."  (NOTE: Let charities deal with them?)  Later, on page 289, he says ``A commitment to zero homelessness is unworkable".
 
 \par
-    He describes public housing rules as giving "authorities a choice between running empty buildings and running buildings full of fairly well-off people".  A study says that for every \$2 spent on public housing, residents would pay only \$1 for it.  His non-discrimination policy says that homeless should \emph{not} move to the front of the queue for public housing.  He also says that there shouldn't be a waiting list for public housing --- it should be a random draw of all applicants!  (Waiting longer doesn't mean "more deserving".)
+    He describes public housing rules as giving ``authorities a choice between running empty buildings and running buildings full of fairly well-off people".  A study says that for every \$2 spent on public housing, residents would pay only \$1 for it.  His non-discrimination policy says that homeless should \emph{not} move to the front of the queue for public housing.  He also says that there shouldn't be a waiting list for public housing --- it should be a random draw of all applicants!  (Waiting longer doesn't mean ``more deserving".)
 
 \par
-    As for regulations, he doesn't like "apex zoning" ("hierarchical zoning", I believe).  It should be easy to evict for any reason (not just "good cause").  He points out that eviction takes time and money and, for poor residents, putting a lein on their possessions won't pay for it.  (NOTE: Does this mean that it would be a good policy to pay landlords for evictions, as a form of insurance?)  He says we should remove "innkeeper liability" for lodginghouses and SROs; they should have the same liability as apartments.  (NOTE: I'm not sure I agree with this; I think allowing eviction for any reason would help fix this.)
+    As for regulations, he doesn't like ``apex zoning" ("hierarchical zoning", I believe).  It should be easy to evict for any reason (not just ``good cause").  He points out that eviction takes time and money and, for poor residents, putting a lien on their possessions won't pay for it.  (NOTE: Does this mean that it would be a good policy to pay landlords for evictions, as a form of insurance?)  He says we should remove ``innkeeper liability" for lodginghouses and SROs; they should have the same liability as apartments.  (NOTE: I'm not sure I agree with this; I think allowing eviction for any reason would help fix this.)
 
 \par
-    He says working homeless are good, because busy people cause fewer problems than welfare clients.  He suggests finding productive work, paid in cash, in small amounts quickly.  He suggest paying for each small piece of work.  He suggests getting rid of the disincentives in assistance plans.  He suggests hiring should be informal and without any eligibility criteria.  His example of a good program is "Street News" newspaper in Chicago and recycling cans in NYC.  He suggests discouraging begging by allowing charities, like Salvation Army, to solicit on the streets!
+    He says working homeless are good, because busy people cause fewer problems than welfare clients.  He suggests finding productive work, paid in cash, in small amounts quickly.  He suggest paying for each small piece of work.  He suggests getting rid of the disincentives in assistance plans.  He suggests hiring should be informal and without any eligibility criteria.  His example of a good program is ``Street News" newspaper in Chicago and recycling cans in NYC.  He suggests discouraging begging by allowing charities, like Salvation Army, to solicit on the streets!
 
 \par
     He suggests getting rid of the disincentives for doubling up in SSI and foodstamps.  He suggests reducing effective marginal tax rates.  For drug abusers, he says we should make it easier for them to get money like SSI.  He suggests disability should be more than yes-no proposition, but have degrees.  Lastly, US programs need to be as friendly and accessible as Canadian ones.  
@@ -1352,13 +1546,13 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
     Skimmed.
 
 \par
-    The author builds a simple stocastic-calculus model of an individual's wealth and, when their wealth falls to zero, the individual goes homeless.   By "simple", I mean it is still stocastic calculus and heavy on the math.
+    The author builds a simple stochastic-calculus model of an individual's wealth and, when their wealth falls to zero, the individual goes homeless.   By ``simple", I mean it is still stochastic calculus and heavy on the math.
 
 \par
-    The author's model leads to an obvious policy: a "Pigouvian homelessness prevention program".  That is, assuming homelessness has negative externalities (like smoking causes second-hand lung cancer), the government pays a subsidy if you are housed (like subsidizing people not to smoke).  Usually the Pigouvian response is a tax, like a heavy cigarette tax, but taxing the homeless would be cruel.   He says "he optimal shelter quality (and street enforcement regime) maximizes the instantaneous difference between benefits and costs".  
+    The author's model leads to an obvious policy: a ``Pigouvian homelessness prevention program".  That is, assuming homelessness has negative externalities (like smoking causes second-hand lung cancer), the government pays a subsidy if you are housed (like subsidizing people not to smoke).  Usually the Pigouvian response is a tax, like a heavy cigarette tax, but taxing the homeless would be cruel.   He says ``he optimal shelter quality (and street enforcement regime) maximizes the instantaneous difference between benefits and costs".  
 
 \par
-    Another policy is income smoothing.  He concludes that "any actuarily fair insurance that reduces volatility is welfare-improving.".  
+    Another policy is income smoothing.  He concludes that ``any actuarily fair insurance that reduces volatility is welfare-improving.".  
   }
 }
 
@@ -1372,16 +1566,16 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   year      = 2018,
   keywords  ={homelessness},
   annote    = {
-    This paper covers research into homelessness by economists and practioners.
+    This paper covers research into homelessness by economists and practitioners.
 
 \par
-    It has an interesting discussion of the strengths of studies that focus on individual vs. averages.  Practioners want individual studies, since it informs how they act.  But they don't provide information on solving homelessness.
+    It has an interesting discussion of the strengths of studies that focus on individual vs. averages.  Practitioners want individual studies, since it informs how they act.  But they don't provide information on solving homelessness.
 
 \par
-    It has some interesting insights on the "general equilibrium", by which the author means how everyone in the housing market reacts to a policy.  A shelter is more pleasant than sleeping rough, so more shelters means that fewer will sleep rough and, also, that some people will stay longer.  So, Housing First treats the homeless, but there aren't studies on what it does to the system.
+    It has some interesting insights on the ``general equilibrium", by which the author means how everyone in the housing market reacts to a policy.  A shelter is more pleasant than sleeping rough, so more shelters means that fewer will sleep rough and, also, that some people will stay longer.  So, Housing First treats the homeless, but there aren't studies on what it does to the system.
 
 \par
-    One simple model has a rate $e$ at which the homed become homeless and a rate $x$ at whick the homeless become homed.  The steadystate homeless rate is $e/x$.  
+    One simple model has a rate $e$ at which the homed become homeless and a rate $x$ at which the homeless become homed.  The steady-state homeless rate is $e/x$.  
 
 \par
     Discusses treatments, where money seems to be best.  Mentions that rent is factor.   Some non-housing interventions help, but they're relatively expensive.
@@ -1390,13 +1584,13 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
     Journeys Home is a longitudinal study that covers Australians beyond homelessness.  It produced a lot of good data.  For men, trauma was seen on entering and exiting homelessness.  Women experienced trauma while homeless.  Violence might cause male homelessness, but not female.   Addiction, in general, was not a cause of homelessness.  Although heavy alcohol use (a binge) might be causal. 
 
 \par
-    An increase in EITC payments lead to fewer families doubling up.  But it didn't decrease homelessness.  The author asks "Why might this be?" and guesses either it has to do with averages or the near-homeless didn't apply for EITC.
+    An increase in EITC payments lead to fewer families doubling up.  But it didn't decrease homelessness.  The author asks ``Why might this be?" and guesses either it has to do with averages or the near-homeless didn't apply for EITC.
 
 \par
-    Evictions often preceed homelessness.  Giving legal representation during evictions help prevent them.  But no one has studied if landlords change in response.
+    Evictions often precede homelessness.  Giving legal representation during evictions help prevent them.  But no one has studied if landlords change in response.
 
 \par
-    He casts a lot of doubt on HUD's Annual Homeless Assessment Report.  This includes the Point-in-Time Count ("homeless census", "PIT Count").
+    He casts a lot of doubt on HUD's Annual Homeless Assessment Report.  This includes the Point-in-Time Count ("homeless census", ``PIT Count").
 
 \par
     His own paper (2003) looked at shelter quality and the quality of living outside (rain, worse spots to camp) and computed an equilibrium for how many homeless would choose each.  It says how the number of beds affects numbers too --- meaning 100 more beds reduces the PIT Count by much fewer than 100!  Permanent supportive housing is very high quality housing and has a predictable effect.  
@@ -1405,19 +1599,19 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
     When prisoners are released, shelter numbers do not increase.  But that may be because recently released criminals scare people away?
 
 \par
-    If housing is given to those homeless longest, it might incentivize people to stay homeless longer to increase their odds of "winning a lottery".  
+    If housing is given to those homeless longest, it might incentivize people to stay homeless longer to increase their odds of ``winning a lottery".  
 
 \par
    Corinth 2017 has formula for predicting homelessness.
 
 \par
-   NYC ran a service "Homebase" which prioritized treated people in their neighborhoods.  I'm not sure all the details, but it kept social connections.
+   NYC ran a service ``Homebase" which prioritized treated people in their neighborhoods.  I'm not sure all the details, but it kept social connections.
 
 \par
    Prevention is tricky.  Rolston et al. found 14.5\% of their control group entered shelters and 8.0\% of the treatment group.  Since only 6.5\% were affected, the program could be expensive for the effect.
 
 \par
-   People have private information on how likely they are to be homeless.  Still, practioners may find it hard to get honest answers when the treatment depends on the answer.  The Homebase program saw evidence with long walks to services.  The NYC housing program does it by requiring long stays at a shelter before getting housing support.
+   People have private information on how likely they are to be homeless.  Still, practitioners may find it hard to get honest answers when the treatment depends on the answer.  The Homebase program saw evidence with long walks to services.  The NYC housing program does it by requiring long stays at a shelter before getting housing support.
 
 \par
    In NYC, homelessness increased from 2011 to 2017, but the housing market was mostly unchanged.  Vacancy in low-rent apartments fell by 1/3, but it was not significant.  Migration doesn't explain shifts in numbers, even in the NY/NJ area.   LA saw a similar rise in the city but not surrounding areas.
@@ -1426,12 +1620,12 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
    Under Mayor De Blasio, NYC raised \$-per-family-day from \$103 to \$171.  (NYC sometimes rents hotel rooms and that's close to the price of one.)
 
 \par
-   On page 62, does a "thought experiment" of how many Housing Choice Vouchers would be necessary to replace NYC's shelters and other programs.  He believes the money currently spent (\$1.8 billion) might be able to do it.
+   On page 62, does a ``thought experiment" of how many Housing Choice Vouchers would be necessary to replace NYC's shelters and other programs.  He believes the money currently spent (\$1.8 billion) might be able to do it.
    
    Pg. 66 says LA's survey is different from NYC in major ways.  E.g., visual not interviews.  No transit.  Non-random.  Crappy in every way.   
 
 \par
-   LA spends far less on homeless services: 1/15th that of NYC!   That rose to about 1/3 in 2017.   "prevention in Los Angeles might also require \$30,000 to reduce the PIT Count by 1".  Wow.  He compares that to rent subsidies, which in NYC, cost \$40,000 to \$80,000 to reduce the PIT Count by 1. 
+   LA spends far less on homeless services: 1/15th that of NYC!   That rose to about 1/3 in 2017.   ``prevention in Los Angeles might also require \$30,000 to reduce the PIT Count by 1".  Wow.  He compares that to rent subsidies, which in NYC, cost \$40,000 to \$80,000 to reduce the PIT Count by 1. 
 
 \par
    Economists have not studied the unsheltered homeless.  Is the difference between cities a matter of enforcement?
@@ -1443,10 +1637,10 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
    Homeless families fell by 2/3s between 2010 and 2017.  It could be because NY state takes kids from homeless families and other states copied that.  There are other possibilities.
 
 \par
-   Black people are more likely to be homeless, but states with more Black residents tend to have fewer homeless.  Drug rates, alcohol abuse, and mental illness are the same rate in Blacks as in other groups.  The proportion of Black incarcerated is similar to those homeless.  The author says another candidate explanation is segregation: a shelter full of Black people may be offputting to White people.  (But wouldn't that push up the number of unsheltered White homeless?)
+   Black people are more likely to be homeless, but states with more Black residents tend to have fewer homeless.  Drug rates, alcohol abuse, and mental illness are the same rate in Blacks as in other groups.  The proportion of Black incarcerated is similar to those homeless.  The author says another candidate explanation is segregation: a shelter full of Black people may be off-putting to White people.  (But wouldn't that push up the number of unsheltered White homeless?)
 
 \par
-    The conclusion says: "We don't know how to end homelessness."  "We can't explain why homelessness in the two biggest American cities exploded in this decade, or why it fell in the rest of the country."  "On an aggregate level, weather, labor market conditions, and housing prices affect homelessness, and maybe policies too, but modest changes in unemployment or rents cannot be expected to trigger huge changes in homelessness."  "...; for the most effective policies a handful ro two of people have to be treated to reduce aggregate homelessness by one."   "It's a good time for more economists to start working on homelessness."
+    The conclusion says: ``We don't know how to end homelessness."  ``We can't explain why homelessness in the two biggest American cities exploded in this decade, or why it fell in the rest of the country."  ``On an aggregate level, weather, labor market conditions, and housing prices affect homelessness, and maybe policies too, but modest changes in unemployment or rents cannot be expected to trigger huge changes in homelessness."  ``...; for the most effective policies a handful or two of people have to be treated to reduce aggregate homelessness by one."   ``It's a good time for more economists to start working on homelessness."
   }
 }
 
@@ -1462,7 +1656,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   pages={323-336},
   month={},
   doi={10.1080/14616710110091525},
-  abstract={It is generally believed that the increased incidence of homelessness in the US has arisen from broad societal factors - changes in the institutionalization of the mentally ill, increases in drug addiction and alcohol usage, etc. This paper reports on a comprehensive test of the alternate hypothesis that variations in homelessness arise from changed circumstances in the housing market and in the income distribution. We utilize essentially all the systematic information available on homelessness in US urban areas - census counts, shelter bed counts, records of transfer payments, and administrative agency estimates. We use these data to estimate the effects of housing prices, vacancies, and rentto-income ratios upon the incidence of homelessness. Our results suggest that simple economic principles governing the availability and pricing of housing and the growth in demand for the lowest quality housing explain a large portion of the variation in homelessness among US metropolitan housing markets. Furthermore, rather modest improvements in the affordability of rental housing or its availability can substantially reduce the incidence of homelessness in the US.},
+  abstract={It is generally believed that the increased incidence of homelessness in the US has arisen from broad societal factors - changes in the institutionalization of the mentally ill, increases in drug addiction and alcohol usage, etc. This paper reports on a comprehensive test of the alternate hypothesis that variations in homelessness arise from changed circumstances in the housing market and in the income distribution. We utilize essentially all the systematic information available on homelessness in US urban areas - census counts, shelter bed counts, records of transfer payments, and administrative agency estimates. We use these data to estimate the effects of housing prices, vacancies, and rent-to-income ratios upon the incidence of homelessness. Our results suggest that simple economic principles governing the availability and pricing of housing and the growth in demand for the lowest quality housing explain a large portion of the variation in homelessness among US metropolitan housing markets. Furthermore, rather modest improvements in the affordability of rental housing or its availability can substantially reduce the incidence of homelessness in the US.},
   url={https://urbanpolicy.berkeley.edu/pdf/QR_EJHP01PB.pdf},
   keywords={homelessness, causes of homelessness},
   annote    = {
@@ -1502,9 +1696,11 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   annote    = {
     Did not read.
 
+\par
     Abstract claims full pass through, especially near downtown.
 
-    Page 5 says "When focusing specifically on buildings outside a 5km radius from the Boston central business district (CBD), the pass-through decreases to a range of $0.52 to $0.67. For buildings within a 5km of the CBD, rent increases by $1.06 to $1.39 indicating this market may be imperfectly competitive with capital owners exercising market power over tenants."
+\par
+    Page 5 says ``When focusing specifically on buildings outside a 5km radius from the Boston central business district (CBD), the pass-through decreases to a range of \$0.52 to \$0.67. For buildings within a 5km of the CBD, rent increases by \$1.06 to \$1.39 indicating this market may be imperfectly competitive with capital owners exercising market power over tenants."
   }
 }
 
@@ -1519,17 +1715,98 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   type={Cowles Foundation Discussion Papers},
   url={https://ideas.repec.org/p/cwl/cwldpp/1036.html},
   number={1036},
-  abstract={Two proposals are made that may facilitate the creation of derivative market instruments, such as futures contracts, cash-settled based on economic indices. The first proposal concerns index number construction: indices based on infrequent measurements of nonstandardized items may control for quality change by using a hedonic repeated measures method, an index number construction method that follows individual assets or subjects through time and also takes account of measured quality variables. The second proposal is to establish markets for perpetual claims on cash flows matching indices of dividends or rents. Such markets may help us to measure the prices of the assets generating these dividends or rents even when the underlying asset prices are difficult or impossible to observe directly. A perpetual futures contract is proposed that would cash settle every day in terms of both the change in the futures price and the dividend or rent index for that day.},
+  abstract={Two proposals are made that may facilitate the creation of derivative market instruments, such as futures contracts, cash-settled based on economic indices. The first proposal concerns index number construction: indices based on infrequent measurements of non-standardized items may control for quality change by using a hedonic repeated measures method, an index number construction method that follows individual assets or subjects through time and also takes account of measured quality variables. The second proposal is to establish markets for perpetual claims on cash flows matching indices of dividends or rents. Such markets may help us to measure the prices of the assets generating these dividends or rents even when the underlying asset prices are difficult or impossible to observe directly. A perpetual futures contract is proposed that would cash settle every day in terms of both the change in the futures price and the dividend or rent index for that day.},
   doi={},
   keywords={hedonic regression},
   annote = {
     This paper covers 2 techniques that might be useful in derivatives markets.
 
+\par
     One section covers the math for combining hedonic regression with repeated-sales data.
 
-    The other section covers "perpetual futures".  This is a financial instrument that regularly pays the different between two indexes.  One is the index to measure; the other is a reference index, like the CPI or risk-free short-term interest rate.  The instrument lasts forever, making its price equal to the discounted future flows from the index.  
+\par
+    The other section covers ``perpetual futures".  This is a financial instrument that regularly pays the different between two indexes.  One is the index to measure; the other is a reference index, like the CPI or risk-free short-term interest rate.  The instrument lasts forever, making its price equal to the discounted future flows from the index.  
   }
 }
+
+@Article{Shoup2008,
+  author={Donald Shoup},
+  title={Graduated Density},
+  journal={Journal of Planning Education and Research},
+  year=2008,
+  volume={28},
+  number={2},
+  pages={},
+  month={},
+  doi={10.1177/0739456X08321},
+  abstract={The difficulty of assembling sites large enough to redevelop at higher density can impede regeneration in city centers and accelerate suburban sprawl onto large sites already in single ownership. One promising new planning strategy to encourage voluntary land assembly is graduated density zoning, which allows higher density on larger sites. This strategy can increase the incentive for owners to cooperate in a land assembly that creates higher land values. Graduated density zoning will not eliminate the incentive to hold out, but it can create a new fear of being left out. Holdouts who are left with sites that cannot be combined with enough contiguous properties to trigger higher density lose a valuable economic opportunity. This article examines the difficulty of assembling land for infill development, and explains graduated density zoning as a way to encourage voluntary land assembly. Finally, it presents the results of graduated density zoning in practice.},
+  url={http://shoup.bol.ucla.edu/GraduatedDensityZoning.pdf},
+  keywords={zoning, lot size},
+  annote = {
+    I read this paper quickly.  It's a simple concept and a well-written paper.  An easy read.
+    
+\par
+    This paper looks at the hard problem of making sure there are lots of \emph{many} sizes available for construction in a city.  It is easy to divide a large lot into many pieces.  But, once done, it is hard to aggregate lots of small lots into a large lot again.  How does a city keep a set of large lots available for development?  The author's answer is to give the financial incentive of more density for larger lots.
+
+\par
+    The concept is pretty simple.  Write the zoning laws so that larger lots can build taller and denser.  This incentivizes owners of small lots to collaborate to create larger lots.  
+
+\par
+    The author has an example from Simi Valley, California.  The incentives allowed 18 single-family lots to be voluntarily grouped together and redeveloped as a master-planned community.   One owner refused to sell; 3 others only sold part of their land.  The sellers had a single realtor.  According to the realtor, ``the developer paid the land price expected for development at seven units per acre. The original owners thus captured most of the capital gains from the higher density".
+
+\par
+    The author has some interesting comments.  It is voluntary, so avoids the problems associated with eminent domain.   After passing graduated density, neighborhoods remain the same; neighborhoods only change when lots are assembled.  Owners may sell their land for fear-of-missing-out.  
+
+\par
+    I do worry about the balance.  The goal is to have many lots of many sizes.  This law may tend towards the largest possible.  E.g., imagine 4 lots on a block and two agree to merge.  If those 2 are in the middle, will the others almost have to join now?  If those 2 are on the end, will the other 2 have an incentive to join to make 2 pair or join the already merging lots to make it 3 or 4 lots together?
+
+\par
+    I don't have time now, but would like to think more about the market solutions.  If there's a shortage, won't larger lots command a higher price?  That should provide incentives to sell.  If we need many land owners to sell together, is there a way to form a legal entity that they participate in?   E.g., create an adhoc corporation with certain bidding rules and a way to overrule holdouts?  I feel like I need to be convinced that this is a real problem and that this is the best solution.  
+
+\par
+    This is a short, easy read.  It is a good subject and a solution worth talking about and considering.
+  }
+}
+
+
+@TechReport{Slattery2022,
+  author    = "Cailin Slattery",
+  title     = "Bidding for Firms: Subsidy Competition in the U.S.",
+  url = "https://static1.squarespace.com/static/5acd55db36099bfff90bf5d6/t/63b04dd75581f14c4a1f8d22/1672498652204/Slattery+\%282022\%29+Bidding+for+Firms.pdf",
+  institution="University of Virginia",
+  year      = 2022,
+  abstract={
+  In the United States, state and local governments compete to attract firms by offering discretionary subsidies. I use a private value English auction to model the subsidy bidding process and quantify the welfare effects of competition. The allocation of rents between states and firms depends on the heterogeneity in states’ valuations for firms and the substitutability of locations. I find that competition increases welfare by only 3\% over a subsidy ban, and states compete away the surplus, transferring the majority of rents to firms. Moreover, political concerns can affect states’ valuations for firms. These findings dampen any interpretation of subsidy competition as an effective place-based policy.
+  },
+  keywords={firm subsidy},
+  annote = {
+    Did not read yet.  Recommended by Caitlin Gorback.  
+  }
+}
+
+
+@TechReport{SupremeCourt1992,
+  author    = "Supreme Court of the US",
+  title     = "Nordlinger v. Hahn",
+  url = "https://tile.loc.gov/storage-services/service/ll/usrep/usrep505/usrep505001/usrep505001.pdf",
+  institution="Supreme Court of the US",
+  year      = 1992,
+  abstract={ },
+  keywords={Prop 13},
+  annote    = {
+    Nordlinger bought a house in California and was paying 400\% more property tax than their neighbor, due to Prop 13.  They challenged the law under the Equal Protection Clause of the US Constitution.
+
+\par
+    The Supreme Court used a very loose ``scrutiny'' and found that there was a rational basis for the law.  The California state legislature was rational to incentivize people to stay in the neighborhood.  Another rational basis was that, under Prop 13, homeowners could predict how much taxes they would owe in the future.  Using this level of scrutiny, the Court didn't evaluate how well this law achieve those goals, nor its other effects.  (The Court assumed the legislature took those into consideration and the plaintiff could ask the legislature (rather than the Court) to change the law.)
+
+\par
+    The Court also held that there was a rational basis to keep the lower tax if the residents moved within California and if children inherited the property.  As Nordlinger already lived in California as a renter before buying the home, they were not allowed to argue that these terms were unfair to out-of-state buyers.  Another plaintiff would need to bring that case.
+
+\par
+    The decision was 8-1.  Stevens dissented.  He thought the rational basis for the law was nonexistent.  The law broke taxpayers into classes, but it wasn't by any rational scheme but by the purchase price of the property, irrelevant of time.  He also thought the ``rational basis" had to serve all taxpayers and the rational that this law served newer homeowners (and people wanting to buy homes) was close to absurd.  He also thought that, by allowing inheriting children to keep the lower tax, it was a tax-break based on heritage.
+  }
+}
+
 
 
 @comment AI techniques
@@ -1545,7 +1822,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   pages={622-629},
   url={https://ojs.aaai.org/index.php/AAAI/article/view/3838},
   DOI={10.1609/aaai.v33i01.3301622},
-  abstract={Modern statistical and machine learning methods are increasingly capable of modeling individual or personalized treatment effects. These predictions could be used to allocate different interventions across populations based on individual characteristics. In many domains, like social services, the availability of different possible interventions can be severely resource limited. This paper considers possible improvements to the allocation of such services in the context of homelessness service provision in a major metropolitan area. Using data from the homeless system, we use a counterfactual approach to show potential for substantial benefits in terms of reducing the number of families who experience repeat episodes of homelessness by choosing optimal allocations (based on predicted outcomes) to a fixed number of beds in different types of homelessness service facilities. Such changes in the allocation mechanism would not be without tradeoffs, however; a significant fraction of households are predicted to have a higher probability of re-entry in the optimal allocation than in the original one. We discuss the efficiency, equity and fairness issues that arise and consider potential implications for policy.&lt;/p&gt;},
+  abstract={Modern statistical and machine learning methods are increasingly capable of modeling individual or personalized treatment effects. These predictions could be used to allocate different interventions across populations based on individual characteristics. In many domains, like social services, the availability of different possible interventions can be severely resource limited. This paper considers possible improvements to the allocation of such services in the context of homelessness service provision in a major metropolitan area. Using data from the homeless system, we use a counterfactual approach to show potential for substantial benefits in terms of reducing the number of families who experience repeat episodes of homelessness by choosing optimal allocations (based on predicted outcomes) to a fixed number of beds in different types of homelessness service facilities. Such changes in the allocation mechanism would not be without trade-offs, however; a significant fraction of households are predicted to have a higher probability of re-entry in the optimal allocation than in the original one. We discuss the efficiency, equity and fairness issues that arise and consider potential implications for policy.&lt;/p&gt;},
   keywords={homelessness, AI},
   annote={
     This paper uses AI to decide which homeless people to assign to which treatment, such as sending them to the homeless shelter or rapid rehousing.
@@ -1554,7 +1831,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
     I skimmed the paper.
 
 \par
-    It looks to use the finite resources to minimize the rentry of people into homelessness.  It identifies the most important factors, to the AI, to diagnose and prevent reentry.  There are ethical considerations and the authors looked at a system that, for any individual, only increased their chance of becoming homeless again by a fixed amount.
+    It looks to use the finite resources to minimize the reentry of people into homelessness.  It identifies the most important factors, to the AI, to diagnose and prevent reentry.  There are ethical considerations and the authors looked at a system that, for any individual, only increased their chance of becoming homeless again by a fixed amount.
   }
 }
 
@@ -1571,7 +1848,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   annote={
     Applies to zoning districts MF-1 through MF-5, and MU combining districts.
     
-    Requires 10\% be affordable (at 60\% MFI for rental units or 80\% MFI for owner-occupied).  Requires 0.6 parking spaces per unit.  They are high restricted by Austin's "compatibility" rules.
+    Requires 10\% be affordable (at 60\% MFI for rental units or 80\% MFI for owner-occupied).  Requires 0.6 parking spaces per unit.  They are high restricted by Austin's ``compatibility" rules.
 
 \par
     Did \emph{not} address land requirements in zoning rules.  MF-5, the highest density, allows 54 units per acre, or 1 unit for every 807 sqft of land.
@@ -1587,10 +1864,10 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   note = {},
   keywords={microunits, Austin},
   annote={
-    Slides on a proposed amendment to Austin's zoning to allow "units" of 200 sqft.  The minimum at the time was 400 sqft. 
+    Slides on a proposed amendment to Austin's zoning to allow ``units" of 200 sqft.  The minimum at the time was 400 sqft. 
 
 \par
-    The amendment would still require 400 sqft per unit on the site.  And, require 0.6 parking spots per unit.  And, require 10\% affordable units!  AND, it would only be allowed on a "CTC", which I think is a "core transit corridor", but not districts that already have affordability requirements, live VMU! WTF!!!
+    The amendment would still require 400 sqft per unit on the site.  And, require 0.6 parking spots per unit.  And, require 10\% affordable units!  AND, it would only be allowed on a ``CTC", which I think is a ``core transit corridor", but not districts that already have affordability requirements, live VMU! WTF!!!
   }
 }
 
@@ -1602,13 +1879,13 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   note = {},
   keywords={microunits, Austin},
   annote={
-    The Director of Austin's Planning and Development Review responded to City Council request to look at "micro units", which have less than 500 square feet of space.  It defines them and the restrictions in Austin's zoning and building code.
+    The Director of Austin's Planning and Development Review responded to City Council request to look at ``micro units", which have less than 500 square feet of space.  It defines them and the restrictions in Austin's zoning and building code.
 
 \par
-    He says micro units are already legal to build, as small as 250 sqft., but other parts of the code interfere with building them.   "Site area requirements specify the minimum amount of land required per dwelling unit. In Austin’s zoning code, these requirements differ depending on the zoning district.  ... Under Austin’s current code, the smallest site area requirement is 800 square feet, for efficiency units located in MF-5 zoning."
+    He says micro units are already legal to build, as small as 250 sqft., but other parts of the code interfere with building them.   ``Site area requirements specify the minimum amount of land required per dwelling unit. In Austin’s zoning code, these requirements differ depending on the zoning district.  ... Under Austin’s current code, the smallest site area requirement is 800 square feet, for efficiency units located in MF-5 zoning."
 
 \par
-    Also, there is a parking requirement.  He says "Austin’s multifamily use requires at least one space per dwelling, unless it meets one of the above conditions for reduced parking.  That means that aside from CBD and DMU zoning districts, a multifamily development will have close to one parking spot per dwelling
+    Also, there is a parking requirement.  He says ``Austin’s multifamily use requires at least one space per dwelling, unless it meets one of the above conditions for reduced parking.  That means that aside from CBD and DMU zoning districts, a multifamily development will have close to one parking spot per dwelling
 (at the 20\% central core reduction) or more."
   }
 }
@@ -1622,10 +1899,10 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   note = {},
   keywords={microunits, Austin},
   annote={
-    Building near Plaza Saltillo claims to have "micro-units".  Average unit size is 355 square feet.  However, the building has 34,364 sqft and, for 60 units, that means 572 sqft per unit.
+    Building near Plaza Saltillo claims to have ``micro-units".  Average unit size is 355 square feet.  However, the building has 34,364 sqft and, for 60 units, that means 572 sqft per unit.
 
 \par
-    It has a lot of amenties: coworking spaces, gym, communial kitchen, rooftop patio, etc.
+    It has a lot of amenities: coworking spaces, gym, communal kitchen, rooftop patio, etc.
 
 \par
     It has 19 parking spaces.
@@ -1648,10 +1925,10 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
   url={https://digitalcommons.unomaha.edu/cgi/viewcontent.cgi?article=1006&context=pubadfacpub},
   keywords={city governance, public choice},
   annote={
-    Focuses on William A. Niskanen's theory that bureaucrats maximize their agency's discretionary budget.  Presumes it can be measured by looking at City Managers who contract outside.  When going outside, the price is visible to their "polical sponsor".  So, if City Managers contract outside more than other top city officials, it validates the theory.  
+    Focuses on William A. Niskanen's theory that bureaucrats maximize their agency's discretionary budget.  Presumes it can be measured by looking at City Managers who contract outside.  When going outside, the price is visible to their ``political sponsor".  So, if City Managers contract outside more than other top city officials, it validates the theory.  
 
 \par
-    Concludes: "City manager cities are slightly more likely to contract out. This general pattern of contracting out is more in line with the professionalism in government hypothesis than the greedy bureaucrat hypothesis."
+    Concludes: ``City manager cities are slightly more likely to contract out. This general pattern of contracting out is more in line with the professionalism in government hypothesis than the greedy bureaucrat hypothesis."
   }
 }
 

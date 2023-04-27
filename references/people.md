@@ -33,6 +33,11 @@
 - His website spells out his philosophy, which I like: raising per-capita GDP.
 - wrote paper with Emily Hamilton on Walk Score where I don't trust the results.
 
+### Chris Elmendorf
+- [Law Professor at UC Davis](https://law.ucdavis.edu/people/christopher-elmendorf)
+- JD, BA in Economics
+- https://twitter.com/CSElmendorf
+
 ### Kevin Erdmann
 - [Senior Affiliated Scholar with Mercatus Center](https://www.mercatus.org/scholars/kevin-erdmann)
 - Masters in Finance
@@ -97,6 +102,15 @@
 - author for [FEE](https://fee.org)
 - [https://twitter.com/ikedasandy?lang=en](https://twitter.com/ikedasandy?lang=en)
 - fan of Jane Jacobs, both social and economic theory
+
+### Andrew Justus
+- [Housing Policy Analyst at Niskanen Center](https://www.niskanencenter.org/author/ajustus/)
+- JD and Masters in Urban and Regional Planning
+- [https://twitter.com/AWJustus](https://twitter.com/aarmlovi)
+
+### Eli Kahn
+- [Research Asst at Mercatus Center](https://www.mercatus.org/people/eli-kahn)
+- MPP from UC Berkeley
 
 ### Michael Lewyn
 - [Professor at Touro Law Center](https://www.tourolaw.edu/AboutTouroLaw/bio/219)
@@ -216,3 +230,4 @@
 - ? Manhattan Institute
 - ? Better Cities Project
 - Welcoming Neighbors Network
+
