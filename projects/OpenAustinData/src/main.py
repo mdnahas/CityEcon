@@ -33,6 +33,9 @@ zoning_local_file = "inputs/PLANNINGCADASTRE_zoning_small_map_scale.json.zip"
 
 # Appraisal are 260MB compressed
 appraisals = {
+    "2023" : { "url": "https://traviscad.org/wp-content/largefiles/2023%20Appraisal%20Export%20Supp%200_04242023.zip",
+               "local_file": "downloads/2023 Appraisal Export Supp 0_04242023.zip" },
+    
     "2022" : { "url": "https://traviscad.org/wp-content/largefiles/2022%20Certified%20Appraisal%20Export%20Supp%200_07252022.zip",
                "local_file" : "downloads/2022 Certified Appraisal Export Supp 0_07252022.zip" },
 
@@ -113,14 +116,17 @@ def main():
         print("Converting appraisal files for " + year_str + " to CSV.")
         appraisal_fw_dir = "tmp/appraisal_fixedwidth_" + year_str
         if not os.path.exists(appraisal_fw_dir):
+            print("  making directory for fixedwidth files for " + year_str)
             os.mkdir(appraisal_fw_dir)
             # Zip file's compression method was not supported.
             #with zipfile.ZipFile("downloads/2022 Certified Appraisal Export Supp 0_07252022.zip", 'r') as zip_ref:
             #    zip_ref.extractall(appraisal_fw_dir)
+            print("  unzipping fixed-width files for " + year_str)
             subprocess.run(["unzip", appraisals[year_str]["local_file"], "-d", appraisal_fw_dir])
 
         appraisal_csv_dir = "tmp/appraisal_CSV_" + year_str
         if not os.path.exists(appraisal_csv_dir):    
+            print("  making directory for CSV files for " + year_str)
             os.mkdir(appraisal_csv_dir)
         appraisal_files = os.listdir(appraisal_fw_dir)
         for filename in appraisal_files:
