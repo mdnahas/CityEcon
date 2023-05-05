@@ -1,0 +1,10 @@
+<h1>Comparing TCAD and Zillow</h1>
+
+<p><a href="zillow_compare_2023_sample.csv">This spreadsheet</a> has the data used to compare prices from TCAD and Zillow.</p>
+
+<p> The data was from TCAD's preliminary appraisal roll for 2023.  The "market_value" field holds TCAD's appraisal.  The ZEstimate values were gathered on May 4th, 2023.  The field "ZEstimate" holds those values.  
+
+<p>The space was a subset of all properties.  In TCAD, the property had to be real estate, had land and building type "A1" (single-family-homes) and had a single owner.</p>
+
+<p>The addresses were not selected at random.  I took the logartihm of TCAD's appraisal prices ("market_value") and then selected 100 values evenly distributed between the minimum and maximum value.  I should have looked at the distribution first.  This approach ended up with a lot of values in the bottom 1000th of the data.  It would have been better to fit the log-normal distribution and then picked values based around its center. </p>
+
