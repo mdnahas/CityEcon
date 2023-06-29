@@ -69,10 +69,16 @@ TN    Traditional Neighborhood
 
 This file describes the land_state_cd and imprv_state_cd fields: [https://comptroller.texas.gov/taxes/property-tax/docs/96-313.pdf](https://comptroller.texas.gov/taxes/property-tax/docs/96-313.pdf)
 
+More details are here: [https://tax-office.traviscountytx.gov/pages/SPTC.php](https://tax-office.traviscountytx.gov/pages/SPTC.php)
 
 ###Category Property Type
 
-A Real Property: Single-family Residential  
+A Real Property: Single-family Residential
+  A1 Single Family Residence
+  A2 Single Family Residence (MH)
+  A3 Single Family Residence (Details)
+  A4 Condos
+  A5 Condos (Details)
 B Real Property: Multifamily Residential  
 C1 Real Property: Vacant Lots and Land Tracts  
 C2 Real Property: Colonia Lots and Land Tracts  
