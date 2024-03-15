@@ -1062,7 +1062,7 @@ commanded no special municipal privilege."  (pg. 17)
 
 
 
-@book{George,
+@book{George1879,
   author    = "Henry George",
   title     = "Progress and Poverty",
   publisher = "D. Appleton and Company",
@@ -1215,6 +1215,37 @@ Evidence from Administrative Data},
   }
 }
 
+
+
+@TechReport{Hamilton2023,
+  author    = "Emily Hamilton",
+  title     = "The Effects of Minimum-lot-size Reform on Houston Land Values",
+  url = "file:///home/mike/Downloads/3085_hamilton_effects_of_minimum_lot_size_reform_houston_wp_v1-1.pdf",  
+  institution="Mercatus Center",
+  year      = 2023,
+  keywords={minimum lot size},
+  annote    = {
+     I skimmed this paper.
+
+\par
+     This paper tries to measure the effect of Houston's 2013 zoning change that reduced the minimum lot size outside the I-610 loop (ring road).
+     The core of the paper is a regression on the logarithm of appraised land prices from 2005 to 2021, except 2013.
+     The treatment area is within 2, 1, or 0.5 miles of the I-610 loop.
+     The treatment is being in the affected time and area: after 2013 and outside the I-610 loop.
+     Fixed affects include the year, "demographics at the Census Tract level" and ZIP code "linear time trend".
+\par
+     The land appraisals are geographically clustered and not independant.
+     The author attempts to correct for this, but I didn't understand what they did.
+\par
+     The results say appraised land prices fell outside the I-610 loop, relative to inside.
+     But most of the results are \emph{not} significant.
+     A few regressions, where the distance was set at 0.5 miles and using many fixed effects, reach a p < 0.1 significance.
+\par
+     I only skimmed this paper, so I can't draw too many conclusions.  I didn't expect a large effect, because outside I-610 is far from downtown, where land values are highest.  (I wish we had data for the 1998 minimum-lot size change that did affect downtown!)   Minimum-lot sizes have their biggest effect on the bottom of the market, so I don't think this style of regression is the best tool to identify their affect.  A cut-off model might be better.  Or a regression of log of price-per-acre that includes the size of the lot as an input.  That said, it seems to be a respectable study of the effects in the only large city to change its minimum lot size, and that's an asset to the research.
+\par
+     (A side note, I mostly skimmed the paper because it was a drudge to read.  It felt like a "wall of text" in places.  I'm not sure if that's a factor of the Mercatus Center's format or the author's long sentences and paragraphs, or a combination of the two.)
+  }
+}
 
 
 
@@ -2095,8 +2126,8 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
 }
 
 
-@TechReport{Shortell2022
-  author    = "Joseph Shortell"
+@TechReport{Shortell2022,
+  author    = "Joseph Shortell",
   title     = "The Effect of a minimum lot size reduction on residential property values: the case of Houston",
   url       = "https://diposit.ub.edu/dspace/handle/2445/187972",
   institution="Universitat de Barcelona",
@@ -2115,7 +2146,7 @@ Rental vacancy was studied by Rosen and Smith 1983 and Arnott 1989. Vacancy is c
     Model is simple.  Fixed effects for year and parcel.  Treatment effect is linear in price, not log-price, which is strange.  In my skimming, I didn't see a discussion of new buildings on the property, nor hedonic regression on the buildings.  There isn't a factor for distance from the center of the city --- that's important because the treatment area is basically the area around downtown.
 
 \par
-    The authors found that land prices increased dramatically with the smaller minimum lot size, as compared to outside it.  The buildings dropped slightly in value inside the area, as compared to outside.  So, ofter all, prices increased inside relative to outside.  The effect on land prices was still widening 5 years after the law changed.
+    The authors found that land prices increased dramatically with the smaller minimum lot size, as compared to outside it.  The buildings dropped slightly in value inside the area, as compared to outside.  So, after all, prices increased inside relative to outside.  The effect on land prices was still widening 5 years after the law changed.
 
 \par
     I don't think this is a good paper, because it doesn't include the distance or drive-time from downtown as factor in the regression.  Anything that affected prices based on distance --- like traffic congestion --- would have a similar effect.   The study would have been better if it regressed on the effect at the boundary. 
