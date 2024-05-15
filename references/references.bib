@@ -1478,6 +1478,49 @@ Evidence from Administrative Data},
 
 
 
+
+@comment RePEc:taf:rjpaxx:v:87:y:2021:i:3:p:383-395
+@Article{Kuhlman2021,
+  author={Daniel Kuhlmann},
+  title={{Upzoning and Single-Family Housing Prices}},
+  journal={Journal of the American Planning Association},
+  year=2021,
+  volume={87},
+  number={3},
+  pages={383-395},
+  month={July},
+  keywords={},
+  doi={10.1080/01944363.2020.185},
+  abstract={ Problem, research strategy, and findingsIn December 2018, the Minneapolis (MN) city council approved a new comprehensive plan that proposed eliminating single-family zoning restrictions throughout the city. In this project, I study the initial impact of this change on the sales prices of affected housing units. I estimate a series of difference-in-differences models comparing the sales price of houses within 3 km of the Minneapolis border in the year before and year after the city adopted the plan. I find that compared with similar unaffected properties in surrounding cities, the Minneapolis plan change was associated with a 3\% and 5\% increase in the price of affected housing units. In addition, there is some evidence that this price increase is due to the new development option it offers property owners. I find that the plan-related price increases are larger in inexpensive neighborhoods and for properties that are small relative to their immediate neighbors.Takeaway for practiceBy examining the short-term effect of the Minneapolis 2040 Plan’s elimination of single-family zoning, my study is useful for planners working in cities considering similar reforms. My analysis, though preliminary, suggests that there is indeed demand for denser development in the city. But the price increases associated with the upzoning redounds most directly to relatively small properties and those in inexpensive neighborhoods. Planners should thus be sensitive to how this type of change can affect housing affordability and housing stock diversity.},
+  url={https://www.decaturga.com/sites/default/files/fileattachments/planning_and_zoning/page/16931/upzoning_and_single_family_housing_prices_japa_1.pdf},
+  annote={
+    The author looks at the effect of Minneapolis's "triplexes everywhere" policy passed in 2018.  He does this using a differences-in-differences approach, comparing sales of properties inside the city with those outside the city.
+
+\par
+    He needs to compare different houses, so he uses a hedonic regression on log price.  There is an additional variable for being inside the city, being after a chosen date, and the product of those two.  There are a lot of details.  
+
+\par
+   His default date for the before/after is Dec. 2018, when Minneapolis city council passed the plan. Figure 2 plots data over time and shows Minneapolis's prices improving relative to control cities, which is worrying.  There is seasonality, but he goes back and forward 1 year from the date, so is sure to include all seasons equally. 
+
+\par
+   For inputs, he looked at transactions from Zillow.   He doesn't say which transactions were in/excluded.  He mentions "R1" zones and "buildings zoned for 2- or 3- families".
+   
+\par
+   He added variables for zipcode and month of sale fixed effects, to control for closeness and prices changes over time.  He looked at more detailed location (census tract) but results were similar.  He does not list all the variables used in the regression and the paper does not have the equations for the regression.  (There is a Technical Appendix, but it is only 3 pages.  It has an equation but no list of variables.)
+
+\par
+   He does a number of regression.  For properties within 1km, 2km, or 3km of the border, he sees price increases inside Minneapolis after 2019 of 5.7\% to 2.9\%.  He looks at neighborhoods with below or above median income and the results are not significant.  (But he quotes that result in his abstract?!)  He also does a regression based on a house's percentile rank of square footage (of interior space, presumably) compared to other houses within 200m.  That was strange.
+
+\par
+  Overall, I think this paper is not good.  I think difference-in-differences is a fine approach, although I would have preferred a discontinuity test if possible.  I find it a big mistake to not list all the variables used in the regression, even more so because there was a technical appendix so page space was not an issue.  I think the author reasonably controlled for distance/location.
+
+\par
+   I am most worried about time.  I would have preferred a regression on years clearly before and after.  Prices increase when information hits the market and that could have been at the election in Nov. 2017.  The trend seen in Figure 2 is that prices in Minneapolis are increasing faster than those in control cities for the 2 years before Dec. 2018.  Visually, Minneapolis is increasing .1 log dollars per 12 months vs .05 for control cities.  So, if that trend continued, I'd expect the regression to get .05.  Which is about what it got.  (The author on page 389 says "the general trend in price growth between the two groups is similar", but I don't think that's so.)  So, my view is this paper concludes "prices increased 3\% to 5\% from 2018 to 2019, but it isn't clear that that is attributable to an event around Dec. 2018.  
+  }
+}
+
+
+
 @misc{Lancing2022,
   author = {Kevin J. Lansing and Luiz E. Oliveira and Adam Hale Shapiro},
   title = {Will Rising Rents Push Up Future Inflation?},
